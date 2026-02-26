@@ -1,0 +1,233 @@
+.team {
+  min-height: 100vh;
+}
+
+.team-header {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.team-header h1 {
+  font-size: 3rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: 800;
+}
+
+.team-header p {
+  font-size: 1.2rem;
+  color: #cbd5e0;
+  margin: 0;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.team-intro {
+  padding: 3rem 1rem;
+  background: #f8f9fa;
+}
+
+.team-intro p {
+  color: #4a5568;
+  line-height: 1.8;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+.team-members {
+  padding: 4rem 1rem;
+}
+
+.team-members h2 {
+  text-align: center;
+  color: #1e3c72;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.team-members h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3282fe, #8cc327);
+  border-radius: 2px;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.team-competencies {
+  padding: 4rem 1rem;
+  background: #f8f9fa;
+}
+
+.team-competencies h2 {
+  text-align: center;
+  color: #1e3c72;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.team-competencies h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #8cc327, #3282fe);
+  border-radius: 2px;
+}
+
+.competencies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.competency-area {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid #3282fe;
+  transition: all 0.3s ease;
+}
+
+.competency-area:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.competency-area h3 {
+  color: #1e3c72;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.competency-area ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.competency-area li {
+  color: #555;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.competency-area li:last-child {
+  border-bottom: none;
+}
+
+.competency-area li:before {
+  content: '✓ ';
+  color: #8cc327;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.team-culture {
+  padding: 4rem 1rem;
+}
+
+.team-culture h2 {
+  text-align: center;
+  color: #1e3c72;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.team-culture h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #d73e33, #3282fe);
+  border-radius: 2px;
+}
+
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.culture-item {
+  background: linear-gradient(135deg, #3282fe 0%, #1e3c72 100%);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.culture-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(50, 130, 254, 0.25);
+}
+
+.culture-item h3 {
+  color: #8cc327;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.culture-item p {
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.95rem;
+  color: #cbd5e0;
+}
+
+@media (max-width: 768px) {
+  .team-header h1 {
+    font-size: 2rem;
+  }
+
+  .team-header p {
+    font-size: 1rem;
+  }
+
+  .team-members h2,
+  .team-competencies h2,
+  .team-culture h2 {
+    font-size: 1.5rem;
+  }
+
+  .members-grid,
+  .competencies-grid,
+  .culture-grid {
+    grid-template-columns: 1fr;
+  }
+}

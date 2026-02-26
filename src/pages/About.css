@@ -1,0 +1,338 @@
+.about {
+  min-height: 100vh;
+}
+
+.about-header {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: 800;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  color: #cbd5e0;
+  margin: 0;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-intro {
+  padding: 4rem 1rem;
+  background: white;
+}
+
+.intro-content h2 {
+  color: #1e3c72;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.intro-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3282fe, #8cc327);
+  border-radius: 2px;
+}
+
+.intro-content p {
+  color: #4a5568;
+  line-height: 1.8;
+  font-size: 1rem;
+  margin: 1.5rem 0;
+  text-align: justify;
+}
+
+.company-history {
+  padding: 4rem 1rem;
+  background: #f8f9fa;
+}
+
+.company-history h2 {
+  text-align: center;
+  color: #1e3c72;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.company-history h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3282fe, #8cc327);
+  border-radius: 2px;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.history-item {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid #3282fe;
+  transition: all 0.3s ease;
+}
+
+.history-item:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.history-item h3 {
+  color: #1e3c72;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.history-item p {
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.core-values {
+  padding: 4rem 1rem;
+}
+
+.core-values h2 {
+  text-align: center;
+  color: #1e3c72;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.core-values h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #8cc327, #d73e33);
+  border-radius: 2px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.value-card {
+  background: linear-gradient(135deg, #3282fe 0%, #1e3c72 100%);
+  color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(50, 130, 254, 0.25);
+}
+
+.value-card h3 {
+  color: #8cc327;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.value-card p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+  color: #e0e7ff;
+}
+
+.competitive-advantages {
+  padding: 4rem 1rem;
+  background: #f8f9fa;
+}
+
+.competitive-advantages h2 {
+  text-align: center;
+  color: #1e3c72;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.competitive-advantages h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #d73e33, #3282fe);
+  border-radius: 2px;
+}
+
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.advantage {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #d73e33;
+  transition: all 0.3s ease;
+}
+
+.advantage:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  transform: translateX(5px);
+}
+
+.advantage h3 {
+  color: #1e3c72;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.advantage p {
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.who-we-serve {
+  padding: 4rem 1rem;
+}
+
+.who-we-serve h2 {
+  text-align: center;
+  color: #1e3c72;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.who-we-serve h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3282fe, #8cc327);
+  border-radius: 2px;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.client-group {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.client-group h3 {
+  color: #1e3c72;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #3282fe;
+  padding-bottom: 0.5rem;
+}
+
+.client-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.client-group li {
+  color: #555;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.client-group li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-header p {
+    font-size: 1rem;
+  }
+
+  .intro-content h2,
+  .company-history h2,
+  .core-values h2,
+  .competitive-advantages h2,
+  .who-we-serve h2 {
+    font-size: 1.5rem;
+  }
+
+  .history-grid,
+  .values-grid,
+  .advantages-list,
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-content p {
+    font-size: 0.95rem;
+  }
+}
