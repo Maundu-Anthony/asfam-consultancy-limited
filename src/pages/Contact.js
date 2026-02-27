@@ -126,8 +126,12 @@ function Contact() {
             <div className="contact-card">
               <h3>🌐 Website</h3>
               <p>
-                <a href="https://www.asfam.co.ke" target="_blank" rel="noopener noreferrer">
-                  www.asfam.co.ke
+                <a
+                  href="https://asfam-consultancy-limited.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://asfam-consultancy-limited.vercel.app/
                 </a>
               </p>
             </div>
