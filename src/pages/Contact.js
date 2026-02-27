@@ -23,7 +23,6 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to a server
     console.log('Form submitted:', formData);
     setSubmitted(true);
     setFormData({
@@ -64,6 +63,7 @@ function Contact() {
       <section className="contact-info-section">
         <div className="container">
           <div className="contact-info-grid">
+            
             <div className="contact-card">
               <h3>📍 Address</h3>
               <p>
@@ -76,14 +76,44 @@ function Contact() {
                 Machakos, KENYA</strong>
               </p>
             </div>
+
             <div className="contact-card">
               <h3>📞 Phone</h3>
               <p>
                 <strong>Office:</strong><br />
-                +254 100 930028<br />
-                +254 745 661 011
+
+                <a href="tel:+254100930028">
+                  +254 100 930028
+                </a>
+                <br />
+
+                <a
+                  href="https://wa.me/254100930028"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whatsapp-link"
+                >
+                  Chat on WhatsApp
+                </a>
+
+                <br /><br />
+
+                <a href="tel:+254745661011">
+                  +254 745 661 011
+                </a>
+                <br />
+
+                <a
+                  href="https://wa.me/254745661011"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whatsapp-link"
+                >
+                  Chat on WhatsApp
+                </a>
               </p>
             </div>
+
             <div className="contact-card">
               <h3>✉️ Email</h3>
               <p>
@@ -92,6 +122,7 @@ function Contact() {
                 </a>
               </p>
             </div>
+
             <div className="contact-card">
               <h3>🌐 Website</h3>
               <p>
@@ -100,6 +131,7 @@ function Contact() {
                 </a>
               </p>
             </div>
+
           </div>
         </div>
       </section>
@@ -126,6 +158,7 @@ function Contact() {
                   placeholder="Your full name"
                 />
               </div>
+
               <div className="form-group">
                 <label htmlFor="email">Email *</label>
                 <input
@@ -138,6 +171,7 @@ function Contact() {
                   placeholder="your.email@example.com"
                 />
               </div>
+
               <div className="form-group">
                 <label htmlFor="phone">Phone</label>
                 <input
@@ -149,6 +183,7 @@ function Contact() {
                   placeholder="+254 700 000 000"
                 />
               </div>
+
               <div className="form-group">
                 <label htmlFor="subject">Subject *</label>
                 <input
@@ -161,6 +196,7 @@ function Contact() {
                   placeholder="How can we help?"
                 />
               </div>
+
               <div className="form-group full-width">
                 <label htmlFor="message">Message *</label>
                 <textarea
@@ -173,6 +209,7 @@ function Contact() {
                   rows="6"
                 />
               </div>
+
               <button type="submit" className="submit-btn">Send Message</button>
             </form>
           </div>
