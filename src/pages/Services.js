@@ -47,18 +47,20 @@ function Services() {
   ];
 
   const trainingPrograms = [
-    'AI Integrated Leadership & Governance for Board of Directors',
-    'Project Management & Resource Mobilization Masterclass',
-    'Public Finance Management & Modern AI Budget Development',
-    'Board Governance, Audit, Risk & Compliance',
-    'Data Protection & Cyber Security Training',
-    'Advanced Excel, Power BI & DATA Analytics with Python',
-    'Credit Digitization Security & Non-performing Loans Management',
-    'Business Channels Masterclass',
-    'Cooperative Societies & SACCOS Management',
-    'Pension Schemes Fiduciary Management',
-    'Digital Banking, Marketing, PR & Customer Service',
-    'Business Continuity Planning Masterclass'
+    'AI Integrated Leadership & Governance for Board of Directors Master Class',
+    'Board Governance, Audit, Risk & Compliance Master Class',
+    'Project Management & Resource Mobilization Master Class',
+    'Digital Banking, Marketing, AI Integrated Marketing, PR, Customer Service & Social Media Marketing Master Class',
+    'FINTECH, Digital Products, Data Protection & Cyber Security Master Class',
+    'Advanced Excel, Power BI & Data Analytics with Python Master Class',
+    'Credit Digitization Security & Non-performing Loans Management Master Class',
+    'Bank Digitization & Alternative Business Channel Master Class',
+    'Business Continuity Planning Master Class',
+    'Public Finance Management & Modern AI Budget Development Master Class',
+    'Sacco Society Digitization & Sacco Management Board Committees Master Class',
+    'Pension Schemes Fiduciary Management Master Class',
+    'Restructuring, Mergers & Acquisitions Master Class',
+    'Records Digitization, Management and Disposal Master Class'
   ];
 
   return (
@@ -182,6 +184,18 @@ function Services() {
           <h2>Strategic Partnerships & Stakeholder Engagement</h2>
           <p>
             We identify, structure, and facilitate partnerships with investors, donors, financiers, trade partners, and ecosystem stakeholders locally and internationally to help our customers take growing companies providing credit rating and credit recommendation services, while ensuring risk mitigation and competitive advantage.
+          </p>
+        </div>
+      </section>
+
+      <section className="contacts">
+        <div className="container">
+          <h2>Contacts</h2>
+          <p>
+            Phone: <a href="tel:+254700000000">+254 700 000 000</a>
+          </p>
+          <p>
+            Email: <a href="mailto:info@asfamconsultancy.com">info@asfamconsultancy.com</a>
           </p>
         </div>
       </section>
