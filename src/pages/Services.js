@@ -51,7 +51,7 @@ function Services() {
     'Board Governance, Audit, Risk & Compliance Master Class',
     'Project Management & Resource Mobilization Master Class',
     'Digital Banking, Marketing, AI Integrated Marketing, PR, Customer Service & Social Media Marketing Master Class',
-    'FINTECH, Digital Products, Data Protection & Cyber Security Master Class',
+    'FINTECH,REGTECH, Digital Products, Data Protection & Cyber Security Master Class',
     'Advanced Excel, Power BI & Data Analytics with Python Master Class',
     'Credit Digitization Security & Non-performing Loans Management Master Class',
     'Bank Digitization & Alternative Business Channel Master Class',
@@ -60,7 +60,9 @@ function Services() {
     'Sacco Society Digitization & Sacco Management Board Committees Master Class',
     'Pension Schemes Fiduciary Management Master Class',
     'Restructuring, Mergers & Acquisitions Master Class',
-    'Records Digitization, Management and Disposal Master Class'
+    'Records Digitization, Management and Disposal Master Class',
+    'Mental Health Mediation Master Class',
+    'Website Creation & Digital Development Master Class'
   ];
 
   return (
