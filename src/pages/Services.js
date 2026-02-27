@@ -191,9 +191,7 @@ function Services() {
       <section className="contacts">
         <div className="container">
           <h2>Contacts</h2>
-          <p>
-            Phone: <a href="tel:+254700000000">+254 700 000 000</a>
-          </p>
+          
           <p>
             Email: <a href="mailto:info@asfamconsultancy.com">info@asfamconsultancy.com</a>
           </p>
