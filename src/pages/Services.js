@@ -43,6 +43,23 @@ function Services() {
       title: 'Training & Mentorship (NITA Accredited)',
       description: 'Delivering certified and customized training programs in resource mobilization, investment readiness, trade development, credit management, financial governance, and institutional strengthening—supported by hands-on mentorship and coaching.',
       icon: '📚'
+    },
+
+    // NEW CORE SERVICES
+    {
+      title: 'Mental Health Support & Capacity Building',
+      description: 'Providing mental health awareness training, workplace wellbeing programs, resilience building, and psychological support frameworks to strengthen individual and organizational performance.',
+      icon: '🧠'
+    },
+    {
+      title: 'Mediation & Conflict Resolution Services',
+      description: 'Facilitating professional mediation, dispute resolution, and dialogue processes to help organizations, institutions, and communities resolve conflicts effectively and sustainably.',
+      icon: '🤝'
+    },
+    {
+      title: 'Web Development & Digital Solutions',
+      description: 'Designing and developing modern, responsive websites and digital platforms that enhance organizational visibility, digital transformation, and service delivery.',
+      icon: '💻'
     }
   ];
 
@@ -51,7 +68,7 @@ function Services() {
     'Board Governance, Audit, Risk & Compliance Master Class',
     'Project Management & Resource Mobilization Master Class',
     'Digital Banking, Marketing, AI Integrated Marketing, PR, Customer Service & Social Media Marketing Master Class',
-    'FINTECH,REGTECH, Digital Products, Data Protection & Cyber Security Master Class',
+    'FINTECH, REGTECH, Digital Products, Data Protection & Cyber Security Master Class',
     'Advanced Excel, Power BI & Data Analytics with Python Master Class',
     'Credit Digitization Security & Non-performing Loans Management Master Class',
     'Bank Digitization & Alternative Business Channel Master Class',
@@ -61,8 +78,9 @@ function Services() {
     'Pension Schemes Fiduciary Management Master Class',
     'Restructuring, Mergers & Acquisitions Master Class',
     'Records Digitization, Management and Disposal Master Class',
-    'Mental Health Mediation Master Class',
-    'Website Creation & Digital Development Master Class'
+    'Mental Health Master Class',
+    'Mediation Master Class',
+    'Web Development Master Class'
   ];
 
   return (
@@ -193,10 +211,7 @@ function Services() {
       <section className="contacts">
         <div className="container">
           <h2>Contacts</h2>
-          
-          <p>
-            Email: <a href="mailto:info@asfamconsultancy.com">info@asfamconsultancy.com</a>
-          </p>
+          <p>Email: <a href="mailto:info@asfamconsultancy.com">info@asfamconsultancy.com</a></p>
         </div>
       </section>
     </div>

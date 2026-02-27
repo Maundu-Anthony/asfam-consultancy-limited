@@ -138,6 +138,38 @@ function Team() {
                 <li>Business Linkages</li>
               </ul>
             </div>
+
+            {/* NEW COMPETENCY AREAS */}
+            <div className="competency-area">
+              <h3>Mental Health</h3>
+              <ul>
+                <li>Mental Wellbeing Programs</li>
+                <li>Resilience & Stress Management</li>
+                <li>Psychological Support Frameworks</li>
+                <li>Workplace Mental Health Awareness</li>
+                <li>Capacity Building for Mental Health</li>
+              </ul>
+            </div>
+            <div className="competency-area">
+              <h3>Mediation & Conflict Resolution</h3>
+              <ul>
+                <li>Professional Mediation Services</li>
+                <li>Dispute Resolution</li>
+                <li>Dialogue Facilitation</li>
+                <li>Organizational Conflict Management</li>
+                <li>Community & Stakeholder Mediation</li>
+              </ul>
+            </div>
+            <div className="competency-area">
+              <h3>Web Development & Digital Solutions</h3>
+              <ul>
+                <li>Responsive Web Design</li>
+                <li>Custom Digital Platforms</li>
+                <li>UI/UX Development</li>
+                <li>Digital Transformation</li>
+                <li>Service Delivery Platforms</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
