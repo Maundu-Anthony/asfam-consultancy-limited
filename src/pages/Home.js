@@ -11,12 +11,12 @@ function Home() {
       icon: '💼'
     },
     {
-      title: 'Trade Facilitation',
+      title: 'Financial Advisory & Credit Facilitation',
       description: 'Supporting access to local, regional, and international markets through trade structuring and market entry strategies.',
       icon: '🌍'
     },
     {
-      title: 'Credit Facilitation',
+      title: 'Credit Rating Facilitation Services',
       description: 'Helping businesses overcome financing barriers by improving risk profiles and facilitating engagement with lenders.',
       icon: '💳'
     },
@@ -55,13 +55,13 @@ function Home() {
             <div className="mission-item">
               <h3>Our Mission</h3>
               <p>
-                To deliver practical financial and business advisory, credit facilitation, trade linkage, training, and mentorship services that connect businesses to the resources, markets, and opportunities they need to unlock their full potential.
+                We offer consultancy and trade facilitation services through linkages whilst nurturing relationships among business community.
               </p>
             </div>
             <div className="mission-item">
               <h3>Our Vision</h3>
               <p>
-                To become the intermediary service provider of choice in connecting diverse pools of financiers and off-takers through a well-vetted, personalized process that addresses specific needs of our clients to unlock their business opportunities and potential.
+                To be the Consultant of Choice in Trade Facilitation and Public Relations.
               </p>
             </div>
           </div>

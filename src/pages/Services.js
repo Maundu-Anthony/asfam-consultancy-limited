@@ -4,63 +4,46 @@ import './Services.css';
 
 function Services() {
   const mainServices = [
-    {
-      title: 'Investment Advisory & Facilitation Services',
-      description: 'We provide integrated resource structuring, valuation, capital allocation, and growth strategies, while facilitating investor engagement, deal origination, due diligence coordination, and transaction closure. Advising on investment mobilization, capital raising, and structuring debt, equity, blended finance, and grant funding from banks, DFIs, private investors, impact investors, and development partners.',
-      icon: '💼'
-    },
-    {
-      title: 'Trade Advisory & Facilitation Services',
-      description: 'Supporting access to local, regional, and international markets through trade structuring, export and import advisory, trade finance facilitation, market entry strategies, and linkage to buyers, suppliers, and trade partners.',
-      icon: '🌍'
-    },
-    {
-      title: 'Business Research & Market Intelligence',
-      description: 'Conducting in-depth business, sectoral, and market research to support investment decisions, market entry, expansion strategies, feasibility studies, and evidence-based planning.',
-      icon: '📊'
-    },
-    {
-      title: 'Credit Rationing & Financing Facilitation Services',
-      description: 'Supporting clients facing credit constraints to access appropriate financing by restructuring credit proposals, improving risk profiles, aligning financial documentation to lender requirements, and facilitating engagement with banks and financing institutions.',
-      icon: '💳'
-    },
-    {
-      title: 'Resource Mobilization Strategy Development',
-      description: 'Designing practical, results-driven strategies that diversify funding sources, strengthen institutional capacity, and enhance financial sustainability.',
-      icon: '💰'
-    },
-    {
-      title: 'Proposal, Business Case & Pitch Development',
-      description: 'Developing high-impact proposals, concept notes, investment memoranda, and pitch decks aligned to investor, donor, financier, and trade partner expectations.',
-      icon: '📝'
-    },
-    {
-      title: 'Bankability & Financial Readiness',
-      description: 'Preparing organizations and projects to meet lender and investor requirements through robust financial models, credit-ready documentation, and risk mitigation frameworks.',
-      icon: '✓'
-    },
-    {
-      title: 'Training & Mentorship (NITA Accredited)',
-      description: 'Delivering certified and customized training programs in resource mobilization, investment readiness, trade development, credit management, financial governance, and institutional strengthening—supported by hands-on mentorship and coaching.',
-      icon: '📚'
-    },
-
-    // NEW CORE SERVICES
-    {
-      title: 'Mental Health Support & Capacity Building',
-      description: 'Providing mental health awareness training, workplace wellbeing programs, resilience building, and psychological support frameworks to strengthen individual and organizational performance.',
-      icon: '🧠'
-    },
-    {
-      title: 'Mediation & Conflict Resolution Services',
-      description: 'Facilitating professional mediation, dispute resolution, and dialogue processes to help organizations, institutions, and communities resolve conflicts effectively and sustainably.',
-      icon: '🤝'
-    },
-    {
-      title: 'Web Development & Digital Solutions',
-      description: 'Designing and developing modern, responsive websites and digital platforms that enhance organizational visibility, digital transformation, and service delivery.',
-      icon: '💻'
-    }
+  {
+  title: 'Investment Advisory & Facilitation Services',
+  description: 'We provide integrated resource structuring, valuation, capital allocation, and growth strategies, while facilitating investor engagement, deal origination, due diligence coordination, and transaction closure. Advising on investment mobilization, capital raising, and structuring debt, equity, blended finance, and grant funding from banks, DFIs, private investors, impact investors, and development partners.',
+  icon: '💼'
+},
+{
+  title: 'Trade Advisory & Facilitation Services',
+  description: 'Supporting access to local, regional, and international markets through trade structuring, export and import advisory, trade finance facilitation, market entry strategies, and linkage to buyers, suppliers, and trade partners.',
+  icon: '🌍'
+},
+{
+  title: 'Training & Mentorship (NITA Accredited)',
+  description: 'Delivering certified and customized training programs in resource mobilization, investment readiness, trade development, credit management, financial governance, and institutional strengthening—supported by hands-on mentorship and coaching.',
+  icon: '📚'
+},
+{
+  title: 'Business Research & Market Intelligence',
+  description: 'Conducting in-depth business, sectoral, and market research to support investment decisions, market entry, expansion strategies, feasibility studies, and evidence-based planning.',
+  icon: '📊'
+},
+{
+  title: 'Credit Rating & Financing Facilitation Services',
+  description: 'Supporting clients facing credit constraints to access appropriate financing by restructuring credit proposals, improving risk profiles, aligning financial documentation to lender requirements, and facilitating engagement with banks and financing institutions.',
+  icon: '💳'
+},
+{
+  title: 'Proposal, Business Case & Pitch Development',
+  description: 'Developing high-impact proposals, concept notes, investment memoranda, and pitch decks aligned to investor, donor, financier, and trade partner expectations.',
+  icon: '📝'
+},
+{
+  title: 'Bankability & Financial Readiness',
+  description: 'Preparing organizations and projects to meet lender and investor requirements through robust financial models, credit-ready documentation, and risk mitigation frameworks.',
+  icon: '✓'
+},
+{
+  title: 'Resource Mobilization Strategy Development',
+  description: 'Designing practical, results-driven strategies that diversify funding sources, strengthen institutional capacity, and enhance financial sustainability.',
+  icon: '💰'
+},
   ];
 
   const trainingPrograms = [
