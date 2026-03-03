@@ -73,6 +73,104 @@
   gap: 2rem;
 }
 
+/* ============================================
+   TEAM MEMBER IMAGE STYLES - AUTO FILL
+   ============================================ */
+
+.team-member {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-top: 5px solid #3282fe;
+}
+
+.team-member:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.member-image {
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-image img {
+  transform: scale(1.03);
+}
+
+.placeholder {
+  font-size: 1.5rem;
+  color: #1e3c72;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+}
+
+.member-info {
+  padding: 1.5rem;
+}
+
+.member-info h3 {
+  color: #1e3c72;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+}
+
+.member-info .title {
+  color: #3282fe;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+}
+
+.member-info .bio {
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.contact-info {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+  color: #4a5568;
+}
+
+.contact-info a {
+  color: #2a5298;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   END OF TEAM MEMBER STYLES
+   ============================================ */
+
 .team-competencies {
   padding: 4rem 1rem;
   background: #f8f9fa;
@@ -229,5 +327,19 @@
   .competencies-grid,
   .culture-grid {
     grid-template-columns: 1fr;
+  }
+
+  .member-image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .member-image {
+    height: 250px;
+  }
+  
+  .placeholder {
+    font-size: 1.2rem;
   }
 }

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -9,6 +10,73 @@ import Contact from './pages/Contact';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    // Aggressive watermark removal
+    const removeWatermarks = () => {
+      // Target all possible watermark sources
+      const elements = document.querySelectorAll('*');
+      
+      elements.forEach(el => {
+        const style = window.getComputedStyle(el);
+        const className = el.className || '';
+        const id = el.id || '';
+        
+        // Check if it's a watermark element
+        if (
+          className.includes('watermark') ||
+          id.includes('watermark') ||
+          className.includes('wm') ||
+          style.backgroundImage.includes('logo') ||
+          style.backgroundImage.includes('watermark')
+        ) {
+          // Don't remove if it's inside the header
+          if (!el.closest('.header') && !el.closest('header') && !el.closest('nav')) {
+            el.style.display = 'none';
+            el.style.visibility = 'hidden';
+            el.style.opacity = '0';
+            el.remove();
+          }
+        }
+        
+        // Remove background images from all elements except header
+        if (!el.closest('.header') && !el.closest('header')) {
+          if (style.backgroundImage !== 'none') {
+            el.style.backgroundImage = 'none';
+          }
+        }
+      });
+      
+      // Specifically target body and root
+      document.body.style.backgroundImage = 'none';
+      const root = document.getElementById('root');
+      if (root) {
+        root.style.backgroundImage = 'none';
+      }
+    };
+
+    // Run immediately and repeatedly
+    removeWatermarks();
+    const interval = setInterval(removeWatermarks, 500);
+    
+    // Also run when DOM changes
+    const observer = new MutationObserver(removeWatermarks);
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    // Stop after 10 seconds (should be enough)
+    setTimeout(() => {
+      clearInterval(interval);
+      observer.disconnect();
+    }, 10000);
+
+    return () => {
+      clearInterval(interval);
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <BrowserRouter>
       <div className="App">

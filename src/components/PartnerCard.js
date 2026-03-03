@@ -7,7 +7,8 @@ function PartnerCard({ name, category, image }) {
       <div className="partner-logo">
         {image ? <img src={image} alt={name} /> : <div className="placeholder">{name}</div>}
       </div>
-      <h4>{name}</h4>
+      {/* Only show h4 if image exists, otherwise name is already in placeholder */}
+      {image && <h4>{name}</h4>}
       <p>{category}</p>
     </div>
   );

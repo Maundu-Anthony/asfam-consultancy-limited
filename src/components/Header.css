@@ -1,11 +1,55 @@
+/* ============================================
+   HEADER WITH WATERMARK PROTECTION
+   ============================================ */
+
 .header {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: #000000 !important;
   color: white;
   padding: 0.75rem 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999999 !important; /* Highest z-index */
+  overflow: hidden;
+  isolation: isolate; /* Creates new stacking context */
+}
+
+/* FORCE REMOVE any background images or watermarks */
+.header,
+.header *,
+.header::before,
+.header::after,
+.header *::before,
+.header *::after {
+  background-image: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+/* SOLID BLACK OVERLAY - Guaranteed to hide watermarks */
+.header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: #000000 !important;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Alternative overlay method */
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000 !important;
+  z-index: -2;
+  pointer-events: none;
 }
 
 .header-container {
@@ -15,10 +59,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 10;
+  background: transparent !important;
 }
 
+/* Logo area - ensure no watermark shows through */
 .logo {
   flex: 1;
+  position: relative;
+  z-index: 100;
+  background: transparent !important;
 }
 
 .logo a {
@@ -27,17 +78,29 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  position: relative;
+  z-index: 101;
+  background: transparent !important;
 }
 
 .logo-image {
   height: 60px;
   width: auto;
   object-fit: contain;
+  position: relative;
+  z-index: 102;
+  background: transparent !important;
+  /* Ensure no SVG filters or masks */
+  filter: none !important;
+  -webkit-filter: none !important;
 }
 
 .logo-text {
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 103;
+  background: transparent !important;
 }
 
 .logo h1 {
@@ -45,6 +108,8 @@
   font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 2px;
+  background: transparent !important;
+  color: white;
 }
 
 .logo .tagline {
@@ -52,16 +117,19 @@
   font-size: 0.8rem;
   font-style: italic;
   color: #e0e7ff;
+  background: transparent !important;
 }
 
 .menu-toggle {
   display: none;
-  background: none;
+  background: none !important;
   border: none;
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
+  position: relative;
+  z-index: 104;
 }
 
 @media (max-width: 768px) {
@@ -74,10 +142,14 @@
   }
 }
 
+/* Navigation - ensure clean background */
 nav {
   display: flex;
   gap: 2rem;
   align-items: center;
+  position: relative;
+  z-index: 105;
+  background: transparent !important;
 }
 
 nav a {
@@ -88,6 +160,8 @@ nav a {
   border-bottom: 3px solid transparent;
   padding-bottom: 0.5rem;
   font-size: 0.95rem;
+  background: transparent !important;
+  position: relative;
 }
 
 nav a:hover {
@@ -98,6 +172,7 @@ nav a:hover {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    background: none !important;
   }
 
   nav {
@@ -108,9 +183,10 @@ nav a:hover {
     right: 0;
     flex-direction: column;
     gap: 0;
-    background: #1e3c72;
+    background: #000000 !important;
     padding: 1rem;
-    border-top: 2px solid #2a5298;
+    border-top: 2px solid #333333;
+    z-index: 1001;
   }
 
   nav.open {
@@ -120,6 +196,7 @@ nav a:hover {
   nav a {
     padding: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent !important;
   }
 
   .header-container {

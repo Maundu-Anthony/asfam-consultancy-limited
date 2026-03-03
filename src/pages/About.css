@@ -3,8 +3,8 @@
 }
 
 .about-header {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  color: white;
+  background: #f8f9fa; /* Light gray background */
+  color: #1e3c72; /* Blue text */
   padding: 5rem 1rem;
   text-align: center;
 }
@@ -13,11 +13,12 @@
   font-size: 3rem;
   margin: 0 0 1.5rem 0;
   font-weight: 800;
+  color: #1e3c72; /* Blue color */
 }
 
 .about-header p {
   font-size: 1.2rem;
-  color: #cbd5e0;
+  color: #1e3c72; /* Blue color */
   margin: 0;
   font-weight: 500;
 }
@@ -124,8 +125,13 @@
   font-size: 0.95rem;
 }
 
+/* ============================================
+   CORE VALUES - UPDATED WITH BLACK FONTS
+   ============================================ */
+
 .core-values {
   padding: 4rem 1rem;
+  background: #f8f9fa;
 }
 
 .core-values h2 {
@@ -157,21 +163,22 @@
 }
 
 .value-card {
-  background: linear-gradient(135deg, #3282fe 0%, #1e3c72 100%);
-  color: white;
+  background: #ffffff;
+  color: #000000;
   padding: 2.5rem 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  border-top: 5px solid #3282fe;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .value-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(50, 130, 254, 0.25);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .value-card h3 {
-  color: #8cc327;
+  color: #1e3c72;
   margin-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: 700;
@@ -181,8 +188,12 @@
   line-height: 1.6;
   margin: 0;
   font-size: 0.95rem;
-  color: #e0e7ff;
+  color: #000000;
 }
+
+/* ============================================
+   END OF CORE VALUES
+   ============================================ */
 
 .competitive-advantages {
   padding: 4rem 1rem;

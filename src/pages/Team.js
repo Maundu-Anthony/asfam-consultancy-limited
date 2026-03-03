@@ -2,35 +2,40 @@ import React from 'react';
 import TeamMember from '../components/TeamMember';
 import './Team.css';
 
+// Import images
+import mwendaImage from '../images/Mwenda Kabeere E. M\'Marete.png';
+import royImage from '../images/Roy Muli.png';
+import saidImage from '../images/Said Athman.png';
+
 function Team() {
   const teamMembers = [
-  {
-    "name": "Mwenda Kabeere E. M'Marete",
-    "title": "Chairman",
-    "bio": "Seasoned Financial-Sector Executive and Governance Professional with over 30 years of deep banking experience across Payments, Banking Services and Oversight, and Financial Markets. Proven expertise in Corporate Governance, Payment Systems Strategy, Financial Markets and Public Debt Management, Risk, Compliance & Operational Resilience, Strategic Leadership & Change Management, and Digital Finance & Financial Inclusion. Prior to joining ASFAM, worked at Central Bank of Kenya (CBK) for 34 years in various capacities including Divisional Deputy Director—Banking, Payment Services Department.",
-    "image": null
-  },
-  {
-    "name": "Said Athman",
-    "title": "Managing Director",
-    "bio": "Results-driven financial services professional with over 15 years' experience in Corporate and Institutional Banking, Financial Consultancy, and Business Development. Expert in Business Management, Strategic Planning, Resource Mobilization, Credit Management, and Structuring. Developed and set up TIER 1 BANKS in East Africa with focus on Market Development, Business Growth, Fund Mobilization, Portfolio Management and Public-Private Partnerships. Leadership defined by Innovation in FINTECH & AI and ability to deliver measurable impact across public and private sector environments.",
-    "image": null
-  },
-  {
-    "name": "Roy Muli",
-    "title": "Director Marketing & Business Development",
-    "bio": "Versatile professional with over 25-30 years of experience in financial sector. Deep expertise spanning Finance, Investment, Fintech, Marketing, Public Relations and Communications, and Resource Mobilization from Donor Funds. Seasoned Corporate Trainer and Part-Time Lecturer mentoring professionals in Corporate Governance and AI-Integrated Leadership Skills. Previously worked for Equity Bank as Pioneer Head of Public Sector Government & Parastatals, Co-operative Bank as Relationship Manager – Institutional Banking, and other leading financial institutions.",
-    "email": "rmuli@asfam.co.ke",
-    "phone": "+254 722 709 200 / +254 785 762 888",
-    "image": null
-  },
-  {
-    "name": "Ms. Eunice Mutava",
-    "title": "Human Resource Consultant & Trainer",
-    "bio": "Career HR and Strategic Planning Specialist with 12 years' experience in providing Human Resource and Administrative Support to Executive Management. Possesses wide experience in all aspects including staff training, recruitment, team leadership, mentorship and coaching. Prior to joining ASFAM, worked for Gulf African Bank as Human Resources Manager in Training and Capacity Building. Brings wide knowledge in administration and talent nurturing.",
-    "image": null
-  }
-];
+    {
+      "name": "Mwenda Kabeere E. M'Marete",
+      "title": "Chairman",
+      "bio": "Seasoned Financial-Sector Executive and Governance Professional with over 30 years of deep banking experience across Payments, Banking Services and Oversight, and Financial Markets. Proven expertise in Corporate Governance, Payment Systems Strategy, Financial Markets and Public Debt Management, Risk, Compliance & Operational Resilience, Strategic Leadership & Change Management, and Digital Finance & Financial Inclusion. Prior to joining ASFAM, worked at Central Bank of Kenya (CBK) for 34 years in various capacities including Divisional Deputy Director—Banking, Payment Services Department.",
+      "image": mwendaImage
+    },
+    {
+      "name": "Said Athman",
+      "title": "Managing Director",
+      "bio": "Results-driven financial services professional with over 15 years' experience in Corporate and Institutional Banking, Financial Consultancy, and Business Development. Expert in Business Management, Strategic Planning, Resource Mobilization, Credit Management, and Structuring. Developed and set up TIER 1 BANKS in East Africa with focus on Market Development, Business Growth, Fund Mobilization, Portfolio Management and Public-Private Partnerships. Leadership defined by Innovation in FINTECH & AI and ability to deliver measurable impact across public and private sector environments.",
+      "image": saidImage
+    },
+    {
+      "name": "Roy Muli",
+      "title": "Director Marketing & Business Development",
+      "bio": "Versatile professional with over 25-30 years of experience in financial sector. Deep expertise spanning Finance, Investment, Fintech, Marketing, Public Relations and Communications, and Resource Mobilization from Donor Funds. Seasoned Corporate Trainer and Part-Time Lecturer mentoring professionals in Corporate Governance and AI-Integrated Leadership Skills. Previously worked for Equity Bank as Pioneer Head of Public Sector Government & Parastatals, Co-operative Bank as Relationship Manager – Institutional Banking, and other leading financial institutions.",
+      "email": "rmuli@asfam.co.ke",
+      "phone": "+254 722 709 200 / +254 785 762 888",
+      "image": royImage
+    },
+    {
+      "name": "Ms. Eunice Mutava",
+      "title": "Human Resource Consultant & Trainer",
+      "bio": "Career HR and Strategic Planning Specialist with 12 years' experience in providing Human Resource and Administrative Support to Executive Management. Possesses wide experience in all aspects including staff training, recruitment, team leadership, mentorship and coaching. Prior to joining ASFAM, worked for Gulf African Bank as Human Resources Manager in Training and Capacity Building. Brings wide knowledge in administration and talent nurturing.",
+      "image": null
+    }
+  ];
 
   return (
     <div className="team">

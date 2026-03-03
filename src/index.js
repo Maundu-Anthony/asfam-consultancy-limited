@@ -4,6 +4,38 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// WATERMARK DESTROYER - Run before React renders
+(function destroyWatermarks() {
+  // Remove any existing watermark elements
+  const watermarkSelectors = [
+    '[class*="watermark"]',
+    '[id*="watermark"]',
+    '[class*="wm"]',
+    '[id*="wm"]',
+    'canvas.watermark',
+    'div[class*="logo"]',
+    'img[src*="logo.svg"]'
+  ];
+  
+  watermarkSelectors.forEach(selector => {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach(el => {
+      if (!el.closest('.header') && !el.closest('header')) {
+        el.remove();
+      }
+    });
+  });
+  
+  // Clear any background images from body and root
+  document.body.style.backgroundImage = 'none';
+  document.body.style.background = '#ffffff';
+  
+  const rootElement = document.getElementById('root');
+  if (rootElement) {
+    rootElement.style.backgroundImage = 'none';
+  }
+})();
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -11,7 +43,4 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
