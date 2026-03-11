@@ -6,7 +6,7 @@ function Services() {
   const mainServices = [
   {
   title: 'Investment Advisory & Facilitation Services',
-  description: 'We provide integrated resource structuring, valuation, capital allocation, and growth strategies, while facilitating investor engagement, deal origination, due diligence coordination, and transaction closure. Advising on investment mobilization, capital raising, and structuring debt, equity, blended finance, and grant funding from banks, DFIs, private investors, impact investors, and development partners.',
+  description: 'We provide integrated resource structuring, valuation, capital structuring, and growth strategies, while facilitating investor engagement, deal origination, due diligence coordination, and transaction closure. Advising on investment mobilization, capital raising, and structuring debt, equity, blended finance, and grant funding from banks, DFIs, private investors, impact investors, and development partners.',
   icon: '💼'
 },
 {
@@ -15,7 +15,7 @@ function Services() {
   icon: '🌍'
 },
 {
-  title: 'Training & Mentorship (NITA Accredited)',
+  title: 'Training & Capacity Building (NITA Accredited)',
   description: 'Delivering certified and customized training programs in resource mobilization, investment readiness, trade development, credit management, financial governance, and institutional strengthening—supported by hands-on mentorship and coaching.',
   icon: '📚'
 },
@@ -25,7 +25,7 @@ function Services() {
   icon: '📊'
 },
 {
-  title: 'Credit Rating & Financing Facilitation Services',
+  title: 'Credit Facilitation Services',
   description: 'Supporting clients facing credit constraints to access appropriate financing by restructuring credit proposals, improving risk profiles, aligning financial documentation to lender requirements, and facilitating engagement with banks and financing institutions.',
   icon: '💳'
 },
@@ -70,18 +70,17 @@ function Services() {
     <div className="services">
       <section className="services-header">
         <div className="container">
-          <h1>Our Services</h1>
-          <p>Turning Vision into Funded, Investable, Trade-Ready, and ESG Sustainable Reality</p>
+          <h1>OUR SERVICES.</h1>
+          <p>
+            Our mission is to unlock capital opportunities, mobilize strategic resources, and deliver high-impact Investment & Trade Advisory, Business Research, Credit Facilitation, Training and Capacity Building, and Mentorship services that enable organizations, enterprises, and projects to expand, scale, compete effectively in markets, and achieve sustainable long-term growth.
+          </p>
         </div>
       </section>
 
       <section className="services-intro">
         <div className="container">
           <p>
-            At ASFAM Consultancy Limited, we unlock capital, mobilize strategic resources, and deliver expert Investment & Trade Advisory, Business Research, Credit Facilitation, Training/Capacity Building, and Mentorship Services that empower organizations, businesses, and projects to grow, upscale, trade competitively, and sustain long-term impact.
-          </p>
-          <p>
-            As a NITA-Accredited Training Provider, we combine advisory excellence, market intelligence, and structured capacity building—ensuring our clients are not only funded, but also positioned to access credit, manage risk, and scale sustainably.
+            As a NITA-accredited training provider, we integrate advisory expertise, market intelligence, and structured capacity-building frameworks to ensure that our clients are not only able to access funding, but are also strategically positioned to secure credit, strengthen risk management, and scale their operations in a sustainable and resilient manner.
           </p>
         </div>
       </section>
@@ -104,30 +103,25 @@ function Services() {
 
       <section className="credit-rating">
         <div className="container">
-          <h2>Credit Rating Facilitation Services</h2>
+          <h2>CREDIT RATING FACILITATION SERVICES.</h2>
           <p className="section-intro">
-            In our quest to provide all-inclusive financial consultancy services, ASFAM has partnered with International Credit Rating Agency (ICRA-LLC) based in UAE. The Agency is one of the fastest-growing credit rating agencies, providing useful information, tools, and confidence in decision-making to mitigate commercial risk.
+            In our quest to provide all-inclusive financial consultancy services, ASFAM have partners with International Credit Rating Agency (ICRA - LLC) based in UAE. The Agency is one of the fastest growing companies providing credit rating and credit recommendation services. It has presences across Europe, Africa and South East Asia. Through our partners ICRA-LLC, we provide useful information, tools and expertise to help our customers take confident decision in mitigating any commercial risk. We are a sole agents mandated by ICRA-LLC, to facilitate issuance of the following services.
           </p>
           <div className="rating-services">
             <div className="rating-service">
-              <h3>◆ Issuer Credit Rating Services</h3>
-              <p>Comprehensive evaluation of credit risk for businesses and organizations</p>
+              <h3>Credit Rating Services</h3>
             </div>
             <div className="rating-service">
-              <h3>◆ Portfolio Rating Services</h3>
-              <p>Assessment of investment portfolios and their credit quality</p>
+              <h3>Portfolio Rating Services.</h3>
             </div>
             <div className="rating-service">
-              <h3>◆ Investor Services</h3>
-              <p>Detailed information and analysis for investment decision-making</p>
+              <h3>Investor Services</h3>
             </div>
             <div className="rating-service">
-              <h3>◆ ESG Rating Services</h3>
-              <p>Environmental, Social, and Governance assessment for sustainable investing</p>
+              <h3>ESG Rating Services.</h3>
             </div>
             <div className="rating-service">
-              <h3>◆ ICRA Scorecard Rating System</h3>
-              <p>Systematic evaluation framework using proven rating methodologies</p>
+              <h3>ICRA Scorecard Rating System</h3>
             </div>
           </div>
         </div>

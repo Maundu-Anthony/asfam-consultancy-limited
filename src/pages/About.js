@@ -7,7 +7,7 @@ function About() {
       <section className="about-header">
         <div className="container">
           <h1>About ASFAM Consultancy</h1>
-          <p>Transformative Financial & Trade Advisory Services for Kenya's Businesses</p>
+          <p>Transformative financial and trade advisory facilitation servives for East Africa</p>
         </div>
       </section>
 
@@ -48,30 +48,32 @@ function About() {
       <section className="core-values">
         <div className="container">
           <h2>Our Core Values</h2>
+          <p>
+            We believe that our client's success is our goal; we serve in Integrity, Professionalism, Passion, Humility, Creativity and innovative way as we consistently maintain high standards of customer service.
+          </p>
+          <p>
+            We understand our client's business needs; we comprehend their business specific needs. We walk through customer experience. We help businesses explore extraordinary opportunities, manage and sustain growth, and maximize revenue through management approaches and technical implementation of business plans.
+          </p>
           <div className="values-grid">
             <div className="value-card">
-              <h3>Integrity</h3>
-              <p>We conduct business with honesty, transparency, and ethical standards in all our dealings.</p>
-            </div>
-            <div className="value-card">
-              <h3>Professionalism</h3>
-              <p>We deliver high standards of service grounded in deep understanding of each client's unique needs.</p>
-            </div>
-            <div className="value-card">
-              <h3>Passion for Excellence</h3>
-              <p>We are committed to delivering measurable results and exceptional value to our clients.</p>
-            </div>
-            <div className="value-card">
-              <h3>Innovation</h3>
+              <h3>1. Creativity and Innovative</h3>
               <p>We encourage inventive thinking and practical solutions to complex business challenges.</p>
             </div>
             <div className="value-card">
-              <h3>Client Success</h3>
+              <h3>2. Humility</h3>
               <p>Our highest priority is serving the interests of our clients and investors - your success defines our destiny.</p>
             </div>
             <div className="value-card">
-              <h3>Trust & Long-Term Focus</h3>
-              <p>We believe trust is earned every day through consistent, reliable, and results-driven service.</p>
+              <h3>3. Integrity</h3>
+              <p>We believe trust is earned through consistent, reliable, and results-driven service. We uphold honesty, transparency, and ethics in all our business dealings.</p>
+            </div>
+            <div className="value-card">
+              <h3>4. Professionalism</h3>
+              <p>We strive to deliver high standards consulting services by understanding of each client's unique needs.</p>
+            </div>
+            <div className="value-card">
+              <h3>5. Passion</h3>
+              <p>Guided by the passion to exceed customer expectations, we commit to delivering measurable results and exceptional value to our clients.</p>
             </div>
           </div>
         </div>

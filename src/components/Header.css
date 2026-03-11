@@ -1,20 +1,20 @@
 /* ============================================
-   HEADER WITH WATERMARK PROTECTION
+   HEADER - WHITE BACKGROUND WITH BLUE TEXT
    ============================================ */
 
 .header {
-  background: #000000 !important;
-  color: white;
+  background: #ffffff !important;
+  color: #1e3c72;
   padding: 0.75rem 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   position: sticky;
   top: 0;
-  z-index: 999999 !important; /* Highest z-index */
+  z-index: 999999 !important;
   overflow: hidden;
-  isolation: isolate; /* Creates new stacking context */
+  isolation: isolate;
 }
 
-/* FORCE REMOVE any background images or watermarks */
+/* Remove watermark protection styles - no longer needed */
 .header,
 .header *,
 .header::before,
@@ -22,11 +22,9 @@
 .header *::before,
 .header *::after {
   background-image: none !important;
-  -webkit-mask-image: none !important;
-  mask-image: none !important;
 }
 
-/* SOLID BLACK OVERLAY - Guaranteed to hide watermarks */
+/* White overlay */
 .header::before {
   content: '';
   position: absolute;
@@ -34,12 +32,11 @@
   left: -50%;
   right: -50%;
   bottom: -50%;
-  background: #000000 !important;
+  background: #ffffff !important;
   z-index: -1;
   pointer-events: none;
 }
 
-/* Alternative overlay method */
 .header::after {
   content: '';
   position: absolute;
@@ -47,7 +44,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #000000 !important;
+  background: #ffffff !important;
   z-index: -2;
   pointer-events: none;
 }
@@ -64,7 +61,6 @@
   background: transparent !important;
 }
 
-/* Logo area - ensure no watermark shows through */
 .logo {
   flex: 1;
   position: relative;
@@ -74,7 +70,7 @@
 
 .logo a {
   text-decoration: none;
-  color: white;
+  color: #1e3c72;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -90,7 +86,6 @@
   position: relative;
   z-index: 102;
   background: transparent !important;
-  /* Ensure no SVG filters or masks */
   filter: none !important;
   -webkit-filter: none !important;
 }
@@ -109,14 +104,14 @@
   font-weight: 700;
   letter-spacing: 2px;
   background: transparent !important;
-  color: white;
+  color: #1e3c72;
 }
 
 .logo .tagline {
   margin: 0;
   font-size: 0.8rem;
   font-style: italic;
-  color: #e0e7ff;
+  color: #3282fe;
   background: transparent !important;
 }
 
@@ -124,7 +119,7 @@
   display: none;
   background: none !important;
   border: none;
-  color: white;
+  color: #1e3c72;
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
@@ -142,7 +137,6 @@
   }
 }
 
-/* Navigation - ensure clean background */
 nav {
   display: flex;
   gap: 2rem;
@@ -153,7 +147,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: #1e3c72;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -165,8 +159,8 @@ nav a {
 }
 
 nav a:hover {
-  color: #8cc327;
-  border-bottom-color: #8cc327;
+  color: #3282fe;
+  border-bottom-color: #3282fe;
 }
 
 @media (max-width: 768px) {
@@ -183,9 +177,9 @@ nav a:hover {
     right: 0;
     flex-direction: column;
     gap: 0;
-    background: #000000 !important;
+    background: #ffffff !important;
     padding: 1rem;
-    border-top: 2px solid #333333;
+    border-top: 2px solid #e0e0e0;
     z-index: 1001;
   }
 
@@ -195,8 +189,9 @@ nav a:hover {
 
   nav a {
     padding: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #e0e0e0;
     background: transparent !important;
+    color: #1e3c72;
   }
 
   .header-container {

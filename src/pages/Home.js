@@ -1,17 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
+import heroBackground from '../images/homepage.jpg';
 import './Home.css';
 
 function Home() {
   const services = [
     {
-      title: 'Investment Advisory',
+      title: 'Investment Advisory & Facilitation Services',
       description: 'Expert guidance in structuring investments, sourcing debt, equity, and blended finance solutions tailored to your business needs.',
       icon: '💼'
     },
     {
-      title: 'Financial Advisory & Credit Facilitation',
+      title: 'Financial Advisory & Credit Facilitation Services',
       description: 'Supporting access to local, regional, and international markets through trade structuring and market entry strategies.',
       icon: '🌍'
     },
@@ -21,7 +22,7 @@ function Home() {
       icon: '💳'
     },
     {
-      title: 'Training & Capacity',
+      title: 'Training & Capacity Building',
       description: 'NITA-accredited training programs in resource mobilization, financial governance, and institutional strengthening.',
       icon: '📚'
     },
@@ -40,6 +41,7 @@ function Home() {
   return (
     <div className="home">
       <section className="hero">
+        <img className="hero-background" src={heroBackground} alt="" aria-hidden="true" />
         <div className="hero-content">
           <h1>Unlock Your Business Potential</h1>
           <p>Transform ideas into funded, investable, trade-ready, and ESG sustainable reality</p>
@@ -48,6 +50,8 @@ function Home() {
         </div>
       </section>
 
+      {/* Rest of your component... */}
+      
       <section className="mission">
         <div className="container">
           <h2>Who We Are</h2>
@@ -89,7 +93,7 @@ function Home() {
 
       <section className="why-choose">
         <div className="container">
-          <h2>Why Choose ASFAM</h2>
+          <h2>Why ASFAM?</h2>
           <div className="reasons-grid">
             <div className="reason">
               <h3>✓ Committed to Your Goals</h3>

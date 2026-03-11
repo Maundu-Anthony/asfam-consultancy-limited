@@ -17,8 +17,7 @@ function Header() {
           <Link to="/">
             <img src={logoImage} alt="ASFAM Logo" className="logo-image" />
             <div className="logo-text">
-              <h1>ASFAM</h1>
-              <p className="tagline">Committed to your goals</p>
+              
             </div>
           </Link>
         </div>

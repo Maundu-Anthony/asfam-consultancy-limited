@@ -127,11 +127,11 @@ function Contact() {
               <h3>🌐 Website</h3>
               <p>
                 <a
-                  href="https://asfam-consultancy-limited.vercel.app/"
+                  href="https://www.asfam.co.ke"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  https://asfam-consultancy-limited.vercel.app/
+                  https://www.asfam.co.ke
                 </a>
               </p>
             </div>

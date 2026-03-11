@@ -2,8 +2,8 @@
   min-height: 100vh;
 }
 
+/* Hero section with clean background image - NO OVERLAY */
 .hero {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   color: white;
   padding: 7rem 1rem;
   text-align: center;
@@ -13,23 +13,22 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
 
-.hero::before {
-  content: '';
+.hero-background {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(50, 130, 254, 0.2) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(139, 195, 39, 0.1) 0%, transparent 50%);
-  pointer-events: none;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
+  max-width: 800px;
 }
 
 .hero-content h1 {
@@ -38,6 +37,7 @@
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
@@ -45,12 +45,14 @@
   margin: 1rem 0;
   line-height: 1.7;
   font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero-subtitle {
   font-size: 1.1rem !important;
-  color: #e0e7ff;
+  color: #ffd700;
   font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .cta-button {
@@ -65,7 +67,7 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   margin-top: 2rem;
   border: 2px solid #d73e33;
-  box-shadow: 0 4px 15px rgba(215, 62, 51, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   letter-spacing: 0.3px;
 }
 
@@ -73,18 +75,20 @@
   background: #b8312a;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(215, 62, 51, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .cta-button.secondary {
   background: white;
   color: #d73e33;
   border-color: #d73e33;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button.secondary:hover {
   background: #d73e33;
   color: white;
+  box-shadow: 0 8px 25px rgba(215, 62, 51, 0.3);
 }
 
 .container {
@@ -152,19 +156,6 @@
   line-height: 1.7;
   margin: 0;
   font-size: 0.95rem;
-}
-
-.mission-item h3 {
-  color: #1e3c72;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-  font-weight: 700;
-}
-
-.mission-item p {
-  color: #4a5568;
-  line-height: 1.7;
-  margin: 0;
 }
 
 .services-preview {
@@ -276,12 +267,13 @@
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   font-weight: 800;
+  color: #3282fe;
 }
 
 .cta-section p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #cbd5e0;
+  color: #3282fe;
   font-weight: 500;
 }
 
