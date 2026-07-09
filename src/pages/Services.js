@@ -46,24 +46,194 @@ function Services() {
 },
   ];
 
-  const trainingPrograms = [
-    'AI Integrated Leadership & Governance for Board of Directors Master Class',
-    'Board Governance, Audit, Risk & Compliance Master Class',
-    'Project Management & Resource Mobilization Master Class',
-    'Digital Banking, Marketing, AI Integrated Marketing, PR, Customer Service & Social Media Marketing Master Class',
-    'FINTECH, REGTECH, Digital Products, Data Protection & Cyber Security Master Class',
-    'Advanced Excel, Power BI & Data Analytics with Python Master Class',
-    'Credit Digitization Security & Non-performing Loans Management Master Class',
-    'Bank Digitization & Alternative Business Channel Master Class',
-    'Business Continuity Planning Master Class',
-    'Public Finance Management & Modern AI Budget Development Master Class',
-    'Sacco Society Digitization & Sacco Management Board Committees Master Class',
-    'Pension Schemes Fiduciary Management Master Class',
-    'Restructuring, Mergers & Acquisitions Master Class',
-    'Records Digitization, Management and Disposal Master Class',
-    'Mental Health Master Class',
-    'Mediation Master Class',
-    'Web Development Master Class'
+  const trainingCategories = [
+    {
+      title: 'A. Corporate Governance, Leadership & ESG Training',
+      items: [
+        'Board AI Augmented Thinking, Board Governance & Board Re-Evaluation, Roles/Effectiveness of Board Committees & ESG Masterclass',
+        'Corporate Governance & Board Competence, Corporate Risk Management for Board Committees Masterclass',
+        'Board Induction/Orientation Workshop, Boardroom Crisis Management & Institutional Risk Masterclass',
+        'Corporate Governance & AI Augmented Thinking, AI Adaptive Leadership for C-Suite Executives Masterclass',
+        'ESG, Sustainability Reporting Compliance & Audit Excellence Masterclass',
+        'Occupational Safety & Health Administration Masterclass',
+        'Digital Transformation Strategy, Leadership & Change Management Masterclass',
+        'Enhancing Strategic Support: Advanced Administrative Competencies for Senior Executives in C-Suite Leadership Enablement Masterclass',
+        'Mastering Operational Excellence: Modern Strategies for Efficiency, Performance & Leadership',
+        'Institutional Change Management & Business Process Re-Engineering',
+        'Legal Leadership & Strategic Advisory Masterclass: Drafting, Advisory, Litigation Strategy, Governance & Boardroom Advisory Excellence',
+        'Strategic Project Life Cycle Management Masterclass: Securing Funding, Agile Implementation, Performance Evaluation & Transparent AI Reporting',
+        'Effective Leadership, Operational Effectiveness & Vital Administrative Competencies for Administrative & Executive Assistants Masterclass',
+        'Modern Business Management Skills: Leadership & Administrative Effectiveness Masterclass',
+        'Data Protection & Cyber Security, Advanced Security, Surveillance & Access Control Masterclass'
+      ]
+    },
+    {
+      title: 'B. AI & Digital Banking',
+      items: [
+        'Augmented Thinking, Adaptive Leadership, Leading with AI Confidence in a Changing World & ESG Masterclass',
+        'Corporate Governance & Adaptive Leadership, AI Augmented Thinking, Board Re-Evaluation & ESG Masterclass for the Board',
+        'Retail & Cross-Border Payment Systems, Governance & Interoperability, AML/CFT Risk Prevention, Blockchain & East African Payments Interoperability Masterclass',
+        'Anti Money Laundering, Counter Terrorism Financing, Blockchain, Cryptocurrency, Central Bank Digital Currency, Token Coins & East African Payments Interoperability Masterclass',
+        'Digital Banking, Integrated Digital Marketing, PR & Data-Driven Customer Service, Portfolio Management, High Net-Worth (HNI) Management Training integrating AI & Social Media Marketing, Data Protection & Cyber Security Masterclass',
+        'Digital Marketing, PR, Data-Driven Decision Making in Customer Service, Innovative Social Media Strategy Training, Chatbots integrating Data Protection & Cyber Security Masterclass',
+        'Credit Digitization, Revolutionizing Digital Customer Service, Security Realization for Non-Performing Loans & Insolvency Management Masterclass, Data Protection & Cyber Security Training',
+        'Strategic Credit Governance: Enhancing Risk Management Analysis & Regulatory Framework Development for Sustainable Credit Operations',
+        'Adaptive Leadership & Governance for C-Suite Executives Masterclass: Emotional Intelligence, Change Management, Performance Management, integrating AI, Data Protection & Cyber Security Training',
+        'Next-Gen Administrative Skills for Supervisors & Admin Assistants for C-Suite Executives: Change Management, Performance Management, Team Efficiency & Productivity, Emotional Intelligence & Personal Development, integrating AI, Data Protection & Cyber Security Training',
+        'Banc-Assurance: Mastering Insurance Operations & Strategy, Navigating Risk Assessment, Underwriting, Claims Handling & Regulatory Compliance Excellence Masterclass'
+      ]
+    },
+    {
+      title: 'C. Data Analytics & Power BI, Data Protection & Cyber Security',
+      items: [
+        'Financial Modelling, Analysis Reporting with AI, Excel Dashboards & Power BI Masterclass',
+        'Advanced Excel, AI & Power Query Training for Routine Tasks & Report Automation Masterclass',
+        'Data Intelligence with AI & Power BI for Effective Data Queries',
+        'Advanced Excel Skills for Finance & Non-Finance Professionals Training: Mastering AI-Driven Analytics, Data Modelling, DAX & Forecasting with Power BI Masterclass',
+        'Power BI Mastery, Automated Financial Reporting & Budget Modelling Masterclass',
+        'Artificial Intelligence in Modern Reporting, Forecasting & Financial Analysis with Power BI Masterclass',
+        'Data Protection & Cyber Security, Advanced Security, Surveillance & Access Control Masterclass'
+      ]
+    },
+    {
+      title: 'D. AI Digital Marketing, PR & Customer Experience (CX) & User Experience (UX)',
+      items: [
+        'The Complete Digital & AI Customer Excellence Masterclass: Navigating PR, Strategy, AI Data-Driven Service Management & Business Uncertainty',
+        'Strategic Customer Experience & Communication Mastery: Leveraging AI, Business Innovation, Ethical Leadership & PR Techniques for Relationship Excellence & Brand Growth Masterclass',
+        'Harnessing Digital Trends for Strategic Transformation: Navigating Innovation, Automation & Competitive Advantage',
+        'New Marketing Techniques for Brand & Revenue Growth in the Digital Era Masterclass integrating ESG Masterclass',
+        'Integrating Digital Marketing Strategies & Techniques, Public Relations & Good Customer Service in the Competitive Digital Age for Brand Communication Officers & Innovative Social Media Strategy Masterclass',
+        'Innovative Social Media Strategy: Transforming Your Social Media Presence with Innovative AI-Driven Strategies & Cutting-Edge Content Creation Masterclass',
+        'Strategic Customer Service: Redefining Customer Obsession, Managing Client Complaints & Expectations, Harnessing Emotional Intelligence for Effective Service Delivery Masterclass',
+        'Revolutionizing Customer Service: AI & the New Age of Customer Obsession Masterclass',
+        'Good Customer Service: Redefining Customer Obsession, Managing Conflict, Digital Marketing Strategy & AI Augmented Leadership in the Competitive Digital Age'
+      ]
+    },
+    {
+      title: 'E. Enterprise Risk Management',
+      items: [
+        'Corporate Risk Management for Board Committees, Risk-Based Audit Planning & Internal Control Evaluation Masterclass',
+        'Risk Management Strategies, Business Continuity Planning & Crisis Management Masterclass',
+        'Integrated Enterprise Risk, Resilience & Governance Masterclass',
+        'The Future of Governance & Emerging Risks, Integrated Risk Management Masterclass',
+        'Risk-Based Audit Planning & Internal Control Evaluation Masterclass',
+        'Forensic Audit & Fraud Investigation in Public Sector Masterclass'
+      ]
+    },
+    {
+      title: 'F. Public Finance Management, Taxation & Procurement',
+      items: [
+        'Public Sector Corporate Governance: Navigating the Complexities of Oversight, Risk Management, Stakeholder Engagement & Future-Ready Financial Reporting in the Public Sector: Integrating IPSAS, AI Integration & Innovative PFM Reforms Masterclass',
+        'Public Sector Financial Transformation: IPSAS Accrual, Highlights, Emerging Insights, Best Practices, Implementation & Case Studies Masterclass',
+        'Public Policy Governance Formulation, Development, Implementation Analysis & Administration Masterclass',
+        'Modern Budget Control, PFM & Tax Compliance Mastery: Navigating the Future of Public Finance Training, Public Sector Budgeting, Accrual-Based Accounting & PFM Governance Masterclass',
+        'PFM Reforms Emerging Trends: Implementing the PFM Act 2012 & Regulations 2015 for Transparency & Accountability, Sustainability Reporting for Public Sector Institutions: Implementing IFRS 1, IFRS 2 & Strengthening Disclosure Governance Masterclass',
+        'Strategic Tax Leadership: Impact of the New Finance Act 2026 Provisions, Emerging Issues in ETIMS, Implementation & Tackling Tax Audit with Modern Approaches Masterclass',
+        'Tax Regime Changes, Implications for Organizations & Addressing Compliance Challenges Masterclass',
+        'Risk-Based Audit Planning, Internal Control Evaluation & Forensic Audit Fraud Investigation in Public Sector Masterclass',
+        'Tax Planning, Implementation Techniques, New Finance Act Provisions & Responding to Tax Audits Masterclass'
+      ]
+    },
+    {
+      title: 'G. Pension Management & Retirement',
+      items: [
+        'Board Trustees Fiduciary Duties, Pension Fund Risks, Administration, Re-Balancing of Assets, Communications & Strategy Masterclass',
+        'Strategic Governance & Leadership for Trustees & Secretariats, Alternative Investments for Pension Schemes, ESG & Climate Impact Investing for Pension Funds Masterclass',
+        'Innovative Tax Strategies in Pension Funds Management Masterclass',
+        'Best Practices in Pension Fund Assets Custody & Regulatory Compliance Masterclass',
+        'Retirement: Pre & Post Retirement Preparation & Modern AI Transition Planning, Retirement Readiness & Personal Finance Management Masterclass',
+        'Empowering Your Next Chapter: Strategic Life Transition Skills for a New Era, Retirement Readiness & Personal Finance Management Masterclass'
+      ]
+    },
+    {
+      title: 'H. Records Management',
+      items: [
+        'Mastering Records Management Standards & Best Practices: Disposal, Data Protection & Compliance for Public & Private Sectors Professionals for C-Suite Executives Masterclass',
+        'Executive Certificate in Records & Information Management, Basic Electronic Records Administration: Structuring, Maintaining & Retrieving Digital Files Masterclass',
+        'Records Automation & Information Systems Management Masterclass'
+      ]
+    },
+    {
+      title: 'I. Project Management, Monitoring & Evaluation, Fund Raising & Resource Mobilization',
+      items: [
+        'Resource Mobilization & Proposal Development Training Masterclass',
+        'Strategic Project Life-Cycle Management: Securing Funding, Agile Implementation, Performance Evaluation & Transparent AI Reporting Masterclass',
+        'Project Life Cycle: Funding, Agile & Transparent Reporting, Schedule, Project Auditing & PPP Scope Creep Management Masterclass',
+        'Contract Management Skills for Modern Professionals: Mastering the Art of Drafting, Negotiation & Compliance',
+        'Grant Management & Fundraising Training: From Fundamentals, Projects & Contract Management Masterclass',
+        'Project Auditing & PPP’s Scope Creep Management & Contract Management Masterclass',
+        'Advanced Project Management Masterclass: Automation, M&E, Hiring Multiple Projects, Reporting, Contract Management & Closure Masterclass',
+        'Monitoring & Evaluation Techniques Training: Improving Project Outcomes Masterclass',
+        'Effective Project Management Essentials Training: Planning, Execution, M&E & Reporting Masterclass'
+      ]
+    },
+    {
+      title: 'J. Health & Safety Management',
+      items: [
+        'Occupational Safety & Health Administration',
+        'Health & Safety Management Training: OSHA Compliance & Best Practices'
+      ]
+    },
+    {
+      title: 'K. SACCOS',
+      items: [
+        'Legal & Regulatory Compliance, Board Effectiveness & Performance, Technology & Digital Transformation in ESG in SACCOSs, Financial Management & Oversight Masterclass',
+        'Roles & Effectiveness of SACCOS Supervisory Committees: Legal Compliance, Interpretation of Financial Reports, Basic Accounting & Basic Auditing & Report Writing Skills Training, IFRS Integrated Reporting & ESG Framework Masterclass',
+        'Public Sector Financial Transformation: IPSAS Accrual, Highlights, Emerging Insights, Best Practices, Implementation & Case Studies Masterclass',
+        'ESG, Sustainability Reporting Compliance & Audit Excellence Masterclass',
+        'Digital Banking, Integrated Digital Marketing, PR & Data-Driven Customer Service, Portfolio Management, High Net-Worth (HNI) Management Training integrating AI & Social Media Marketing, Data Protection & Cyber Security Masterclass',
+        'Credit Digitization, Revolutionizing Digital Customer Service: Security Realization for Non-Performing Loans & Insolvency Management Masterclass, Data Protection & Cyber Security Training',
+        'Strategic Credit Governance: Enhancing Risk Management Analysis & Regulatory Framework Development for Sustainable Credit Operations',
+        'Retail & Cross-Border Payment Systems, Governance & Interoperability, AML/CFT Risk Prevention, Blockchain Technology & East African Payments Interoperability Masterclass; Data Protection & Cyber Security Advanced Security, Surveillance & Access Control Systems Masterclass'
+      ]
+    },
+    {
+      title: 'L. Central Bank Trainings',
+      items: [
+        'Augmented Thinking: Leading with AI Confidence in a Changing World Masterclass',
+        'Retail & Cross-Border Payment Systems, Governance & Interoperability, AML/CFT Risk Prevention, Blockchain Technology & East African Payments Interoperability Masterclass',
+        'Anti Money Laundering, Counter Terrorism Financing, Blockchain Technology, Cryptocurrency, Central Bank Digital Currency, Token Coins & East African Payments Interoperability Masterclass',
+        'Harnessing Digital Trends for Strategic Transformation: Navigating Innovation, Automation & Competitive Advantage Masterclass',
+        'ESG, Sustainability Reporting Compliance, Audit, Inspection & Regulatory Excellence Masterclass',
+        'Occupational Safety & Health Administration Masterclass',
+        'Effective Pension Secretariats Masterclass for Governance Compliance Board Support: Audit, Pensions Compliance & Risk Fiduciary Oversight Masterclass',
+        'Facility Management Masterclass: Managing Building Safety & Security Strategies — Protecting People, Property & Assets',
+        'Anti Money Laundering & Financial Risk Prevention Masterclass'
+      ]
+    },
+    {
+      title: 'M. Insurance Companies Training Programmes',
+      items: [
+        'Banc-Assurance: Digital Operations & Strategy, Risk, Underwriting, Claims, Innovation & AI Future Readiness',
+        'Digital Insurance, Technology & Operational Excellence, Enterprise Risk Management, Innovation & AI Future Readiness',
+        'Augmented Thinking, Adaptive Leadership, Leading with AI Confidence in a Changing World & ESG',
+        'Insurance Industry Transformation, Governance, AI-Driven Marketing, Customer Service & ESG',
+        'Core Insurance Operations, Modern Digital Underwriting, Claims Management, AI, Finance & Investment & Enterprise Risk Management',
+        'Data Protection & Cyber Security, Advanced Security, Surveillance & Access Control Systems',
+        'Financial Modelling, Data Analysis Reporting with AI, Advanced Excel Dashboards & Power BI',
+        'ESG, Sustainability Reporting Compliance & Audit Excellence',
+        'Crisis Management, Business Continuity Planning & Integrated Risk Management Strategies',
+        'Health & Safety Management Training: OSHA Compliance & Best Practices'
+      ]
+    },
+    {
+      title: 'N. Human Resource & Organisational Development',
+      items: [
+        'Environmental Management Practices & Sustainable Solutions (ESG) Masterclass',
+        'Communication Skills Development Training Masterclass: Communication, Emotional Intelligence, PR & Interpersonal Skills',
+        'Competency Profiling & Succession Planning Training for HR Managers',
+        'Performance Management & Employee Appraisal Techniques Masterclass'
+      ]
+    },
+    {
+      title: 'Additional Specialized Trainings',
+      items: [
+        'Counselling Masterclass',
+        'Mediation Masterclass',
+        'Mental Health Masterclass',
+        'Web Development Masterclass'
+      ]
+    }
   ];
 
   return (
@@ -163,13 +333,17 @@ function Services() {
         <div className="container">
           <h2>Specialized Training Programs</h2>
           <p className="section-intro">
-            As a NITA-accredited training provider, we deliver certified, customized training programs including:
+            As a NITA-accredited training provider, we deliver certified, customized training programs across the following specialised areas:
           </p>
-          <div className="programs-grid">
-            {trainingPrograms.map((program, index) => (
-              <div key={index} className="program-item">
-                <span className="program-number">{index + 1}</span>
-                <p>{program}</p>
+          <div className="training-categories">
+            {trainingCategories.map((category, index) => (
+              <div key={index} className="training-category">
+                <h3>{category.title}</h3>
+                <ul>
+                  {category.items.map((item, itemIndex) => (
+                    <li key={`${index}-${itemIndex}`}>{item}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>

@@ -231,48 +231,51 @@
   border-radius: 2px;
 }
 
-.programs-grid {
+.training-categories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
 }
 
-.program-item {
+.training-category {
   background: white;
   padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  transition: all 0.3s ease;
-  border-left: 4px solid #3282fe;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  border-top: 4px solid #3282fe;
 }
 
-.program-item:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transform: translateX(3px);
+.training-category h3 {
+  color: #1e3c72;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
-.program-number {
-  background: #8cc327;
-  color: white;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  flex-shrink: 0;
-  margin-top: 0.2rem;
-}
-
-.program-item p {
-  color: #4a5568;
+.training-category ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.training-category li {
+  color: #4a5568;
   font-size: 0.95rem;
   line-height: 1.6;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.training-category li::before {
+  content: '•';
+  color: #8cc327;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
 }
 
 .partnerships {
@@ -313,7 +316,7 @@
   .services-grid,
   .rating-services,
   .proposition-grid,
-  .programs-grid {
+  .training-categories {
     grid-template-columns: 1fr;
   }
 
