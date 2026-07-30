@@ -1,5 +1,11 @@
 import React from 'react';
 import ServiceCard from '../components/ServiceCard';
+import trainingSectionImage from '../images/Training_and_Capacity_Building_section.png';
+import businessResearchSectionImage from '../images/Business_Research_section.png';
+import resourceMobilizationSectionImage from '../images/Resource_Mobilization_section.png';
+import creditRatingSectionImage from '../images/Credit_Rating_section.png';
+import investmentSectionImage from '../images/Investment_Advisory_&_Facilitation_Services_section.png';
+import financialSectionImage from '../images/Financial_Advisory_&_Credit_Facilitation_Services_section.png';
 import './Services.css';
 
 function Services() {
@@ -258,6 +264,29 @@ function Services() {
       <section className="main-services">
         <div className="container">
           <h2>Core Services</h2>
+          <div className="section-visuals section-visuals-row">
+            <div className="section-image-card section-image-card-large">
+              <img
+                src={investmentSectionImage}
+                alt="Investment advisory and facilitation section illustration"
+                className="section-image investment-services-image"
+              />
+            </div>
+            <div className="section-image-card">
+              <img
+                src={businessResearchSectionImage}
+                alt="Business research section illustration"
+                className="section-image business-research-image"
+              />
+            </div>
+            <div className="section-image-card">
+              <img
+                src={resourceMobilizationSectionImage}
+                alt="Resource mobilization section illustration"
+                className="section-image resource-mobilization-image"
+              />
+            </div>
+          </div>
           <div className="services-grid">
             {mainServices.map((service, index) => (
               <ServiceCard
@@ -268,12 +297,31 @@ function Services() {
               />
             ))}
           </div>
+          <img
+            src={businessResearchSectionImage}
+            alt="Business research section illustration"
+            className="section-image business-research-image"
+          />
+          <img
+            src={resourceMobilizationSectionImage}
+            alt="Resource mobilization section illustration"
+            className="section-image resource-mobilization-image"
+          />
         </div>
       </section>
 
       <section className="credit-rating">
         <div className="container">
           <h2>CREDIT RATING FACILITATION SERVICES.</h2>
+          <div className="section-visuals">
+            <div className="section-image-card credit-image-card">
+              <img
+                src={creditRatingSectionImage}
+                alt="Credit rating section illustration"
+                className="section-image credit-rating-image"
+              />
+            </div>
+          </div>
           <p className="section-intro">
             In our quest to provide all-inclusive financial consultancy services, ASFAM have partners with International Credit Rating Agency (ICRA - LLC) based in UAE. The Agency is one of the fastest growing companies providing credit rating and credit recommendation services. It has presences across Europe, Africa and South East Asia. Through our partners ICRA-LLC, we provide useful information, tools and expertise to help our customers take confident decision in mitigating any commercial risk. We are a sole agents mandated by ICRA-LLC, to facilitate issuance of the following services.
           </p>
@@ -331,20 +379,29 @@ function Services() {
 
       <section className="training-programs">
         <div className="container">
-          <h2>Specialized Training Programs</h2>
+          <h2>flexible, reliable and customized training programs</h2>
+          <div className="section-image-card section-image-card-large">
+            <img
+              src={trainingSectionImage}
+              alt="Training programs section illustration"
+              className="section-image training-services-image"
+            />
+          </div>
           <p className="section-intro">
             As a NITA-accredited training provider, we deliver certified, customized training programs across the following specialised areas:
           </p>
           <div className="training-categories">
             {trainingCategories.map((category, index) => (
-              <div key={index} className="training-category">
-                <h3>{category.title}</h3>
-                <ul>
+              <details key={index} className="training-category">
+                <summary className="training-category-summary">
+                  {category.title}
+                </summary>
+                <ul className="training-category-items">
                   {category.items.map((item, itemIndex) => (
                     <li key={`${index}-${itemIndex}`}>{item}</li>
                   ))}
                 </ul>
-              </div>
+              </details>
             ))}
           </div>
         </div>

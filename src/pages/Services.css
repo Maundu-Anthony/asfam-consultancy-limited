@@ -232,50 +232,124 @@
 }
 
 .training-categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .training-category {
   background: white;
-  padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
   border-top: 4px solid #3282fe;
+  overflow: hidden;
 }
 
-.training-category h3 {
-  color: #1e3c72;
-  font-size: 1.05rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.training-category ul {
+.training-category summary {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
 }
 
-.training-category li {
+.training-category summary::-webkit-details-marker {
+  display: none;
+}
+
+.training-category-summary {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: #f3f6fb;
+  color: #1e3c72;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.training-category-summary:hover,
+.training-category-summary:focus {
+  background: #e8eff8;
+}
+
+.training-category-summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.training-category[open] .training-category-summary::after {
+  content: '−';
+}
+
+.training-category-items {
+  padding: 1rem 1.5rem 1.5rem;
+  background: #fff;
+}
+
+.training-category-items li {
   color: #4a5568;
   font-size: 0.95rem;
   line-height: 1.6;
-  padding-left: 1rem;
+  padding-left: 1.25rem;
   position: relative;
+  margin-bottom: 0.75rem;
 }
 
-.training-category li::before {
+.training-category-items li::before {
   content: '•';
   color: #8cc327;
   position: absolute;
   left: 0;
   top: 0;
   font-weight: bold;
+}
+
+.section-visuals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-image-card {
+  background: white;
+  border-radius: 16px;
+  padding: 0.75rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 980px;
+}
+
+.section-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.investment-services-image,
+.training-services-image {
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .investment-services-image,
+  .business-research-image,
+  .resource-mobilization-image,
+  .credit-rating-image,
+  .training-services-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .training-category-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
 }
 
 .partnerships {

@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import heroBackground from '../images/homepage.jpg';
+import whoWeAreImage from '../images/who_we_are_section.png';
+import coreServicesImage from '../images/core_services_section.png';
 import './Home.css';
 
 function Home() {
@@ -55,6 +57,15 @@ function Home() {
       <section className="mission">
         <div className="container">
           <h2>Who We Are</h2>
+          <div className="section-visuals">
+            <div className="section-image-card section-image-card-large">
+              <img
+                src={whoWeAreImage}
+                alt="Who we are section illustration"
+                className="section-image who-we-are-image"
+              />
+            </div>
+          </div>
           <div className="mission-grid">
             <div className="mission-item">
               <h3>Our Mission</h3>
@@ -75,6 +86,15 @@ function Home() {
       <section className="services-preview">
         <div className="container">
           <h2>Our Core Services</h2>
+          <div className="section-visuals">
+            <div className="section-image-card section-image-card-large">
+              <img
+                src={coreServicesImage}
+                alt="Core services section illustration"
+                className="section-image core-services-image"
+              />
+            </div>
+          </div>
           <div className="services-grid">
             {services.map((service, index) => (
               <ServiceCard
