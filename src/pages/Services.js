@@ -186,6 +186,36 @@ function Services() {
       <section className="main-services">
         <div className="container">
           <h2>Core Services</h2>
+          <div className="section-visuals section-visuals-row">
+            <div className="section-image-card">
+              <img
+                src={investmentSectionImage}
+                alt="Investment advisory and facilitation section illustration"
+                className="section-image investment-services-image"
+              />
+            </div>
+            <div className="section-image-card">
+              <img
+                src={businessResearchSectionImage}
+                alt="Business research section illustration"
+                className="section-image business-research-image"
+              />
+            </div>
+            <div className="section-image-card">
+              <img
+                src={resourceMobilizationSectionImage}
+                alt="Resource mobilization section illustration"
+                className="section-image resource-mobilization-image"
+              />
+            </div>
+            <div className="section-image-card">
+              <img
+                src={trainingSectionImage}
+                alt="Training programs section illustration"
+                className="section-image training-services-image"
+              />
+            </div>
+          </div>
           <div className="services-grid">
             {mainServices.map((service, index) => (
               <ServiceCard
@@ -301,7 +331,7 @@ function Services() {
       <section className="contacts">
         <div className="container">
           <h2>Contacts</h2>
-          <p>Email: <a href="mailto:info@asfamconsultancy.com">info@asfamconsultancy.com</a></p>
+          <p>Email: <a href="mailto:info@asfam.com">info@asfamconsultancy.com</a></p>
         </div>
       </section>
     </div>
