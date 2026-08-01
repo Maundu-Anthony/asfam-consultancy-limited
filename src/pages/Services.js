@@ -5,7 +5,6 @@ import businessResearchSectionImage from '../images/Business_Research_section.pn
 import resourceMobilizationSectionImage from '../images/Resource_Mobilization_section.png';
 import creditRatingSectionImage from '../images/Credit_Rating_section.png';
 import investmentSectionImage from '../images/Investment_Advisory_&_Facilitation_Services_section.png';
-import financialSectionImage from '../images/Financial_Advisory_&_Credit_Facilitation_Services_section.png';
 import './Services.css';
 
 function Services() {
