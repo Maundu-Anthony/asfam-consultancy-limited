@@ -16,7 +16,7 @@ function Team() {
       "image": mwendaImage
     },
     {
-      "name": "SAID ATHMAN MWASAHANI.",
+      "name": "Said Athman Mwasahani.",
       "title": "Managing Director",
       "bio": "Results-driven financial services professional with over 15 years' experience in corporate and institutional banking, financial consultant, and business development. He possess a strong skills in institutional relationship management, strategic planning, resource mobilization, credit management and structuring, financial analysis, sales and marketing, and people management. He has a proven track record in resource mobilization, project funding, portfolio management, and formulation of banking solutions targeting corporate, government, institutional and NGO clients. He is a corporate trainer, leadership coach & mentor, consultant in strategic leadership, business management and operations, customer service, and entrepreneurial development. His professional experience spans roles such as Business Relationship Manager at Equity Bank, Relationship Manager at Co-operative Bank, Senior Manager at Chase Bank and Gulf African Bank, and Managing Director of ASFAM Consultancy Limited. He holds a Bachelor's degree in Economics from the University of Nairobi, complemented by certificates in international trade, financial management, leadership, strategic management, and business facilitation.",
       "image": saidImage
