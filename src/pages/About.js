@@ -16,13 +16,10 @@ function About() {
           <div className="intro-content">
             <h2>Who We Are</h2>
             <p>
-              ASFAM Consultancy Company Limited (ASFAM) is a transformative financial and trade advisory firm dedicated to advancing financial inclusion and business growth across Kenya. We close critical economic gaps by providing strategic financial facilitation, advisory, and trade support that empower enterprises to grow, compete, and thrive.
+              ASFAM Consultancy Company Limited (ASFAM) is a transformative financial and trade advisory and training firm dedicated to advancing financial and business inclusion to its clients across Kenya. We bridge critical economic gaps by providing strategic financial facilitation, advisory, and trade facilitation services that empower enterprises to grow, compete, and thrive.
             </p>
             <p>
-              At ASFAM, we do more than advise. We structure, connect, and facilitate solutions that unlock capital, credit, and market access opportunities. Our work is grounded in a deep understanding of Kenya's financial markets, regulatory environment, and a hands-on, client-focused delivery model.
-            </p>
-            <p>
-              Our mission is to deliver practical advisory, credit facilitation, trade linkage, training, and mentorship services that help businesses access the resources, markets, and opportunities needed to unlock their full potential.
+              Our mission is to deliver practical financial and business advisory, credit facilitation, trade linkage, training, and mentorship services that connect businesses to the resources, markets, and opportunities they need to unlock their full potential.
             </p>
           </div>
         </div>

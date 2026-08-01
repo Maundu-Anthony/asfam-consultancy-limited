@@ -11,17 +11,20 @@
 
 .services-header h1 {
   font-size: 3rem;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1.25rem 0;
   font-weight: 800;
   color: rgba(255, 255, 255, 1);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.04em;
 }
 
 .services-header p {
-  font-size: 1.2rem;
-  color: #cbd5e0;
-  margin: 0;
-  font-weight: 500;
+  font-size: 1.1rem;
+  color: #f8fbff;
+  margin: 0 auto;
+  font-weight: 600;
+  line-height: 1.8;
+  max-width: 920px;
 }
 
 .container {
@@ -36,11 +39,13 @@
 }
 
 .services-intro p {
-  color: #4a5568;
+  color: #0f172a;
   line-height: 1.8;
   font-size: 1rem;
-  margin: 1rem 0;
-  text-align: justify;
+  margin: 1rem auto;
+  text-align: left;
+  max-width: 900px;
+  font-weight: 500;
 }
 
 .main-services {
@@ -103,12 +108,13 @@
 }
 
 .section-intro {
-  color: #555;
+  color: #0f172a;
   line-height: 1.8;
   font-size: 1rem;
   text-align: center;
   margin: 0 auto 2rem;
   max-width: 860px;
+  font-weight: 500;
 }
 
 .rating-services {
@@ -139,10 +145,11 @@
 }
 
 .rating-service p {
-  color: #4a5568;
+  color: #0f172a;
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.6;
+  font-weight: 500;
 }
 
 .value-proposition {
@@ -202,7 +209,8 @@
   line-height: 1.7;
   margin: 0;
   font-size: 0.95rem;
-  color: #cbd5e0;
+  color: #f8fafc;
+  font-weight: 500;
 }
 
 .training-programs {
@@ -288,12 +296,14 @@
 }
 
 .training-category-items li {
-  color: #4a5568;
+  color: #0f172a;
   font-size: 0.95rem;
   line-height: 1.6;
-  padding-left: 1.25rem;
+  padding-left: 0.75rem;
   position: relative;
   margin-bottom: 0.75rem;
+  list-style: none;
+  font-weight: 500;
 }
 
 .training-category-items li::before {
@@ -314,7 +324,10 @@
 }
 
 .section-visuals-row {
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
 }
 
 .section-image-card {
@@ -323,12 +336,10 @@
   padding: 0.75rem;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
   width: 100%;
-  max-width: 420px;
-}
-
-.section-image-card-large {
-  max-width: 720px;
-  flex: 2 1 40rem;
+  max-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .credit-image-card {
@@ -339,7 +350,8 @@
 .section-image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  min-height: 220px;
   border-radius: 14px;
   object-fit: cover;
 }
@@ -368,6 +380,10 @@
     align-items: flex-start;
     gap: 0.75rem;
   }
+
+  .section-visuals-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 .partnerships {
@@ -383,12 +399,13 @@
 }
 
 .partnerships p {
-  color: #555;
+  color: #0f172a;
   line-height: 1.8;
   font-size: 1rem;
   text-align: justify;
   max-width: 900px;
   margin: 0 auto;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {

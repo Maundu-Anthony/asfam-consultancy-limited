@@ -32,6 +32,18 @@
   opacity: 1;
 }
 
+.service-media {
+  margin-bottom: 1rem;
+}
+
+.service-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
 .service-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -46,10 +58,11 @@
 }
 
 .service-card p {
-  color: #4a5568;
+  color: #0f172a;
   line-height: 1.7;
   margin: 0;
   font-size: 0.95rem;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
@@ -63,5 +76,9 @@
 
   .service-icon {
     font-size: 2.5rem;
+  }
+
+  .service-image {
+    height: 150px;
   }
 }
