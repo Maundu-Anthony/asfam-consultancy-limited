@@ -107,7 +107,8 @@
   line-height: 1.8;
   font-size: 1rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+  max-width: 860px;
 }
 
 .rating-services {
@@ -241,7 +242,7 @@
   background: white;
   border-radius: 12px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
-  border-top: 4px solid #3282fe;
+  border: 1px solid #e6edf7;
   overflow: hidden;
 }
 
@@ -309,7 +310,11 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-visuals-row {
+  align-items: flex-start;
 }
 
 .section-image-card {
@@ -318,7 +323,17 @@
   padding: 0.75rem;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
   width: 100%;
-  max-width: 980px;
+  max-width: 420px;
+}
+
+.section-image-card-large {
+  max-width: 720px;
+  flex: 2 1 40rem;
+}
+
+.credit-image-card {
+  max-width: 580px;
+  margin: 0 auto;
 }
 
 .section-image {
@@ -330,7 +345,10 @@
 }
 
 .investment-services-image,
-.training-services-image {
+.training-services-image,
+.business-research-image,
+.resource-mobilization-image,
+.credit-rating-image {
   max-width: 100%;
 }
 
@@ -354,6 +372,7 @@
 
 .partnerships {
   padding: 3rem 1rem;
+  background: white;
 }
 
 .partnerships h2 {
@@ -368,6 +387,8 @@
   line-height: 1.8;
   font-size: 1rem;
   text-align: justify;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {

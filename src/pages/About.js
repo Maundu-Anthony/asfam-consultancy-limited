@@ -7,7 +7,7 @@ function About() {
       <section className="about-header">
         <div className="container">
           <h1>About ASFAM Consultancy</h1>
-          <p>Transformative financial and trade advisory facilitation servives for East Africa</p>
+          <p>Transformative financial and trade advisory facilitation services across East Africa</p>
         </div>
       </section>
 
@@ -16,10 +16,13 @@ function About() {
           <div className="intro-content">
             <h2>Who We Are</h2>
             <p>
-              ASFAM Consultancy Company Limited (ASFAM) is a transformative financial and trade advisory firm dedicated to advancing financial and business inclusion to its clients across Kenya. We bridge critical economic gaps by providing strategic financial facilitation, advisory, and trade facilitation services that empower enterprises to grow, compete, and thrive.
+              ASFAM Consultancy Company Limited (ASFAM) is a transformative financial and trade advisory firm dedicated to advancing financial inclusion and business growth across Kenya. We close critical economic gaps by providing strategic financial facilitation, advisory, and trade support that empower enterprises to grow, compete, and thrive.
             </p>
             <p>
-              At ASFAM Consultancy Company Limited, we go beyond offering advisory services. We structure, connect, and facilitate solutions that unlock capital, credit, and market opportunities. Our work is anchored on our deep understanding of Kenya's financial and private capital markets and a hands-on, client-focused approach.
+              At ASFAM, we do more than advise. We structure, connect, and facilitate solutions that unlock capital, credit, and market access opportunities. Our work is grounded in a deep understanding of Kenya's financial markets, regulatory environment, and a hands-on, client-focused delivery model.
+            </p>
+            <p>
+              Our mission is to deliver practical advisory, credit facilitation, trade linkage, training, and mentorship services that help businesses access the resources, markets, and opportunities needed to unlock their full potential.
             </p>
           </div>
         </div>
@@ -49,10 +52,10 @@ function About() {
         <div className="container">
           <h2>Our Core Values</h2>
           <p>
-            We believe that our client's success is our goal; we serve in Integrity, Professionalism, Passion, Humility, Creativity and innovative way as we consistently maintain high standards of customer service.
+            We believe our clients' success is our success. We operate with integrity, professionalism, passion, humility, creativity, and innovation while maintaining high standards of customer service.
           </p>
           <p>
-            We understand our client's business needs; we comprehend their business specific needs. We walk through customer experience. We help businesses explore extraordinary opportunities, manage and sustain growth, and maximize revenue through management approaches and technical implementation of business plans.
+            We understand each client's specific business needs and deliver a strong customer experience. We help businesses explore strategic opportunities, manage sustainable growth, and maximize revenue through practical planning and execution.
           </p>
           <div className="values-grid">
             <div className="value-card">

@@ -247,7 +247,7 @@ function Services() {
         <div className="container">
           <h1>OUR SERVICES.</h1>
           <p>
-            Our mission is to unlock capital opportunities, mobilize strategic resources, and deliver high-impact Investment & Trade Advisory, Business Research, Credit Facilitation, Training and Capacity Building, and Mentorship services that enable organizations, enterprises, and projects to expand, scale, compete effectively in markets, and achieve sustainable long-term growth.
+            We provide integrated Resource Mobilization, Capital Raising, Investment Advisory, Trade Facilitation, Business Research, Credit Rationing Facilitation, Training, and Mentorship solutions tailored for corporates, SMEs, NGOs, development programs, cooperatives, and public-sector entities.
           </p>
         </div>
       </section>
@@ -296,22 +296,12 @@ function Services() {
               />
             ))}
           </div>
-          <img
-            src={businessResearchSectionImage}
-            alt="Business research section illustration"
-            className="section-image business-research-image"
-          />
-          <img
-            src={resourceMobilizationSectionImage}
-            alt="Resource mobilization section illustration"
-            className="section-image resource-mobilization-image"
-          />
         </div>
       </section>
 
       <section className="credit-rating">
         <div className="container">
-          <h2>CREDIT RATING FACILITATION SERVICES.</h2>
+          <h2>Credit Rating Facilitation Services</h2>
           <div className="section-visuals">
             <div className="section-image-card credit-image-card">
               <img
@@ -322,20 +312,20 @@ function Services() {
             </div>
           </div>
           <p className="section-intro">
-            In our quest to provide all-inclusive financial consultancy services, ASFAM have partners with International Credit Rating Agency (ICRA - LLC) based in UAE. The Agency is one of the fastest growing companies providing credit rating and credit recommendation services. It has presences across Europe, Africa and South East Asia. Through our partners ICRA-LLC, we provide useful information, tools and expertise to help our customers take confident decision in mitigating any commercial risk. We are a sole agents mandated by ICRA-LLC, to facilitate issuance of the following services.
+            ASFAM partners with ICRA LLC, an international credit rating agency based in the UAE with presence across Europe, Africa, and Southeast Asia. Through this partnership, we help clients improve credit readiness, make informed risk decisions, and access rating, portfolio, investor, and ESG services. ASFAM is the sole mandated agent for ICRA LLC in the region.
           </p>
           <div className="rating-services">
             <div className="rating-service">
               <h3>Credit Rating Services</h3>
             </div>
             <div className="rating-service">
-              <h3>Portfolio Rating Services.</h3>
+              <h3>Portfolio Rating Services</h3>
             </div>
             <div className="rating-service">
               <h3>Investor Services</h3>
             </div>
             <div className="rating-service">
-              <h3>ESG Rating Services.</h3>
+              <h3>ESG Rating Services</h3>
             </div>
             <div className="rating-service">
               <h3>ICRA Scorecard Rating System</h3>
@@ -378,7 +368,7 @@ function Services() {
 
       <section className="training-programs">
         <div className="container">
-          <h2>flexible, reliable and customized training programs</h2>
+          <h2>Flexible, Reliable and Customized Training Programs</h2>
           <div className="section-image-card section-image-card-large">
             <img
               src={trainingSectionImage}
@@ -387,7 +377,7 @@ function Services() {
             />
           </div>
           <p className="section-intro">
-            As a NITA-accredited training provider, we deliver certified, customized training programs across the following specialised areas:
+            As a NITA-accredited training provider, we deliver certified, customized programs designed to strengthen capacity in the following specialized areas:
           </p>
           <div className="training-categories">
             {trainingCategories.map((category, index) => (
@@ -410,7 +400,7 @@ function Services() {
         <div className="container">
           <h2>Strategic Partnerships & Stakeholder Engagement</h2>
           <p>
-            We identify, structure, and facilitate partnerships with investors, donors, financiers, trade partners, and ecosystem stakeholders locally and internationally to help our customers take growing companies providing credit rating and credit recommendation services, while ensuring risk mitigation and competitive advantage.
+            We identify, structure, and facilitate partnerships with investors, donors, financiers, trade partners, and ecosystem stakeholders locally and internationally. Our focus is to help clients strengthen credit readiness, secure funding, and improve competitiveness while managing risk.
           </p>
         </div>
       </section>
