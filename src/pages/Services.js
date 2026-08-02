@@ -160,7 +160,7 @@ function Services() {
 
   return (
     <div className="services">
-      <section className="services-header">
+      <section className="page-header">
         <div className="container">
           <h1>OUR SERVICES.</h1>
           <p>

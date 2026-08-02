@@ -80,7 +80,7 @@
 }
 
 .logo-image {
-  height: 60px;
+  height: 90px;
   width: auto;
   object-fit: contain;
   position: relative;
@@ -129,7 +129,7 @@
 
 @media (max-width: 768px) {
   .logo-image {
-    height: 50px;
+    height: 70px;
   }
 
   .logo-text {

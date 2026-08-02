@@ -2,27 +2,6 @@
   min-height: 100vh;
 }
 
-.about-header {
-  background: #f8f9fa; /* Light gray background */
-  color: #1e3c72; /* Blue text */
-  padding: 5rem 1rem;
-  text-align: center;
-}
-
-.about-header h1 {
-  font-size: 3rem;
-  margin: 0 0 1.5rem 0;
-  font-weight: 800;
-  color: #1e3c72; /* Blue color */
-}
-
-.about-header p {
-  font-size: 1.2rem;
-  color: #1e3c72; /* Blue color */
-  margin: 0;
-  font-weight: 500;
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;

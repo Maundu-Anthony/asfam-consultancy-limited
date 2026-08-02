@@ -2,31 +2,6 @@
   min-height: 100vh;
 }
 
-.services-header {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
-  color: #ffffff !important;
-  padding: 6rem 1rem;
-  text-align: center;
-}
-
-.services-header h1 {
-  color: #ffffff !important;
-  font-size: clamp(3rem, 6vw, 4.5rem);
-  font-weight: 800;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 3px 10px rgba(0,0,0,.35);
-}
-
-.services-header p {
-  color: rgba(255,255,255,.96) !important;
-  font-size: 1.2rem;
-  line-height: 1.9;
-  max-width: 900px;
-  margin: 0 auto;
-  font-weight: 400;
-  text-shadow: 0 1px 3px rgba(0,0,0,.3);
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;

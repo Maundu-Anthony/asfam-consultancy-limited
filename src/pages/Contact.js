@@ -75,7 +75,7 @@ function Contact() {
 
   return (
     <div className="contact-page">
-      <section className="contact-header">
+      <section className="page-header">
         <div className="container">
           <h1>Get In Touch</h1>
           <p>Let's discuss how we can help unlock your business potential</p>

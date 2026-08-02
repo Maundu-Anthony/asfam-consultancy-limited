@@ -4,7 +4,7 @@ import './About.css';
 function About() {
   return (
     <div className="about">
-      <section className="about-header">
+      <section className="page-header">
         <div className="container">
           <h1>About ASFAM Consultancy</h1>
           <p>Transformative financial and trade advisory facilitation services across East Africa</p>

@@ -39,7 +39,7 @@ function Team() {
 
   return (
     <div className="team">
-      <section className="team-header">
+      <section className="page-header">
         <div className="container">
           <h1>Our Leadership Team</h1>
           <p>Experienced Professionals Committed to Your Success</p>
