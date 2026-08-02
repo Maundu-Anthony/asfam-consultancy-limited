@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import PartnerCard from '../components/PartnerCard';
 import './Contact.css';
 
+const CONTACT_API_URL = process.env.REACT_APP_CONTACT_API_URL || '/api/contact';
+
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -12,6 +14,7 @@ function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,18 +24,37 @@ function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
-    setTimeout(() => setSubmitted(false), 5000);
+    setError(null);
+
+    try {
+      const response = await fetch(CONTACT_API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        const responseText = await response.text();
+        throw new Error(responseText || 'Unable to send message.');
+      }
+
+      setSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (err) {
+      console.error('Contact form error:', err);
+      setError('Unable to send message right now. Please try again later.');
+    }
   };
 
   const localPartners = [
@@ -147,6 +169,11 @@ function Contact() {
             {submitted && (
               <div className="success-message">
                 ✓ Thank you! Your message has been sent. We'll get back to you soon.
+              </div>
+            )}
+            {error && (
+              <div className="error-message">
+                {error}
               </div>
             )}
             <form onSubmit={handleSubmit} className="contact-form">
