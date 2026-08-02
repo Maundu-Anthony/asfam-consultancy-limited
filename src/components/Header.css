@@ -10,7 +10,7 @@
   position: sticky;
   top: 0;
   z-index: 999999 !important;
-  overflow: hidden;
+  overflow: visible;
   isolation: isolate;
 }
 
@@ -124,7 +124,7 @@
   cursor: pointer;
   padding: 0.5rem;
   position: relative;
-  z-index: 104;
+  z-index: 100006;
 }
 
 @media (max-width: 768px) {
@@ -142,7 +142,7 @@ nav {
   gap: 2rem;
   align-items: center;
   position: relative;
-  z-index: 105;
+  z-index: 100005;
   background: transparent !important;
 }
 
@@ -180,7 +180,7 @@ nav a:hover {
     background: #ffffff !important;
     padding: 1rem;
     border-top: 2px solid #e0e0e0;
-    z-index: 1001;
+    z-index: 100005;
   }
 
   nav.open {

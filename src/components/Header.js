@@ -21,10 +21,18 @@ function Header() {
             </div>
           </Link>
         </div>
-        <button className="menu-toggle" onClick={toggleMenu}>
+        <button
+          type="button"
+          className="menu-toggle"
+          onClick={toggleMenu}
+          onTouchStart={toggleMenu}
+          onMouseDown={(e) => e.preventDefault()}
+          aria-expanded={menuOpen}
+          aria-label="Toggle navigation"
+        >
           ☰
         </button>
-        <nav className={`nav ${menuOpen ? 'open' : ''}`}>
+        <nav className={`nav ${menuOpen ? 'open' : ''}`} role="navigation" data-open={menuOpen}>
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
           <Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link>

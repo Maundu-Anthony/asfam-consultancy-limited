@@ -3,28 +3,28 @@
 }
 
 .services-header {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  color: white;
-  padding: 5rem 1rem;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+  color: #ffffff !important;
+  padding: 6rem 1rem;
   text-align: center;
 }
 
 .services-header h1 {
-  font-size: 3rem;
-  margin: 0 0 1.25rem 0;
+  color: #ffffff !important;
+  font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 800;
-  color: rgba(255, 255, 255, 1);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 3px 10px rgba(0,0,0,.35);
 }
 
 .services-header p {
-  font-size: 1.1rem;
-  color: #f8fbff;
+  color: rgba(255,255,255,.96) !important;
+  font-size: 1.2rem;
+  line-height: 1.9;
+  max-width: 900px;
   margin: 0 auto;
-  font-weight: 600;
-  line-height: 1.8;
-  max-width: 920px;
+  font-weight: 400;
+  text-shadow: 0 1px 3px rgba(0,0,0,.3);
 }
 
 .container {
@@ -185,12 +185,11 @@
 }
 
 .proposition {
-  background: linear-gradient(135deg, #3282fe 0%, #1e3c72 100%);
-  color: white;
+  background: linear-gradient(135deg, #3282fe 0%, #1e3c72 100%) !important;
+  color: #ffffff !important;
   padding: 2.5rem 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
 }
 
 .proposition:hover {
@@ -199,18 +198,18 @@
 }
 
 .proposition h3 {
-  color: #8cc327;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
+  color: #ffffff !important;
+  font-size: 1.45rem;
   font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: none !important;
 }
 
 .proposition p {
-  line-height: 1.7;
-  margin: 0;
-  font-size: 0.95rem;
-  color: #f8fafc;
-  font-weight: 500;
+  color: rgba(255,255,255,.92) !important;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-shadow: none !important;
 }
 
 .training-programs {
