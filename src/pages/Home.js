@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import heroBackground from '../images/homepage.jpg';
 import whoWeAreImage from '../images/who_we_are_section.png';
-import coreServicesImage from '../images/core_services_section.png';
+import investmentSectionImage from '../images/Investment_Advisory_&_Facilitation_Services_section.png';
+import financialAdvisorySectionImage from '../images/Financial_Advisory_&_Credit_Facilitation_Services_section.png';
+import creditRatingSectionImage from '../images/Credit_Rating_section.png';
+import trainingSectionImage from '../images/training_section.png';
+import businessResearchSectionImage from '../images/Business_Research_section.png';
+import resourceMobilizationSectionImage from '../images/Resource_Mobilization_section.png';
 import './Home.css';
 
 function Home() {
@@ -11,32 +16,32 @@ function Home() {
     {
       title: 'Investment Advisory & Facilitation Services',
       description: 'Expert guidance in structuring investments, sourcing debt, equity, and blended finance solutions tailored to your business needs.',
-      icon: '💼'
+      image: investmentSectionImage
     },
     {
       title: 'Financial Advisory & Credit Facilitation Services',
       description: 'Supporting access to local, regional, and international markets through trade structuring and market entry strategies.',
-      icon: '🌍'
+      image: financialAdvisorySectionImage
     },
     {
       title: 'Credit Rating Facilitation Services',
       description: 'Helping businesses overcome financing barriers by improving risk profiles and facilitating engagement with lenders.',
-      icon: '💳'
+      image: creditRatingSectionImage
     },
     {
       title: 'Training & Capacity Building',
       description: 'NITA-accredited training programs in resource mobilization, financial governance, and institutional strengthening.',
-      icon: '📚'
+      image: trainingSectionImage
     },
     {
       title: 'Business Research',
       description: 'In-depth market research and intelligence to support investment decisions and expansion strategies.',
-      icon: '📊'
+      image: businessResearchSectionImage
     },
     {
       title: 'Resource Mobilization',
       description: 'Strategic development of funding sources diversification and financial sustainability enhancement.',
-      icon: '💰'
+      image: resourceMobilizationSectionImage
     }
   ];
 
@@ -86,22 +91,13 @@ function Home() {
       <section className="services-preview">
         <div className="container">
           <h2>Our Core Services</h2>
-          <div className="section-visuals">
-            <div className="section-image-card section-image-card-large">
-              <img
-                src={coreServicesImage}
-                alt="Core services section illustration"
-                className="section-image core-services-image"
-              />
-            </div>
-          </div>
           <div className="services-grid">
             {services.map((service, index) => (
               <ServiceCard
                 key={index}
                 title={service.title}
                 description={service.description}
-                icon={service.icon}
+                image={service.image}
               />
             ))}
           </div>

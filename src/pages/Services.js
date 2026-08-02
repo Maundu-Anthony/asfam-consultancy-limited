@@ -1,11 +1,6 @@
 import React from 'react';
 import ServiceCard from '../components/ServiceCard';
-import trainingSectionImage from '../images/Training_and_Capacity_Building_section.png';
-import businessResearchSectionImage from '../images/Business_Research_section.png';
-import resourceMobilizationSectionImage from '../images/Resource_Mobilization_section.png';
 import creditRatingSectionImage from '../images/Credit_Rating_section.png';
-import investmentSectionImage from '../images/Investment_Advisory_&_Facilitation_Services_section.png';
-import financialAdvisorySectionImage from '../images/Financial_Advisory_&_Credit_Facilitation_Services_section.png';
 import './Services.css';
 
 function Services() {
@@ -13,42 +8,42 @@ function Services() {
   {
   title: 'Investment Advisory & Facilitation Services',
   description: 'We provide integrated resource structuring, valuation, capital structuring, and growth strategies, while facilitating investor engagement, deal origination, due diligence coordination, and transaction closure. Advising on investment mobilization, capital raising, and structuring debt, equity, blended finance, and grant funding from banks, DFIs, private investors, impact investors, and development partners.',
-  image: investmentSectionImage
+  icon: '💼'
 },
 {
   title: 'Trade Advisory & Facilitation Services',
   description: 'Supporting access to local, regional, and international markets through trade structuring, export and import advisory, trade finance facilitation, market entry strategies, and linkage to buyers, suppliers, and trade partners.',
-  image: investmentSectionImage
+  icon: '🌍'
 },
 {
   title: 'Training & Capacity Building (NITA Accredited)',
   description: 'Delivering certified and customized training programs in resource mobilization, investment readiness, trade development, credit management, financial governance, and institutional strengthening—supported by hands-on mentorship and coaching.',
-  image: trainingSectionImage
+  icon: '🎓'
 },
 {
   title: 'Business Research & Market Intelligence',
   description: 'Conducting in-depth business, sectoral, and market research to support investment decisions, market entry, expansion strategies, feasibility studies, and evidence-based planning.',
-  image: businessResearchSectionImage
+  icon: '📊'
 },
 {
   title: 'Financial Advisory and Credit Facilitation Services',
   description: 'Supporting clients facing credit constraints to access appropriate financing by restructuring credit proposals, improving risk profiles, aligning financial documentation to lender requirements, and facilitating engagement with banks and financing institutions.',
-  image: financialAdvisorySectionImage
+  icon: '💳'
 },
 {
   title: 'Proposal, Business Case & Pitch Development',
   description: 'Developing high-impact proposals, concept notes, investment memoranda, and pitch decks aligned to investor, donor, financier, and trade partner expectations.',
-  image: investmentSectionImage
+  icon: '📝'
 },
 {
   title: 'Bankability & Financial Readiness',
   description: 'Preparing organizations and projects to meet lender and investor requirements through robust financial models, credit-ready documentation, and risk mitigation frameworks.',
-  image: financialAdvisorySectionImage
+  icon: '🏦'
 },
 {
   title: 'Resource Mobilization Strategy Development',
   description: 'Designing practical, results-driven strategies that diversify funding sources, strengthen institutional capacity, and enhance financial sustainability.',
-  image: resourceMobilizationSectionImage
+  icon: '🔗'
 },
   ];
 
@@ -186,43 +181,13 @@ function Services() {
       <section className="main-services">
         <div className="container">
           <h2>Core Services</h2>
-          <div className="section-visuals section-visuals-row">
-            <div className="section-image-card">
-              <img
-                src={investmentSectionImage}
-                alt="Investment advisory and facilitation section illustration"
-                className="section-image investment-services-image"
-              />
-            </div>
-            <div className="section-image-card">
-              <img
-                src={businessResearchSectionImage}
-                alt="Business research section illustration"
-                className="section-image business-research-image"
-              />
-            </div>
-            <div className="section-image-card">
-              <img
-                src={resourceMobilizationSectionImage}
-                alt="Resource mobilization section illustration"
-                className="section-image resource-mobilization-image"
-              />
-            </div>
-            <div className="section-image-card">
-              <img
-                src={trainingSectionImage}
-                alt="Training programs section illustration"
-                className="section-image training-services-image"
-              />
-            </div>
-          </div>
           <div className="services-grid">
             {mainServices.map((service, index) => (
               <ServiceCard
                 key={index}
                 title={service.title}
                 description={service.description}
-                image={service.image}
+                icon={service.icon}
               />
             ))}
           </div>
