@@ -26,12 +26,14 @@ import reportWebVitals from './reportWebVitals';
     });
   });
   
-  // Clear any background images from body and root
-  document.body.style.backgroundImage = 'none';
+  // Leave intentional gradients and backgrounds intact; only clear obvious watermark backgrounds
+  if (document.body.style.backgroundImage && document.body.style.backgroundImage.includes('watermark')) {
+    document.body.style.backgroundImage = 'none';
+  }
   document.body.style.background = '#ffffff';
   
   const rootElement = document.getElementById('root');
-  if (rootElement) {
+  if (rootElement && rootElement.style.backgroundImage && rootElement.style.backgroundImage.includes('watermark')) {
     rootElement.style.backgroundImage = 'none';
   }
 })();

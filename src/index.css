@@ -69,13 +69,13 @@ a:hover {
 
 .page-header {
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   padding: 5rem 1rem;
 }
 
 .page-header h1 {
-  color: #fff;
+  color: #ffffff;
   font-size: clamp(2.8rem, 5vw, 4rem);
   font-weight: 800;
   margin-bottom: 1.25rem;
@@ -83,12 +83,27 @@ a:hover {
 }
 
 .page-header p {
-  color: rgba(255,255,255,.95);
+  color: #ffffff;
   font-size: 1.2rem;
   line-height: 1.8;
   max-width: 900px;
   margin: 0 auto;
   font-weight: 500;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 4rem 1rem;
+  }
+
+  .page-header h1 {
+    font-size: clamp(2.2rem, 7vw, 3rem);
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
 }
 
 /* Heading styling */

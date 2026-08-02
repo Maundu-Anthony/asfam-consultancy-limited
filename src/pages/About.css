@@ -299,14 +299,6 @@
 }
 
 @media (max-width: 768px) {
-  .about-header h1 {
-    font-size: 2rem;
-  }
-
-  .about-header p {
-    font-size: 1rem;
-  }
-
   .intro-content h2,
   .company-history h2,
   .core-values h2,

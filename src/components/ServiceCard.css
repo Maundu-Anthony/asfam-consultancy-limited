@@ -1,5 +1,6 @@
 .service-card {
   background: linear-gradient(135deg, #3282fe 0%, #1e3c72 100%);
+  color: #ffffff;
   border-radius: 12px;
   padding: 2.5rem 2rem;
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
@@ -7,6 +8,7 @@
   border-top: 5px solid rgba(255, 255, 255, 0.85);
   position: relative;
   overflow: hidden;
+  opacity: 1;
 }
 
 .service-card::before {
@@ -59,11 +61,12 @@
 }
 
 .service-card p {
-  color: rgba(255, 255, 255, 0.92);
+  color: #ffffff;
   line-height: 1.75;
   margin: 0;
   font-size: 0.98rem;
   font-weight: 500;
+  opacity: 1;
 }
 
 @media (max-width: 768px) {

@@ -289,14 +289,6 @@
 }
 
 @media (max-width: 768px) {
-  .team-header h1 {
-    font-size: 2rem;
-  }
-
-  .team-header p {
-    font-size: 1rem;
-  }
-
   .team-members h2,
   .team-competencies h2,
   .team-culture h2 {

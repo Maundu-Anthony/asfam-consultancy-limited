@@ -38,8 +38,16 @@ function App() {
           }
         }
         
-        // Remove background images from all elements except header
-        if (!el.closest('.header') && !el.closest('header')) {
+        // Only clear background images for watermark-like elements so intentional gradients stay intact
+        const isWatermarkLike = (
+          className.includes('watermark') ||
+          id.includes('watermark') ||
+          className.includes('wm') ||
+          style.backgroundImage.includes('logo') ||
+          style.backgroundImage.includes('watermark')
+        );
+
+        if (isWatermarkLike && !el.closest('.header') && !el.closest('header') && !el.closest('.page-header')) {
           if (style.backgroundImage !== 'none') {
             el.style.backgroundImage = 'none';
           }
