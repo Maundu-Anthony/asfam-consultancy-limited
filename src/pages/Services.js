@@ -1,6 +1,5 @@
 import React from 'react';
 import ServiceCard from '../components/ServiceCard';
-import creditRatingSectionImage from '../images/Credit_Rating_section.png';
 import './Services.css';
 
 function Services() {
@@ -197,15 +196,6 @@ function Services() {
       <section className="credit-rating">
         <div className="container">
           <h2>Credit Rating Facilitation Services</h2>
-          <div className="section-visuals">
-            <div className="section-image-card credit-image-card">
-              <img
-                src={creditRatingSectionImage}
-                alt="Credit rating section illustration"
-                className="section-image credit-rating-image"
-              />
-            </div>
-          </div>
           <p className="section-intro">
             ASFAM partners with ICRA LLC, an international credit rating agency based in the UAE with presence across Europe, Africa, and Southeast Asia. Through this partnership, we help clients improve credit readiness, make informed risk decisions, and access rating, portfolio, investor, and ESG services. ASFAM is the sole mandated agent for ICRA LLC in the region.
           </p>
@@ -296,7 +286,7 @@ function Services() {
       <section className="contacts">
         <div className="container">
           <h2>Contacts</h2>
-          <p>Email: <a href="mailto:info@asfam.com">info@asfamconsultancy.com</a></p>
+          <p>Email: <a href="mailto:info@asfam.co.ke">info@asfam.co.ke</a></p>
         </div>
       </section>
     </div>
