@@ -133,6 +133,22 @@ function Contact() {
                 >
                   Chat on WhatsApp
                 </a>
+
+                <br /><br />
+
+                <a href="tel:+254722709200">
+                  +254 722 709 200
+                </a>
+                <br />
+
+                <a
+                  href="https://wa.me/254722709200"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whatsapp-link"
+                >
+                  Chat on WhatsApp
+                </a>
               </p>
             </div>
 

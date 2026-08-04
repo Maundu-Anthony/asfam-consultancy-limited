@@ -5,6 +5,12 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-top: 5px solid #3282fe;
+  
+  /* EQUAL HEIGHT FIX */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .team-member:hover {
@@ -14,12 +20,13 @@
 
 .member-image {
   width: 100%;
-  height: 300px;
+  height: 260px;
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .member-image img {
@@ -36,32 +43,41 @@
 
 .member-info {
   padding: 1.5rem;
+  
+  /* EQUAL HEIGHT FIX */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.member-text-content {
+  flex-grow: 1;
 }
 
 .member-info h3 {
   color: #1e3c72;
   margin: 0 0 0.5rem 0;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
 }
 
 .member-info .title {
-  color: #ffd700;
+  color: #1b6814; /* Adjusted for better contrast if needed, or keep #ffd700 */
   font-weight: 600;
   margin: 0 0 1rem 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .member-info .bio {
   color: #555;
   line-height: 1.6;
   margin: 1rem 0;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 .contact-info {
   border-top: 1px solid #e0e0e0;
   padding-top: 1rem;
-  margin-top: 1rem;
+  margin-top: auto; /* Forces contact info to stick to the bottom */
 }
 
 .contact-info p {
@@ -77,6 +93,12 @@
 
 .contact-info a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .member-image {
+    height: 220px;
+  }
 }
 
 @media (max-width: 768px) {

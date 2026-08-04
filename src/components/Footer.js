@@ -17,6 +17,7 @@ function Footer() {
             <li><a href="/about">About Us</a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="/team">Team</a></li>
+            <li><a href="/registration">Register with us</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
@@ -38,6 +39,11 @@ function Footer() {
             <strong>Phone:</strong>{' '}
             <a href="tel:+254745661011" className="footer-link">
               +254 745 661 011
+            </a>
+            <br />
+            <strong>Phone:</strong>{' '}
+            <a href="tel:+254722709200" className="footer-link">
+              +254 722 709 200
             </a>
             <br />
             <strong>Website:</strong>{' '}
@@ -73,7 +79,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2026 ASFAM Consultancy Company Limited. All rights reserved.</p>
+        <p>© 2026 ASFAM Consultancy Company Limited. All rights reserved.</p>
         <p>Success is best when it's shared.</p>
       </div>
     </footer>

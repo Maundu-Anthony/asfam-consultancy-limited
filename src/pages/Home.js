@@ -113,7 +113,6 @@ function Home() {
             </div>
           </div>
 
-          {/* New phrase added below Who We Are image & above Mission/Vision */}
           <p className="who-we-are-text" style={{
             textAlign: 'center',
             maxWidth: '900px',
@@ -158,7 +157,10 @@ function Home() {
             ))}
           </div>
           <div className="services-cta">
-            <Link to="/services" className="cta-button secondary">View All Services</Link>
+            <Link to="/services" className="cta-button">
+              View All Services
+              <span className="arrow">➜</span>
+            </Link>
           </div>
         </div>
       </section>

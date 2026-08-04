@@ -24,7 +24,7 @@ function Team() {
     {
       "name": "Roy Muli",
       "title": "Director Marketing & Business Development",
-      "bio": "Versatile professional with over 25-30 years of experience in financial sector. Deep expertise spanning Finance, Investment, Fintech, Marketing, Public Relations and Communications, and Resource Mobilization from Donor Funds. Seasoned Corporate Trainer and Part-Time Lecturer mentoring professionals in Corporate Governance and AI-Integrated Leadership Skills. Previously worked for Equity Bank as Pioneer Head of Public Sector Government & Parastatals, Co-operative Bank as Relationship Manager – Institutional Banking, and other leading financial institutions.",
+      "bio": "Versatile professional with over 30 years of experience in the financial and corporate capacity building sectors. Deep expertise spanning Finance, Investment, Fintech, Marketing, Public Relations and Communications, and Resource Mobilization from Donor Funds. Seasoned Corporate Trainer and Part-Time Lecturer mentoring professionals in Corporate Governance and AI-Integrated Leadership Skills. Previously worked for Equity Bank as Pioneer Head of Public Sector Government & Parastatals, Co-operative Bank as Relationship Manager – Institutional Banking, and other leading financial institutions.",
       "email": "rmuli@asfam.co.ke",
       "phone": "+254 722 709 200 / +254 785 762 888",
       "image": royImage

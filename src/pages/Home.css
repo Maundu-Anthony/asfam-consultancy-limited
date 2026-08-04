@@ -138,19 +138,6 @@
   font-size: 1.4rem;
 }
 
-.cta-button.secondary {
-  background: white;
-  color: #b11212;
-  border-color: #b11212;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.cta-button.secondary:hover {
-  background: #b11212;
-  color: white;
-  box-shadow: 0 8px 25px rgba(177, 18, 18, 0.3);
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -310,6 +297,30 @@
   text-align: center;
 }
 
+/* Red button styling applied to View All Services button */
+.services-cta .cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 2.8rem;
+  background: linear-gradient(180deg, #c31313 0%, #a20d0d 100%);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 20px rgba(162, 13, 13, 0.35);
+  border: 1px solid #8f0a0a;
+}
+
+.services-cta .cta-button:hover {
+  background: linear-gradient(180deg, #a20d0d 0%, #810b0b 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(129, 11, 11, 0.45);
+  color: #fff;
+}
+
 .why-choose {
   padding: 4rem 1rem;
   background: #f8f9fa;
@@ -457,8 +468,8 @@
     grid-template-columns: 1fr;
   }
 
-  .cta-button.secondary {
-    padding: 0.7rem 2rem;
-    font-size: 0.95rem;
+  .services-cta .cta-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
   }
 }
