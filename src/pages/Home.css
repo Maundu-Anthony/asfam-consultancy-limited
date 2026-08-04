@@ -171,7 +171,7 @@
 
 .mission h2 {
   text-align: center;
-  color: #1e3c72; /* Reverted to original blue/dark header */
+  color: #1e3c72;
   font-size: 2.5rem;
   margin-bottom: 3rem;
   position: relative;
@@ -212,14 +212,14 @@
 }
 
 .mission-item h3 {
-  color: #1e3c72; /* Reverted */
+  color: #1e3c72;
   margin-bottom: 1rem;
   font-size: 1.3rem;
   font-weight: 700;
 }
 
 .mission-item p {
-  color: #4a5568; /* Reverted */
+  color: #4a5568;
   line-height: 1.7;
   margin: 0;
   font-size: 0.95rem;
@@ -268,7 +268,7 @@
 
 .services-preview h2 {
   text-align: center;
-  color: #1e3c72; /* Reverted */
+  color: #1e3c72;
   font-size: 2.5rem;
   margin-bottom: 3rem;
   position: relative;
@@ -306,7 +306,7 @@
 
 .why-choose h2 {
   text-align: center;
-  color: #1e3c72; /* Reverted */
+  color: #1e3c72;
   font-size: 2.5rem;
   margin-bottom: 3rem;
   position: relative;
@@ -347,21 +347,21 @@
 }
 
 .reason h3 {
-  color: #1e3c72; /* Reverted */
+  color: #1e3c72;
   margin-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: 700;
 }
 
 .reason p {
-  color: #4a5568; /* Reverted */
+  color: #4a5568;
   line-height: 1.7;
   margin: 0;
   font-size: 0.95rem;
 }
 
 .cta-section {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* Reverted */
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   color: white;
   padding: 5rem 1rem;
   text-align: center;
@@ -381,17 +381,21 @@
   font-weight: 500;
 }
 
+/* UPDATED GET IN TOUCH BUTTON STYLES */
 .cta-section .cta-button {
-  background: transparent;
-  color: #ffffff;
+  background-color: #ffffff !important;
+  color: #1e3c72 !important;
+  font-weight: 700 !important;
   border: 2px solid #ffffff;
-  box-shadow: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 .cta-section .cta-button:hover {
-  background: #ffffff;
-  color: #1e3c72;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: #e2e8f0 !important;
+  color: #1e3c72 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
