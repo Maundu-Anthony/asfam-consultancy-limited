@@ -28,54 +28,106 @@
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 800px;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 3rem 3.5rem;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
-.hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -1px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero-content p {
-  font-size: 1.3rem;
-  margin: 1rem 0;
-  line-height: 1.7;
-  font-weight: 500;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.hero-subtitle {
-  font-size: 1.1rem !important;
-  color: #ffd700;
-  font-style: italic;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.cta-button {
-  display: inline-block;
-  background: #d73e33;
-  color: white;
-  padding: 1rem 3rem;
-  border-radius: 8px;
-  text-decoration: none;
+.hero-top-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  color: #18356d;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-size: 1.15rem;
   font-weight: 700;
-  font-size: 1rem;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  margin-top: 2rem;
-  border: 2px solid #d73e33;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  letter-spacing: 0.3px;
+  margin-bottom: 1rem;
 }
 
-.cta-button:hover {
-  background: #b8312a;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+.hero-top-title .line {
+  width: 60px;
+  height: 3px;
+  background: #d8a600;
+  border-radius: 2px;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 1.3rem;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.business {
+  color: #0f2f67;
+}
+
+.potential {
+  color: #2f8b2e;
+}
+
+.hero-description {
+  font-size: 1.45rem;
+  color: #18356d;
+  font-weight: 500;
+  line-height: 1.8;
+  margin: 0 0 1rem;
+}
+
+.funded,
+.investable,
+.trade,
+.esg {
+  color: #18356d;
+  font-weight: 700;
+}
+
+.hero-company {
+  margin-top: 1.8rem;
+  margin-bottom: 2.4rem;
+  font-size: 1.25rem;
+  color: #24385b;
+  font-weight: 500;
+}
+
+.company-name {
+  color: #c89b0e;
+  font-weight: 700;
+}
+
+.hero .cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 2.8rem;
+  background: #b32727;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: 0.35s;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  border: 2px solid #b32727;
+}
+
+.hero .cta-button:hover {
+  background: #8d1d1d;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  color: #fff;
+}
+
+.arrow {
+  color: #f3c623;
+  font-size: 1.4rem;
 }
 
 .cta-button.secondary {
@@ -304,28 +356,63 @@
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   font-weight: 800;
-  color: #3282fe;
+  color: #ffffff;
 }
 
 .cta-section p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #3282fe;
+  color: #ffffff;
   font-weight: 500;
 }
 
+.cta-section .cta-button {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  box-shadow: none;
+}
+
+.cta-section .cta-button:hover {
+  background: #ffffff;
+  color: #1e3c72;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 @media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1.1rem;
-  }
-
   .hero {
     padding: 4rem 1rem;
     min-height: 400px;
+  }
+
+  .hero-content {
+    padding: 2rem 1.25rem;
+  }
+
+  .hero-title {
+    font-size: 2.6rem;
+  }
+
+  .hero-description {
+    font-size: 1.05rem;
+  }
+
+  .hero-company {
+    font-size: 1rem;
+  }
+
+  .hero-top-title {
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+  }
+
+  .hero-top-title .line {
+    width: 35px;
+  }
+
+  .hero .cta-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
   }
 
   .mission h2,
@@ -341,7 +428,7 @@
     grid-template-columns: 1fr;
   }
 
-  .cta-button {
+  .cta-button.secondary {
     padding: 0.7rem 2rem;
     font-size: 0.95rem;
   }

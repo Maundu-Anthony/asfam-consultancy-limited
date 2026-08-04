@@ -172,7 +172,7 @@ function Services() {
       <section className="services-intro">
         <div className="container">
           <p>
-            As a NITA-accredited training provider, we integrate advisory expertise, market intelligence, and structured capacity-building frameworks to ensure that our clients are not only able to access funding, but are also strategically positioned to secure credit, strengthen risk management, and scale their operations in a sustainable and resilient manner.
+            We integrate advisory expertise, market intelligence, and structured capacity-building frameworks to ensure that our clients are not only able to access funding, but are also strategically positioned to secure credit, strengthen risk management, and scale their operations in a sustainable and resilient manner.
           </p>
         </div>
       </section>
@@ -188,6 +188,29 @@ function Services() {
                 description={service.description}
                 icon={service.icon}
               />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="training-programs">
+        <div className="container">
+          <h2>Flexible, Reliable and Customized Training Programs</h2>
+          <p className="section-intro">
+            As a NITA-accredited training provider, we deliver certified, customized programs designed to strengthen capacity in the following specialized areas:
+          </p>
+          <div className="training-categories">
+            {trainingCategories.map((category, index) => (
+              <details key={index} className="training-category">
+                <summary className="training-category-summary">
+                  {category.title}
+                </summary>
+                <ul className="training-category-items">
+                  {category.items.map((item, itemIndex) => (
+                    <li key={`${index}-${itemIndex}`}>{item}</li>
+                  ))}
+                </ul>
+              </details>
             ))}
           </div>
         </div>
@@ -247,29 +270,6 @@ function Services() {
               <h3>Integrated Approach</h3>
               <p>Combining advisory, research, facilitation, and mentorship for comprehensive solutions.</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="training-programs">
-        <div className="container">
-          <h2>Flexible, Reliable and Customized Training Programs</h2>
-          <p className="section-intro">
-            As a NITA-accredited training provider, we deliver certified, customized programs designed to strengthen capacity in the following specialized areas:
-          </p>
-          <div className="training-categories">
-            {trainingCategories.map((category, index) => (
-              <details key={index} className="training-category">
-                <summary className="training-category-summary">
-                  {category.title}
-                </summary>
-                <ul className="training-category-items">
-                  {category.items.map((item, itemIndex) => (
-                    <li key={`${index}-${itemIndex}`}>{item}</li>
-                  ))}
-                </ul>
-              </details>
-            ))}
           </div>
         </div>
       </section>

@@ -50,10 +50,38 @@ function Home() {
       <section className="hero">
         <img className="hero-background" src={heroBackground} alt="" aria-hidden="true" />
         <div className="hero-content">
-          <h1>Unlock Your Business Potential</h1>
-          <p>Transform ideas into funded, investable, trade-ready, and ESG sustainable reality</p>
-          <p className="hero-subtitle">ASFAM Consultancy - Financial & Trade Advisory Excellence</p>
-          <Link to="/services" className="cta-button">Explore Our Services</Link>
+          <p className="hero-top-title">
+            <span className="line"></span>
+            Unlock Your
+            <span className="line"></span>
+          </p>
+
+          <h1 className="hero-title">
+            <span className="business">Business</span>{' '}
+            <span className="potential">Potential</span>
+          </h1>
+
+          <p className="hero-description">
+            Transform ideas into
+            <span className="funded"> funded</span>,
+            <span className="investable"> investable</span>,
+            <span className="trade"> trade-ready</span>,
+            and
+            <span className="esg"> ESG sustainable</span>
+            reality
+          </p>
+
+          <p className="hero-company">
+            <span className="company-name">
+              ASFAM Consultancy
+            </span>{' '}
+            – Financial &amp; Trade Advisory Excellence
+          </p>
+
+          <Link to="/services" className="cta-button">
+            Explore Our Services
+            <span className="arrow"> →</span>
+          </Link>
         </div>
       </section>
 
