@@ -412,3 +412,20 @@
     font-size: 0.95rem;
   }
 }
+/* REGISTRATION BANNER IMAGE BELOW FORM */
+.registration-image-container {
+  margin-top: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.registration-banner-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+  display: block;
+}

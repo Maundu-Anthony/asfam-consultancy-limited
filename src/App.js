@@ -7,13 +7,13 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
+import Registration from './pages/Registration';
 import './App.css';
 
 function App() {
   useEffect(() => {
     // Aggressive watermark removal
     const removeWatermarks = () => {
-      // Target all possible watermark sources
       const elements = document.querySelectorAll('*');
       
       elements.forEach(el => {
@@ -21,7 +21,6 @@ function App() {
         const className = el.className || '';
         const id = el.id || '';
         
-        // Check if it's a watermark element
         if (
           className.includes('watermark') ||
           id.includes('watermark') ||
@@ -29,7 +28,6 @@ function App() {
           style.backgroundImage.includes('logo') ||
           style.backgroundImage.includes('watermark')
         ) {
-          // Don't remove if it's inside the header
           if (!el.closest('.header') && !el.closest('header') && !el.closest('nav')) {
             el.style.display = 'none';
             el.style.visibility = 'hidden';
@@ -38,7 +36,6 @@ function App() {
           }
         }
         
-        // Only clear background images for watermark-like elements so intentional gradients stay intact
         const isWatermarkLike = (
           className.includes('watermark') ||
           id.includes('watermark') ||
@@ -54,7 +51,6 @@ function App() {
         }
       });
       
-      // Specifically target body and root
       document.body.style.backgroundImage = 'none';
       const root = document.getElementById('root');
       if (root) {
@@ -62,18 +58,15 @@ function App() {
       }
     };
 
-    // Run immediately and repeatedly
     removeWatermarks();
     const interval = setInterval(removeWatermarks, 500);
     
-    // Also run when DOM changes
     const observer = new MutationObserver(removeWatermarks);
     observer.observe(document.body, {
       childList: true,
       subtree: true
     });
 
-    // Stop after 10 seconds (should be enough)
     setTimeout(() => {
       clearInterval(interval);
       observer.disconnect();
@@ -96,6 +89,10 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/team" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
+            {/* Handled casing variations for registration */}
+            <Route path="/registration" element={<Registration />} />
+            <Route path="/Registration" element={<Registration />} />
+            <Route path="/register" element={<Registration />} />
           </Routes>
         </main>
         <Footer />

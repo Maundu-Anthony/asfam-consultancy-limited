@@ -62,14 +62,14 @@ function Home() {
           </h1>
 
           <p className="hero-description">
-            Transform ideas into
-            <span className="funded"> funded</span>,
-            <span className="investable"> investable</span>,
-            <span className="trade"> trade-ready</span>,
-            and
-            <span className="esg"> ESG sustainable</span>
-            reality
-          </p>
+  Transform ideas into
+  <span className="funded"> funded</span>,
+  <span className="investable"> investable</span>,
+  <span className="trade"> trade-ready</span>,
+  and
+  <span className="esg"> ESG sustainable</span>{' '}
+  reality
+</p>
 
           <p className="hero-company">
             <span className="company-line"></span>

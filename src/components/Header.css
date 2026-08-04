@@ -50,9 +50,9 @@
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: 1400px; /* Expanded max-width so links go further right */
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem; /* Adjusted side padding for clean edge gaps */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,7 +62,7 @@
 }
 
 .logo {
-  flex: 1;
+  flex: 0 0 auto; /* Prevents logo from growing/taking unnecessary space */
   position: relative;
   z-index: 100;
   background: transparent !important;
@@ -127,20 +127,11 @@
   z-index: 100006;
 }
 
-@media (max-width: 768px) {
-  .logo-image {
-    height: 70px;
-  }
-
-  .logo-text {
-    display: none;
-  }
-}
-
 nav {
   display: flex;
   gap: 2rem;
   align-items: center;
+  margin-left: auto; /* Pushes navigation links all the way to the far right */
   position: relative;
   z-index: 100005;
   background: transparent !important;
@@ -164,9 +155,22 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+  .logo-image {
+    height: 70px;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
   .menu-toggle {
     display: block;
     background: none !important;
+  }
+
+  .header-container {
+    padding: 0 1rem;
+    flex-direction: row; /* Keeps mobile layout aligned nicely */
   }
 
   nav {
@@ -181,6 +185,7 @@ nav a:hover {
     padding: 1rem;
     border-top: 2px solid #e0e0e0;
     z-index: 100005;
+    margin-left: 0;
   }
 
   nav.open {
@@ -192,10 +197,6 @@ nav a:hover {
     border-bottom: 1px solid #e0e0e0;
     background: transparent !important;
     color: #1e3c72;
-  }
-
-  .header-container {
-    flex-direction: column;
   }
 
   .logo h1 {
