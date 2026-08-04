@@ -15,10 +15,12 @@ function Header() {
       className="header" 
       style={{ 
         width: '100%', 
-        padding: '0.5rem 0',
+        padding: '0.25rem 0',
         display: 'flex',
         alignItems: 'center',
-        minHeight: '112px'
+        height: '60px',
+        position: 'sticky',
+        top: 0
       }}
     >
       <div 
@@ -30,17 +32,35 @@ function Header() {
           width: '100%',
           maxWidth: '100%',
           padding: '0 2rem',
-          boxSizing: 'border-box'
+          boxSizing: 'border-box',
+          position: 'relative',
+          height: '100%'
         }}
       >
-        {/* LOGO - Left aligned & enlarged by 60% */}
-        <div className="logo" style={{ flex: '0 0 auto', display: 'flex', alignItems: 'center' }}>
+        {/* LOGO - Reduced by 5% (100px) */}
+        <div 
+          className="logo" 
+          style={{ 
+            flex: '0 0 auto', 
+            display: 'flex', 
+            alignItems: 'center',
+            height: '100%',
+            position: 'relative'
+          }}
+        >
           <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
             <img 
               src={logoImage} 
               alt="ASFAM Logo" 
               className="logo-image" 
-              style={{ height: '112px', width: 'auto', objectFit: 'contain' }} 
+              style={{ 
+                height: '100px', /* Reduced 5% from 105px */
+                width: 'auto', 
+                objectFit: 'contain',
+                position: 'absolute',
+                top: '50%',
+                transform: 'translateY(-40%)'
+              }} 
             />
           </Link>
         </div>
@@ -58,12 +78,17 @@ function Header() {
           ☰
         </button>
 
-        {/* NAV LINKS - Vertically centered and right aligned */}
+        {/* NAV LINKS */}
         <nav 
           className={`nav ${menuOpen ? 'open' : ''}`} 
           role="navigation" 
           data-open={menuOpen}
-          style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}
+          style={{ 
+            marginLeft: 'auto', 
+            display: 'flex', 
+            alignItems: 'center',
+            transform: 'translateY(60%)'
+          }}
         >
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>

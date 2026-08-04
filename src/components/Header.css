@@ -5,16 +5,15 @@
 .header {
   background: #ffffff !important;
   color: #1e3c72;
-  padding: 0.75rem 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   position: sticky;
   top: 0;
   z-index: 999999 !important;
-  overflow: visible;
+  overflow: visible !important; /* Critical to prevent logo clipping */
   isolation: isolate;
 }
 
-/* Remove watermark protection styles - no longer needed */
+/* Remove watermark protection styles */
 .header,
 .header *,
 .header::before,
@@ -24,7 +23,7 @@
   background-image: none !important;
 }
 
-/* White overlay */
+/* White overlays */
 .header::before {
   content: '';
   position: absolute;
@@ -50,19 +49,13 @@
 }
 
 .header-container {
-  max-width: 1400px; /* Expanded max-width so links go further right */
   margin: 0 auto;
-  padding: 0 2rem; /* Adjusted side padding for clean edge gaps */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
   z-index: 10;
   background: transparent !important;
 }
 
 .logo {
-  flex: 0 0 auto; /* Prevents logo from growing/taking unnecessary space */
   position: relative;
   z-index: 100;
   background: transparent !important;
@@ -71,48 +64,17 @@
 .logo a {
   text-decoration: none;
   color: #1e3c72;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
   position: relative;
   z-index: 101;
   background: transparent !important;
 }
 
 .logo-image {
-  height: 90px;
-  width: auto;
-  object-fit: contain;
   position: relative;
   z-index: 102;
   background: transparent !important;
   filter: none !important;
   -webkit-filter: none !important;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 103;
-  background: transparent !important;
-}
-
-.logo h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  background: transparent !important;
-  color: #1e3c72;
-}
-
-.logo .tagline {
-  margin: 0;
-  font-size: 0.8rem;
-  font-style: italic;
-  color: #3282fe;
-  background: transparent !important;
 }
 
 .menu-toggle {
@@ -128,10 +90,7 @@
 }
 
 nav {
-  display: flex;
   gap: 2rem;
-  align-items: center;
-  margin-left: auto; /* Pushes navigation links all the way to the far right */
   position: relative;
   z-index: 100005;
   background: transparent !important;
@@ -143,7 +102,7 @@ nav a {
   font-weight: 600;
   transition: all 0.3s ease;
   border-bottom: 3px solid transparent;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.2rem;
   font-size: 0.95rem;
   background: transparent !important;
   position: relative;
@@ -154,27 +113,15 @@ nav a:hover {
   border-bottom-color: #3282fe;
 }
 
+/* RESPONSIVE MOBILE NAVIGATION */
 @media (max-width: 768px) {
-  .logo-image {
-    height: 70px;
-  }
-
-  .logo-text {
-    display: none;
-  }
-
   .menu-toggle {
     display: block;
     background: none !important;
   }
 
-  .header-container {
-    padding: 0 1rem;
-    flex-direction: row; /* Keeps mobile layout aligned nicely */
-  }
-
   nav {
-    display: none;
+    display: none !important;
     position: absolute;
     top: 100%;
     left: 0;
@@ -185,11 +132,10 @@ nav a:hover {
     padding: 1rem;
     border-top: 2px solid #e0e0e0;
     z-index: 100005;
-    margin-left: 0;
   }
 
   nav.open {
-    display: flex;
+    display: flex !important;
   }
 
   nav a {
@@ -197,9 +143,7 @@ nav a:hover {
     border-bottom: 1px solid #e0e0e0;
     background: transparent !important;
     color: #1e3c72;
-  }
-
-  .logo h1 {
-    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
   }
 }
