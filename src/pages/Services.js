@@ -1,48 +1,56 @@
 import React from 'react';
 import ServiceCard from '../components/ServiceCard';
 import './Services.css';
+import investmentImg from '../images/services-images/Investment_Advisory_Services.jpg';
+import tradeImg from '../images/services-images/Trade_Advisory_Services.jpeg';
+import trainingImg from '../images/services-images/Training_and_Capacity_Building_Services.png';
+import researchImg from '../images/services-images/Business_Research_and_Market_Intelligence_Services.jpeg';
+import financialImg from '../images/services-images/Financial_Advisory_and_Credit_Facilitation_Services.jpeg';
+import proposalImg from '../images/services-images/Proposal_Business_Case_&_Pitch_Development_Services.jpg';
+import bankabilityImg from '../images/services-images/Bankability_&_Financial_Readiness_Services.jpg';
+import resourceImg from '../images/services-images/Resource_Mobilization_Services.png';
 
 function Services() {
   const mainServices = [
   {
   title: 'Investment Advisory & Facilitation Services',
   description: 'We provide integrated resource structuring, valuation, capital structuring, and growth strategies, while facilitating investor engagement, deal origination, due diligence coordination, and transaction closure. Advising on investment mobilization, capital raising, and structuring debt, equity, blended finance, and grant funding from banks, DFIs, private investors, impact investors, and development partners.',
-  icon: '💼'
+  image: investmentImg,
 },
 {
   title: 'Trade Advisory & Facilitation Services',
   description: 'Supporting access to local, regional, and international markets through trade structuring, export and import advisory, trade finance facilitation, market entry strategies, and linkage to buyers, suppliers, and trade partners.',
-  icon: '🌍'
+  image: tradeImg,
 },
 {
   title: 'Training & Capacity Building (NITA Accredited)',
   description: 'Delivering certified and customized training programs in resource mobilization, investment readiness, trade development, credit management, financial governance, and institutional strengthening—supported by hands-on mentorship and coaching.',
-  icon: '🎓'
+  image: trainingImg,
 },
 {
   title: 'Business Research & Market Intelligence',
   description: 'Conducting in-depth business, sectoral, and market research to support investment decisions, market entry, expansion strategies, feasibility studies, and evidence-based planning.',
-  icon: '📊'
+  image: researchImg,
 },
 {
   title: 'Financial Advisory and Credit Facilitation Services',
   description: 'Supporting clients facing credit constraints to access appropriate financing by restructuring credit proposals, improving risk profiles, aligning financial documentation to lender requirements, and facilitating engagement with banks and financing institutions.',
-  icon: '💳'
+  image: financialImg,
 },
 {
   title: 'Proposal, Business Case & Pitch Development',
   description: 'Developing high-impact proposals, concept notes, investment memoranda, and pitch decks aligned to investor, donor, financier, and trade partner expectations.',
-  icon: '📝'
+  image: proposalImg,
 },
 {
   title: 'Bankability & Financial Readiness',
   description: 'Preparing organizations and projects to meet lender and investor requirements through robust financial models, credit-ready documentation, and risk mitigation frameworks.',
-  icon: '🏦'
+  image: bankabilityImg,
 },
 {
   title: 'Resource Mobilization Strategy Development',
   description: 'Designing practical, results-driven strategies that diversify funding sources, strengthen institutional capacity, and enhance financial sustainability.',
-  icon: '🔗'
+  image: resourceImg,
 },
   ];
 
@@ -186,7 +194,7 @@ function Services() {
                 key={index}
                 title={service.title}
                 description={service.description}
-                icon={service.icon}
+                image={service.image}
               />
             ))}
           </div>
