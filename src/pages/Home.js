@@ -16,32 +16,38 @@ function Home() {
     {
       title: 'Investment Advisory & Facilitation Services',
       description: 'Expert guidance in structuring investments, sourcing debt, equity, and blended finance solutions tailored to your business needs.',
-      image: investmentSectionImage
+      image: investmentSectionImage,
+      link: '/services#investment-advisory'
     },
     {
       title: 'Financial Advisory & Credit Facilitation Services',
       description: 'Supporting access to local, regional, and international markets through trade structuring and market entry strategies.',
-      image: financialAdvisorySectionImage
+      image: financialAdvisorySectionImage,
+      link: '/services#financial-advisory'
     },
     {
       title: 'Credit Rating Facilitation Services',
       description: 'Helping businesses overcome financing barriers by improving risk profiles and facilitating engagement with lenders.',
-      image: creditRatingSectionImage
+      image: creditRatingSectionImage,
+      link: '/services#credit-rating'
     },
     {
-      title: 'Training & Capacity Building',
+      title: 'Flexible, Reliable and Customized Training Programs',
       description: 'NITA-accredited training programs in resource mobilization, financial governance, and institutional strengthening.',
-      image: trainingSectionImage
+      image: trainingSectionImage,
+      link: '/services#customized-training'
     },
     {
       title: 'Business Research',
       description: 'In-depth market research and intelligence to support investment decisions and expansion strategies.',
-      image: businessResearchSectionImage
+      image: businessResearchSectionImage,
+      link: '/services#business-research'
     },
     {
       title: 'Resource Mobilization',
       description: 'Strategic development of funding sources diversification and financial sustainability enhancement.',
-      image: resourceMobilizationSectionImage
+      image: resourceMobilizationSectionImage,
+      link: '/services#resource-mobilization'
     }
   ];
 
@@ -62,14 +68,14 @@ function Home() {
           </h1>
 
           <p className="hero-description">
-  Transform ideas into
-  <span className="funded"> funded</span>,
-  <span className="investable"> investable</span>,
-  <span className="trade"> trade-ready</span>,
-  and
-  <span className="esg"> ESG sustainable</span>{' '}
-  reality
-</p>
+            Transform ideas into
+            <span className="funded"> funded</span>,
+            <span className="investable"> investable</span>,
+            <span className="trade"> trade-ready</span>,
+            and
+            <span className="esg"> ESG sustainable</span>{' '}
+            reality
+          </p>
 
           <p className="hero-company">
             <span className="company-line"></span>
@@ -142,12 +148,13 @@ function Home() {
           <h2>Our Core Services</h2>
           <div className="services-grid">
             {services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                title={service.title}
-                description={service.description}
-                image={service.image}
-              />
+              <Link to={service.link} key={index} className="service-card-link">
+                <ServiceCard
+                  title={service.title}
+                  description={service.description}
+                  image={service.image}
+                />
+              </Link>
             ))}
           </div>
           <div className="services-cta">

@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import './Services.css';
+
 import investmentImg from '../images/services-images/Investment_Advisory_Services.jpg';
 import tradeImg from '../images/services-images/Trade_Advisory_Services.jpeg';
 import trainingImg from '../images/services-images/Training_and_Capacity_Building_Services.png';
@@ -11,43 +13,67 @@ import bankabilityImg from '../images/services-images/Bankability_&_Financial_Re
 import resourceImg from '../images/services-images/Resource_Mobilization_Services.png';
 
 function Services() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 150);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [hash]);
+
   const mainServices = [
     {
+      id: 'investment-advisory',
       title: 'Investment Advisory & Facilitation Services',
       description: 'We provide integrated resource structuring, valuation, capital structuring, and growth strategies, while facilitating investor engagement, deal origination, due diligence coordination, and transaction closure. Advising on investment mobilization, capital raising, and structuring debt, equity, blended finance, and grant funding from banks, DFIs, private investors, impact investors, and development partners.',
       image: investmentImg,
     },
     {
+      id: 'trade-advisory',
       title: 'Trade Advisory & Facilitation Services',
       description: 'Supporting access to local, regional, and international markets through trade structuring, export and import advisory, trade finance facilitation, market entry strategies, and linkage to buyers, suppliers, and trade partners.',
       image: tradeImg,
     },
     {
+      id: 'customized-training',
       title: 'Training & Capacity Building (NITA Accredited)',
       description: 'Delivering certified and customized training programs in resource mobilization, investment readiness, trade development, credit management, financial governance, and institutional strengthening—supported by hands-on mentorship and coaching.',
       image: trainingImg,
     },
     {
+      id: 'business-research',
       title: 'Business Research & Market Intelligence',
       description: 'Conducting in-depth business, sectoral, and market research to support investment decisions, market entry, expansion strategies, feasibility studies, and evidence-based planning.',
       image: researchImg,
     },
     {
+      id: 'financial-advisory',
       title: 'Financial Advisory and Credit Facilitation Services',
       description: 'Supporting clients facing credit constraints to access appropriate financing by restructuring credit proposals, improving risk profiles, aligning financial documentation to lender requirements, and facilitating engagement with banks and financing institutions.',
       image: financialImg,
     },
     {
+      id: 'proposal-development',
       title: 'Proposal, Business Case & Pitch Development',
       description: 'Developing high-impact proposals, concept notes, investment memoranda, and pitch decks aligned to investor, donor, financier, and trade partner expectations.',
       image: proposalImg,
     },
     {
+      id: 'bankability',
       title: 'Bankability & Financial Readiness',
       description: 'Preparing organizations and projects to meet lender and investor requirements through robust financial models, credit-ready documentation, and risk mitigation frameworks.',
       image: bankabilityImg,
     },
     {
+      id: 'resource-mobilization',
       title: 'Resource Mobilization Strategy Development',
       description: 'Designing practical, results-driven strategies that diversify funding sources, strengthen institutional capacity, and enhance financial sustainability.',
       image: resourceImg,
@@ -185,23 +211,25 @@ function Services() {
         </div>
       </section>
 
+      {/* CORE SERVICES - 4x2 GRID */}
       <section className="main-services">
         <div className="container">
           <h2>Core Services</h2>
           <div className="services-grid">
-            {mainServices.map((service, index) => (
-              <ServiceCard
-                key={index}
-                title={service.title}
-                description={service.description}
-                image={service.image}
-              />
+            {mainServices.map((service) => (
+              <div id={service.id} key={service.id}>
+                <ServiceCard
+                  title={service.title}
+                  description={service.description}
+                  image={service.image}
+                />
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="training-programs">
+      <section id="customized-training" className="training-programs">
         <div className="container">
           <h2>Flexible, Reliable and Customized Training Programs</h2>
           <p className="section-intro">
@@ -224,7 +252,7 @@ function Services() {
         </div>
       </section>
 
-      <section className="credit-rating">
+      <section id="credit-rating" className="credit-rating">
         <div className="container">
           <h2>Credit Rating Facilitation Services</h2>
           <p className="section-intro">

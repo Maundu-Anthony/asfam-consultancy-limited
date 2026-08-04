@@ -5,7 +5,7 @@ import './Registration.css';
 
 function Registration() {
   const [formData, setFormData] = useState({
-    // Personal Details
+    // Personal and Contact Information
     fullName: '',
     email: '',
     phone: '',
@@ -13,26 +13,20 @@ function Registration() {
     dateOfBirth: '',
     gender: '',
 
-    // Professional Details
-    organization: '',
-    position: '',
-    qualification: '',
+    // Professional or Academic Background
+    companyName: '',
+    jobTitle: '',
+    educationalBackground: '',
 
-    // Training Details
-    course: '',
-    preferredDate: '',
-    batch: '',
+    // Course and Session Details
+    courseTitleCode: '',
+    preferredSchedule: '',
     registrationType: '',
-    participants: 1,
 
-    // Logistics
-    emergencyContact: '',
-    emergencyPhone: '',
-    dietary: '',
-    accessibility: '',
-
-    // Additional Notes
-    additionalNotes: ''
+    // Logistics and Compliance
+    emergencyContactName: '',
+    emergencyContactPhone: '',
+    specialRequests: ''
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -68,19 +62,15 @@ function Registration() {
           address: formData.address,
           date_of_birth: formData.dateOfBirth,
           gender: formData.gender,
-          organization: formData.organization,
-          position: formData.position,
-          qualification: formData.qualification,
-          course: formData.course,
-          preferred_date: formData.preferredDate,
-          batch: formData.batch,
+          company_name: formData.companyName,
+          job_title: formData.jobTitle,
+          educational_background: formData.educationalBackground,
+          course_title_code: formData.courseTitleCode,
+          preferred_schedule: formData.preferredSchedule,
           registration_type: formData.registrationType,
-          participants: formData.participants,
-          emergency_contact: formData.emergencyContact,
-          emergency_phone: formData.emergencyPhone,
-          dietary: formData.dietary,
-          accessibility: formData.accessibility,
-          additional_notes: formData.additionalNotes
+          emergency_contact_name: formData.emergencyContactName,
+          emergency_contact_phone: formData.emergencyContactPhone,
+          special_requests: formData.specialRequests
         },
         PUBLIC_KEY
       )
@@ -115,7 +105,7 @@ function Registration() {
           <div className="success-message">
             <h2>Thank You for Registering!</h2>
             <p>Your registration details have been sent to <strong>info@asfam.co.ke</strong>.</p>
-            <button className="cta-button" onClick={() => setSubmitted(false)}>
+            <button className="cta-button primary" onClick={() => setSubmitted(false)}>
               Submit Another Registration
             </button>
           </div>
@@ -123,12 +113,12 @@ function Registration() {
           <form className="registration-form" onSubmit={handleSubmit}>
             {errorMsg && <div className="error-message">{errorMsg}</div>}
 
-            {/* PERSONAL DETAILS */}
+            {/* 1. PERSONAL AND CONTACT INFORMATION */}
             <fieldset className="form-section">
-              <legend>Personal Details</legend>
+              <legend>Personal and Contact Information</legend>
               <div className="form-grid">
                 <div className="form-group">
-                  <label htmlFor="fullName">Full Name</label>
+                  <label htmlFor="fullName">Full Name *</label>
                   <input
                     type="text"
                     id="fullName"
@@ -140,7 +130,7 @@ function Registration() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="email">Email Address *</label>
                   <input
                     type="email"
                     id="email"
@@ -152,7 +142,7 @@ function Registration() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="phone">Phone</label>
+                  <label htmlFor="phone">Phone Number *</label>
                   <input
                     type="tel"
                     id="phone"
@@ -164,7 +154,7 @@ function Registration() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="address">Address</label>
+                  <label htmlFor="address">Home or Work Address</label>
                   <input
                     type="text"
                     id="address"
@@ -203,85 +193,71 @@ function Registration() {
               </div>
             </fieldset>
 
-            {/* PROFESSIONAL DETAILS */}
+            {/* 2. PROFESSIONAL OR ACADEMIC BACKGROUND */}
             <fieldset className="form-section">
-              <legend>Professional Details</legend>
+              <legend>Professional or Academic Background</legend>
               <div className="form-grid">
                 <div className="form-group">
-                  <label htmlFor="organization">Organization</label>
+                  <label htmlFor="companyName">Company Name or Organization</label>
                   <input
                     type="text"
-                    id="organization"
-                    name="organization"
-                    value={formData.organization}
+                    id="companyName"
+                    name="companyName"
+                    value={formData.companyName}
                     onChange={handleChange}
                   />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="position">Position</label>
+                  <label htmlFor="jobTitle">Job Title, Department, or Designation</label>
                   <input
                     type="text"
-                    id="position"
-                    name="position"
-                    value={formData.position}
+                    id="jobTitle"
+                    name="jobTitle"
+                    value={formData.jobTitle}
                     onChange={handleChange}
                   />
                 </div>
 
-                <div className="form-group">
-                  <label htmlFor="qualification">Qualification</label>
+                <div className="form-group full-width">
+                  <label htmlFor="educationalBackground">Educational Background or Qualifications</label>
                   <input
                     type="text"
-                    id="qualification"
-                    name="qualification"
-                    value={formData.qualification}
+                    id="educationalBackground"
+                    name="educationalBackground"
+                    value={formData.educationalBackground}
                     onChange={handleChange}
                   />
                 </div>
               </div>
             </fieldset>
 
-            {/* TRAINING DETAILS */}
+            {/* 3. COURSE AND SESSION DETAILS */}
             <fieldset className="form-section">
-              <legend>Training Details</legend>
+              <legend>Course and Session Details</legend>
               <div className="form-grid">
                 <div className="form-group">
-                  <label htmlFor="course">Course</label>
+                  <label htmlFor="courseTitleCode">Training Course Title or Code *</label>
                   <input
                     type="text"
-                    id="course"
-                    name="course"
-                    value={formData.course}
+                    id="courseTitleCode"
+                    name="courseTitleCode"
+                    value={formData.courseTitleCode}
                     onChange={handleChange}
                     required
                   />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="preferredDate">Preferred Date</label>
+                  <label htmlFor="preferredSchedule">Preferred Cohort, Date, or Schedule</label>
                   <input
-                    type="date"
-                    id="preferredDate"
-                    name="preferredDate"
-                    value={formData.preferredDate}
+                    type="text"
+                    id="preferredSchedule"
+                    name="preferredSchedule"
+                    placeholder="e.g. Q4 Cohort / Oct 15, 2026"
+                    value={formData.preferredSchedule}
                     onChange={handleChange}
                   />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="batch">Batch</label>
-                  <select
-                    id="batch"
-                    name="batch"
-                    value={formData.batch}
-                    onChange={handleChange}
-                  >
-                    <option value="">Select Batch</option>
-                    <option value="Morning">Morning</option>
-                    <option value="Afternoon">Afternoon</option>
-                    <option value="Evening">Evening</option>
-                  </select>
                 </div>
 
                 <div className="form-group">
@@ -297,83 +273,45 @@ function Registration() {
                     <option value="Corporate">Corporate</option>
                   </select>
                 </div>
-
-                <div className="form-group">
-                  <label htmlFor="participants">Number of Participants</label>
-                  <input
-                    type="number"
-                    id="participants"
-                    name="participants"
-                    min="1"
-                    value={formData.participants}
-                    onChange={handleChange}
-                  />
-                </div>
               </div>
             </fieldset>
 
-            {/* LOGISTICS */}
+            {/* 4. LOGISTICS AND COMPLIANCE */}
             <fieldset className="form-section">
-              <legend>Logistics</legend>
+              <legend>Logistics and Compliance</legend>
               <div className="form-grid">
                 <div className="form-group">
-                  <label htmlFor="emergencyContact">Emergency Contact</label>
+                  <label htmlFor="emergencyContactName">Emergency Contact Name</label>
                   <input
                     type="text"
-                    id="emergencyContact"
-                    name="emergencyContact"
-                    value={formData.emergencyContact}
+                    id="emergencyContactName"
+                    name="emergencyContactName"
+                    value={formData.emergencyContactName}
                     onChange={handleChange}
                   />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="emergencyPhone">Emergency Phone</label>
+                  <label htmlFor="emergencyContactPhone">Emergency Contact Phone</label>
                   <input
                     type="tel"
-                    id="emergencyPhone"
-                    name="emergencyPhone"
-                    value={formData.emergencyPhone}
+                    id="emergencyContactPhone"
+                    name="emergencyContactPhone"
+                    value={formData.emergencyContactPhone}
                     onChange={handleChange}
                   />
                 </div>
 
-                <div className="form-group">
-                  <label htmlFor="dietary">Dietary Requirements</label>
-                  <input
-                    type="text"
-                    id="dietary"
-                    name="dietary"
-                    value={formData.dietary}
+                <div className="form-group full-width">
+                  <label htmlFor="specialRequests">Dietary Needs or Special Accessibility Requests</label>
+                  <textarea
+                    id="specialRequests"
+                    name="specialRequests"
+                    rows="3"
+                    value={formData.specialRequests}
                     onChange={handleChange}
-                  />
+                  ></textarea>
                 </div>
-
-                <div className="form-group">
-                  <label htmlFor="accessibility">Accessibility Requirements</label>
-                  <input
-                    type="text"
-                    id="accessibility"
-                    name="accessibility"
-                    value={formData.accessibility}
-                    onChange={handleChange}
-                  />
-                </div>
-              </div>
-            </fieldset>
-
-            {/* ADDITIONAL NOTES */}
-            <fieldset className="form-section">
-              <legend>Additional Notes</legend>
-              <div className="form-group full-width">
-                <label htmlFor="additionalNotes">Notes / Special Requests</label>
-                <textarea
-                  id="additionalNotes"
-                  name="additionalNotes"
-                  rows="4"
-                  value={formData.additionalNotes}
-                  onChange={handleChange}
-                ></textarea>
               </div>
             </fieldset>
 

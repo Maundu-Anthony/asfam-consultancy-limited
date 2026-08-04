@@ -49,10 +49,19 @@
   border-radius: 2px;
 }
 
-.services-grid {
+/* 4x2 GRID SPECIFIC TO SERVICES PAGE CORE SERVICES SECTION */
+.main-services .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* Ensures intermediate wrapper divs stretch to match row height */
+.main-services .services-grid > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .credit-rating {
@@ -94,7 +103,7 @@
 
 .rating-services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
 }
 
@@ -155,7 +164,7 @@
 
 .proposition-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
@@ -177,15 +186,12 @@
   font-size: 1.45rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  text-shadow: none;
 }
 
 .proposition p {
   color: #ffffff;
   font-size: 1rem;
   line-height: 1.8;
-  text-shadow: none;
-  opacity: 1;
 }
 
 .training-programs {
@@ -290,142 +296,33 @@
   font-weight: bold;
 }
 
-.section-visuals {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.section-visuals-row {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  align-items: stretch;
-}
-
-.section-image-card {
-  background: white;
-  border-radius: 16px;
-  padding: 0.75rem;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-  width: 100%;
-  max-width: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.credit-image-card {
-  max-width: 580px;
-  margin: 0 auto;
-}
-
-.section-image {
+.service-card-link-wrapper {
+  text-decoration: none;
+  color: inherit;
   display: block;
-  width: 100%;
   height: 100%;
-  min-height: 220px;
-  border-radius: 14px;
-  object-fit: cover;
 }
 
-.investment-services-image,
-.training-services-image,
-.business-research-image,
-.resource-mobilization-image,
-.credit-rating-image {
-  max-width: 100%;
-}
-
+/* RESPONSIVE LAYOUT FOR SERVICES PAGE 4x2 GRID */
 @media (max-width: 1024px) {
-  .investment-services-image,
-  .business-research-image,
-  .resource-mobilization-image,
-  .credit-rating-image,
-  .training-services-image {
-    width: 100%;
+  .main-services .services-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
-  .training-category-summary {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .section-visuals-row {
+@media (max-width: 640px) {
+  .main-services .services-grid {
     grid-template-columns: 1fr;
   }
-}
 
-.partnerships {
-  padding: 3rem 1rem;
-  background: white;
-}
-
-.partnerships h2 {
-  text-align: center;
-  color: #1e3c72;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.partnerships p {
-  color: #0f172a;
-  line-height: 1.8;
-  font-size: 1rem;
-  text-align: justify;
-  max-width: 900px;
-  margin: 0 auto;
-  font-weight: 500;
-}
-
-@media (max-width: 768px) {
   .page-header h1 {
     font-size: 2rem;
-  }
-
-  .page-header p {
-    font-size: 1rem;
   }
 
   .main-services h2,
   .credit-rating h2,
   .value-proposition h2,
-  .training-programs h2,
-  .partnerships h2 {
+  .training-programs h2 {
     font-size: 1.5rem;
   }
-
-  .services-grid,
-  .rating-services,
-  .proposition-grid,
-  .training-categories {
-    grid-template-columns: 1fr;
-  }
-
-  .services-intro p,
-  .partnerships p {
-    font-size: 0.95rem;
-  }
-}
-/* REGISTRATION BANNER IMAGE BELOW FORM */
-.registration-image-container {
-  margin-top: 2.5rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.registration-banner-image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-  object-fit: cover;
-  display: block;
 }
