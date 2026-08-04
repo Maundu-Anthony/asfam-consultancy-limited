@@ -12,46 +12,46 @@ import resourceImg from '../images/services-images/Resource_Mobilization_Service
 
 function Services() {
   const mainServices = [
-  {
-  title: 'Investment Advisory & Facilitation Services',
-  description: 'We provide integrated resource structuring, valuation, capital structuring, and growth strategies, while facilitating investor engagement, deal origination, due diligence coordination, and transaction closure. Advising on investment mobilization, capital raising, and structuring debt, equity, blended finance, and grant funding from banks, DFIs, private investors, impact investors, and development partners.',
-  image: investmentImg,
-},
-{
-  title: 'Trade Advisory & Facilitation Services',
-  description: 'Supporting access to local, regional, and international markets through trade structuring, export and import advisory, trade finance facilitation, market entry strategies, and linkage to buyers, suppliers, and trade partners.',
-  image: tradeImg,
-},
-{
-  title: 'Training & Capacity Building (NITA Accredited)',
-  description: 'Delivering certified and customized training programs in resource mobilization, investment readiness, trade development, credit management, financial governance, and institutional strengthening—supported by hands-on mentorship and coaching.',
-  image: trainingImg,
-},
-{
-  title: 'Business Research & Market Intelligence',
-  description: 'Conducting in-depth business, sectoral, and market research to support investment decisions, market entry, expansion strategies, feasibility studies, and evidence-based planning.',
-  image: researchImg,
-},
-{
-  title: 'Financial Advisory and Credit Facilitation Services',
-  description: 'Supporting clients facing credit constraints to access appropriate financing by restructuring credit proposals, improving risk profiles, aligning financial documentation to lender requirements, and facilitating engagement with banks and financing institutions.',
-  image: financialImg,
-},
-{
-  title: 'Proposal, Business Case & Pitch Development',
-  description: 'Developing high-impact proposals, concept notes, investment memoranda, and pitch decks aligned to investor, donor, financier, and trade partner expectations.',
-  image: proposalImg,
-},
-{
-  title: 'Bankability & Financial Readiness',
-  description: 'Preparing organizations and projects to meet lender and investor requirements through robust financial models, credit-ready documentation, and risk mitigation frameworks.',
-  image: bankabilityImg,
-},
-{
-  title: 'Resource Mobilization Strategy Development',
-  description: 'Designing practical, results-driven strategies that diversify funding sources, strengthen institutional capacity, and enhance financial sustainability.',
-  image: resourceImg,
-},
+    {
+      title: 'Investment Advisory & Facilitation Services',
+      description: 'We provide integrated resource structuring, valuation, capital structuring, and growth strategies, while facilitating investor engagement, deal origination, due diligence coordination, and transaction closure. Advising on investment mobilization, capital raising, and structuring debt, equity, blended finance, and grant funding from banks, DFIs, private investors, impact investors, and development partners.',
+      image: investmentImg,
+    },
+    {
+      title: 'Trade Advisory & Facilitation Services',
+      description: 'Supporting access to local, regional, and international markets through trade structuring, export and import advisory, trade finance facilitation, market entry strategies, and linkage to buyers, suppliers, and trade partners.',
+      image: tradeImg,
+    },
+    {
+      title: 'Training & Capacity Building (NITA Accredited)',
+      description: 'Delivering certified and customized training programs in resource mobilization, investment readiness, trade development, credit management, financial governance, and institutional strengthening—supported by hands-on mentorship and coaching.',
+      image: trainingImg,
+    },
+    {
+      title: 'Business Research & Market Intelligence',
+      description: 'Conducting in-depth business, sectoral, and market research to support investment decisions, market entry, expansion strategies, feasibility studies, and evidence-based planning.',
+      image: researchImg,
+    },
+    {
+      title: 'Financial Advisory and Credit Facilitation Services',
+      description: 'Supporting clients facing credit constraints to access appropriate financing by restructuring credit proposals, improving risk profiles, aligning financial documentation to lender requirements, and facilitating engagement with banks and financing institutions.',
+      image: financialImg,
+    },
+    {
+      title: 'Proposal, Business Case & Pitch Development',
+      description: 'Developing high-impact proposals, concept notes, investment memoranda, and pitch decks aligned to investor, donor, financier, and trade partner expectations.',
+      image: proposalImg,
+    },
+    {
+      title: 'Bankability & Financial Readiness',
+      description: 'Preparing organizations and projects to meet lender and investor requirements through robust financial models, credit-ready documentation, and risk mitigation frameworks.',
+      image: bankabilityImg,
+    },
+    {
+      title: 'Resource Mobilization Strategy Development',
+      description: 'Designing practical, results-driven strategies that diversify funding sources, strengthen institutional capacity, and enhance financial sustainability.',
+      image: resourceImg,
+    },
   ];
 
   const trainingCategories = [
@@ -279,15 +279,6 @@ function Services() {
               <p>Combining advisory, research, facilitation, and mentorship for comprehensive solutions.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="partnerships">
-        <div className="container">
-          <h2>Strategic Partnerships & Stakeholder Engagement</h2>
-          <p>
-            We identify, structure, and facilitate partnerships with investors, donors, financiers, trade partners, and ecosystem stakeholders locally and internationally. Our focus is to help clients strengthen credit readiness, secure funding, and improve competitiveness while managing risk.
-          </p>
         </div>
       </section>
 

@@ -21,6 +21,14 @@ function About() {
             <p>
               Our mission is to deliver practical financial and business advisory, credit facilitation, trade linkage, training, and mentorship services that connect businesses to the resources, markets, and opportunities they need to unlock their full potential.
             </p>
+            
+            {/* Centered Strategic Partnerships & Stakeholder Engagement section */}
+            <div className="who-we-are-partnerships" style={{ marginTop: '2.5rem', textAlign: 'center' }}>
+              <h3 style={{ textAlign: 'center' }}>Strategic Partnerships &amp; Stakeholder Engagement</h3>
+              <p style={{ maxWidth: '850px', margin: '1rem auto 0', textAlign: 'center' }}>
+                We identify, structure, and facilitate partnerships with investors, donors, financiers, trade partners, and ecosystem stakeholders locally and internationally. Our focus is to help clients strengthen credit readiness, secure funding, and improve competitiveness while managing risk.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -96,7 +104,7 @@ function About() {
               <p>As a NITA-accredited training provider, we deliver quality-assured capacity building programs.</p>
             </div>
             <div className="advantage">
-              <h3>Bankability & Credit Focus</h3>
+              <h3>Bankability &amp; Credit Focus</h3>
               <p>Strong focus on credit access, investability, and market entry for sustainable business growth.</p>
             </div>
             <div className="advantage">
@@ -120,14 +128,14 @@ function About() {
               <ul>
                 <li>Government Agencies</li>
                 <li>County Governments</li>
-                <li>Public Bodies & Parastatals</li>
+                <li>Public Bodies &amp; Parastatals</li>
               </ul>
             </div>
             <div className="client-group">
               <h3>Private Sector</h3>
               <ul>
-                <li>Corporates & SMEs/MSMEs</li>
-                <li>Exporters & Importers</li>
+                <li>Corporates &amp; SMEs/MSMEs</li>
+                <li>Exporters &amp; Importers</li>
                 <li>Trade-Oriented Enterprises</li>
               </ul>
             </div>
@@ -136,13 +144,13 @@ function About() {
               <ul>
                 <li>Commercial Banks</li>
                 <li>Microfinance Institutions</li>
-                <li>SACCOs & Cooperative Banks</li>
+                <li>SACCOs &amp; Cooperative Banks</li>
               </ul>
             </div>
             <div className="client-group">
               <h3>Non-Profit Sector</h3>
               <ul>
-                <li>NGOs & Foundations</li>
+                <li>NGOs &amp; Foundations</li>
                 <li>Development Projects</li>
                 <li>Social Enterprises</li>
               </ul>

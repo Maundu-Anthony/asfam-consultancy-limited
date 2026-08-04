@@ -50,52 +50,50 @@ function Home() {
       <section className="hero">
         <img className="hero-background" src={heroBackground} alt="" aria-hidden="true" />
         <div className="hero-content">
-  <div className="hero-top-title">
-    <span className="line"></span>
-    <span>UNLOCK YOUR</span>
-    <span className="line"></span>
-  </div>
+          <div className="hero-top-title">
+            <span className="line"></span>
+            <span>UNLOCK YOUR</span>
+            <span className="line"></span>
+          </div>
 
-  <h1 className="hero-title">
-    <span className="business">Business</span>{' '}
-    <span className="potential">Potential</span>
-  </h1>
+          <h1 className="hero-title">
+            <span className="business">Business</span>{' '}
+            <span className="potential">Potential</span>
+          </h1>
 
-  <p className="hero-description">
-    Transform ideas into
-    <span className="funded"> funded</span>,
-    <span className="investable"> investable</span>,
-    <span className="trade"> trade-ready</span>,
-    and
-    <span className="esg"> ESG sustainable</span>
-    reality
-  </p>
+          <p className="hero-description">
+            Transform ideas into
+            <span className="funded"> funded</span>,
+            <span className="investable"> investable</span>,
+            <span className="trade"> trade-ready</span>,
+            and
+            <span className="esg"> ESG sustainable</span>
+            reality
+          </p>
 
-  <p className="hero-company">
-    <span className="company-line"></span>
+          <p className="hero-company">
+            <span className="company-line"></span>
 
-    <span className="company-name">
-      ASFAM Consultancy
-    </span>
+            <span className="company-name">
+              ASFAM Consultancy
+            </span>
 
-    <span className="separator">
-      &nbsp;–&nbsp;
-    </span>
+            <span className="separator">
+              &nbsp;–&nbsp;
+            </span>
 
-    Financial &amp; Trade Advisory Excellence
+            Financial &amp; Trade Advisory Excellence
 
-    <span className="company-line"></span>
-  </p>
+            <span className="company-line"></span>
+          </p>
 
-  <Link to="/services" className="cta-button">
-    Explore Our Services
-    <span className="arrow">➜</span>
-  </Link>
-</div>
+          <Link to="/services" className="cta-button">
+            Explore Our Services
+            <span className="arrow">➜</span>
+          </Link>
+        </div>
       </section>
 
-      {/* Rest of your component... */}
-      
       <section className="mission">
         <div className="container">
           <h2>Who We Are</h2>
@@ -108,6 +106,20 @@ function Home() {
               />
             </div>
           </div>
+
+          {/* New phrase added below Who We Are image & above Mission/Vision */}
+          <p className="who-we-are-text" style={{
+            textAlign: 'center',
+            maxWidth: '900px',
+            margin: '2rem auto 3rem',
+            fontSize: '1.1rem',
+            lineHeight: '1.8',
+            color: '#4a5568',
+            fontWeight: '500'
+          }}>
+            We believe our clients’ success defines our own. Guided by integrity, professionalism, passion, humility, creativity, and innovation, we deliver high standards of service grounded in a deep understanding of each client’s unique business and training needs.
+          </p>
+
           <div className="mission-grid">
             <div className="mission-item">
               <h3>Our Mission</h3>
