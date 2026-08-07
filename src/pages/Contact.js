@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PartnerCard from '../components/PartnerCard';
 import './Contact.css';
 
 const CONTACT_API_URL = process.env.REACT_APP_CONTACT_API_URL || '/api/contact';
@@ -65,7 +66,7 @@ function Contact() {
         </div>
       </section>
 
-      <section className="contact-content">
+      <section className="contact-content" style={{ paddingBottom: '5rem' }}>
         <div className="container contact-grid">
           <div className="contact-info">
             <h2>Get in Touch</h2>
@@ -89,7 +90,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="contact-form-wrapper">
+          <div className="contact-form-wrapper" style={{ paddingBottom: '3rem' }}>
             <h2>Send Us a Message</h2>
             {submitted && <div className="success-message">Thank you! Your message has been sent successfully.</div>}
             {error && <div className="error-message">{error}</div>}
@@ -154,7 +155,27 @@ function Contact() {
                 ></textarea>
               </div>
 
-              <button type="submit" className="cta-button primary">Send Message</button>
+              <button 
+                type="submit" 
+                className="submit-btn"
+                style={{
+                  background: 'linear-gradient(135deg, #d73e33 0%, #b8312a 100%)',
+                  color: 'white',
+                  padding: '1.1rem 2.5rem',
+                  border: 'none',
+                  borderRadius: '8px',
+                  fontSize: '1rem',
+                  fontWeight: '700',
+                  cursor: 'pointer',
+                  boxShadow: '0 4px 15px rgba(215, 62, 51, 0.2)',
+                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                  width: '100%',
+                  marginTop: '1.5rem',
+                  marginBottom: '1.5rem' // Added bottom spacing so it doesn't crowd the container boundary
+                }}
+              >
+                Send Message
+              </button>
             </form>
           </div>
         </div>
