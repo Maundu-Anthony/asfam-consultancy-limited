@@ -48,20 +48,14 @@
 }
 
 /* ============================================
-   MEMBERS GRID - 4 CARDS HORIZONTAL LINE
+   MEMBERS GRID - RESPONSIVE (4 cols desktop, vertical stack mobile)
    ============================================ */
 
 .members-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(260px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  overflow-x: auto;
-  padding-bottom: 15px;
 }
-
-/* ============================================
-   TEAM MEMBER IMAGE STYLES - UNIFORM HEIGHT
-   ============================================ */
 
 .team-member {
   background: white;
@@ -160,10 +154,6 @@
 .contact-info a:hover {
   text-decoration: underline;
 }
-
-/* ============================================
-   END OF TEAM MEMBER STYLES
-   ============================================ */
 
 .team-competencies {
   padding: 4rem 1rem;
@@ -304,7 +294,7 @@
 
 @media (max-width: 1024px) {
   .members-grid {
-    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -315,7 +305,10 @@
     font-size: 1.5rem;
   }
 
-  .members-grid,
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
+
   .competencies-grid,
   .culture-grid {
     grid-template-columns: 1fr;

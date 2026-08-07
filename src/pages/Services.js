@@ -130,6 +130,13 @@ function Services() {
     }
   ];
 
+  // Venue mapping configuration based on your attached image
+  const venueOptions = {
+    Local: ['Naivasha', 'Mombasa', 'Diani', 'Kisumu', 'Nakuru', 'Eldoret'],
+    Regional: ['Rwanda', 'Tanzania', 'Uganda'],
+    International: ['Malaysia', 'Singapore', 'Dubai']
+  };
+
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -142,6 +149,8 @@ function Services() {
     educationalBackground: '',
     selectedModule: '',
     courseTitleCode: '',
+    venueCategory: '',
+    trainingVenue: '',
     startDate: '',
     endDate: '',
     registrationType: '',
@@ -151,6 +160,7 @@ function Services() {
   });
 
   const [availableCourses, setAvailableCourses] = useState([]);
+  const [availableVenues, setAvailableVenues] = useState([]);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
@@ -197,6 +207,16 @@ function Services() {
       return;
     }
 
+    if (name === 'venueCategory') {
+      setAvailableVenues(venueOptions[value] || []);
+      setFormData((prev) => ({
+        ...prev,
+        venueCategory: value,
+        trainingVenue: ''
+      }));
+      return;
+    }
+
     if (name === 'startDate') {
       if (!value) {
         setFormData(prev => ({ ...prev, startDate: '', endDate: '' }));
@@ -205,9 +225,8 @@ function Services() {
       }
 
       const dateObj = new Date(value);
-      const dayOfWeek = dateObj.getDay(); // 0 is Sunday, 6 is Saturday
+      const dayOfWeek = dateObj.getDay();
 
-      // No weekend rule check on start date
       if (dayOfWeek === 0 || dayOfWeek === 6) {
         setErrorMsg('Training cannot start on a weekend (Saturday or Sunday). Please select a weekday.');
         setFormData(prev => ({ ...prev, startDate: value, endDate: '' }));
@@ -216,14 +235,12 @@ function Services() {
 
       setErrorMsg('');
 
-      // Calculate 4 consecutive working days (skipping weekends)
       let addedDays = 0;
       let currentIterDate = new Date(dateObj);
       
-      while (addedDays < 3) { // 3 more days after start date = 4 total working days
+      while (addedDays < 3) {
         currentIterDate.setDate(currentIterDate.getDate() + 1);
         const currentDayOfWeek = currentIterDate.getDay();
-        // Skip Saturday (6) and Sunday (0)
         if (currentDayOfWeek !== 0 && currentDayOfWeek !== 6) {
           addedDays++;
         }
@@ -275,6 +292,8 @@ function Services() {
           educational_background: formData.educationalBackground,
           selected_module: formData.selectedModule,
           course_title_code: formData.courseTitleCode,
+          venue_category: formData.venueCategory,
+          training_venue: formData.trainingVenue,
           preferred_schedule: scheduleSpan,
           registration_type: formData.registrationType,
           emergency_contact_name: formData.emergencyContactName,
@@ -423,7 +442,7 @@ function Services() {
                 boxShadow: '0 4px 14px rgba(217, 20, 36, 0.3)',
                 transition: 'background 0.3s ease, transform 0.2s ease'
               }}>
-                Register for Training & Programs <span className="arrow">➜</span>
+                REGISTER FOR OUR TRAINING PROGRAMS <span className="arrow">➜</span>
               </button>
             </div>
           )}
@@ -438,24 +457,6 @@ function Services() {
             >
               <section className="registration-header">
                 <div className="container">
-                  <div style={{ marginBottom: '1rem' }}>
-                    <button onClick={handleCloseRegistration} className="cta-button secondary" style={{ 
-                      backgroundColor: '#ffffff', 
-                      color: '#0f2c59', 
-                      padding: '0.5rem 1.2rem', 
-                      borderRadius: '6px', 
-                      border: 'none',
-                      cursor: 'pointer',
-                      fontWeight: '600',
-                      fontSize: '0.85rem',
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '6px',
-                      boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)'
-                    }}>
-                      <span>✕</span> Close Registration Form
-                    </button>
-                  </div>
                   <h1>TRAINING REGISTRATION</h1>
                   <p>Please review and complete your details to register for your upcoming training session.</p>
                 </div>
@@ -647,6 +648,43 @@ function Services() {
                             {availableCourses.map((course, idx) => (
                               <option key={idx} value={course}>
                                 {course}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+
+                        {/* Venue Classification Dropdown */}
+                        <div className="form-group">
+                          <label htmlFor="venueCategory">Venue Classification *</label>
+                          <select
+                            id="venueCategory"
+                            name="venueCategory"
+                            value={formData.venueCategory}
+                            onChange={handleChange}
+                            required
+                          >
+                            <option value="">-- Select Classification --</option>
+                            <option value="Local">Local</option>
+                            <option value="Regional">Regional</option>
+                            <option value="International">International</option>
+                          </select>
+                        </div>
+
+                        {/* Corresponding Venue Dropdown */}
+                        <div className="form-group">
+                          <label htmlFor="trainingVenue">Training Venue *</label>
+                          <select
+                            id="trainingVenue"
+                            name="trainingVenue"
+                            value={formData.trainingVenue}
+                            onChange={handleChange}
+                            required
+                            disabled={!formData.venueCategory}
+                          >
+                            <option value="">-- Select Venue --</option>
+                            {availableVenues.map((venue, idx) => (
+                              <option key={idx} value={venue}>
+                                {venue}
                               </option>
                             ))}
                           </select>

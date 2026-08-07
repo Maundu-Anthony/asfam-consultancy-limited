@@ -58,14 +58,7 @@ function Team() {
       <section className="team-members">
         <div className="container">
           <h2>Senior Management</h2>
-          {/* Inline style applied here to force all 4 cards into a single horizontal line without altering individual card widths */}
-          <div className="members-grid" style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(4, minmax(280px, 1fr))', 
-            gap: '24px', 
-            overflowX: 'auto', 
-            paddingBottom: '15px' 
-          }}>
+          <div className="members-grid">
             {teamMembers.map((member, index) => (
               <TeamMember
                 key={index}
@@ -146,7 +139,6 @@ function Team() {
               </ul>
             </div>
 
-            {/* NEW COMPETENCY AREAS */}
             <div className="competency-area">
               <h3>Mental Health</h3>
               <ul>
