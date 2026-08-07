@@ -130,7 +130,6 @@ function Services() {
     }
   ];
 
-  // Venue mapping configuration based on your attached image
   const venueOptions = {
     Local: ['Naivasha', 'Mombasa', 'Diani', 'Kisumu', 'Nakuru', 'Eldoret'],
     Regional: ['Rwanda', 'Tanzania', 'Uganda'],
@@ -147,13 +146,13 @@ function Services() {
     companyName: '',
     jobTitle: '',
     educationalBackground: '',
+    registrationType: '', // Added here first state-wise
     selectedModule: '',
     courseTitleCode: '',
     venueCategory: '',
     trainingVenue: '',
     startDate: '',
     endDate: '',
-    registrationType: '',
     emergencyContactName: '',
     emergencyContactPhone: '',
     specialRequests: ''
@@ -290,12 +289,12 @@ function Services() {
           company_name: formData.companyName,
           job_title: formData.jobTitle,
           educational_background: formData.educationalBackground,
+          registration_type: formData.registrationType,
           selected_module: formData.selectedModule,
           course_title_code: formData.courseTitleCode,
           venue_category: formData.venueCategory,
           training_venue: formData.trainingVenue,
           preferred_schedule: scheduleSpan,
-          registration_type: formData.registrationType,
           emergency_contact_name: formData.emergencyContactName,
           emergency_contact_phone: formData.emergencyContactPhone,
           special_requests: formData.specialRequests
@@ -609,13 +608,29 @@ function Services() {
                       </div>
                     </fieldset>
 
-                    {/* 3. COURSE AND SESSION DETAILS */}
+                    {/* 3. COURSE AND SESSION DETAILS (Registration Type moved to top) */}
                     <fieldset className="form-section">
                       <legend>Course and Session Details</legend>
                       
                       {errorMsg && <div className="error-message full-width" style={{ marginBottom: '1.5rem', backgroundColor: '#fed7d7', color: '#9b2c2c', padding: '10px', borderRadius: '4px', fontWeight: '600' }}>{errorMsg}</div>}
 
                       <div className="form-grid">
+                        {/* Registration Type moved to the very first position */}
+                        <div className="form-group">
+                          <label htmlFor="registrationType">Registration Type *</label>
+                          <select
+                            id="registrationType"
+                            name="registrationType"
+                            value={formData.registrationType}
+                            onChange={handleChange}
+                            required
+                          >
+                            <option value="">Select Type</option>
+                            <option value="Individual">Individual</option>
+                            <option value="Corporate">Corporate</option>
+                          </select>
+                        </div>
+
                         <div className="form-group">
                           <label htmlFor="selectedModule">Module *</label>
                           <select
@@ -721,21 +736,6 @@ function Services() {
                           <small style={{ display: 'block', marginTop: '4px', color: '#1e3c72', fontSize: '0.8rem', fontWeight: '700' }}>
                             🔒 Automatically calculated as exactly 4 consecutive working days.
                           </small>
-                        </div>
-
-                        <div className="form-group">
-                          <label htmlFor="registrationType">Registration Type *</label>
-                          <select
-                            id="registrationType"
-                            name="registrationType"
-                            value={formData.registrationType}
-                            onChange={handleChange}
-                            required
-                          >
-                            <option value="">Select Type</option>
-                            <option value="Individual">Individual</option>
-                            <option value="Corporate">Corporate</option>
-                          </select>
                         </div>
                       </div>
                     </fieldset>
