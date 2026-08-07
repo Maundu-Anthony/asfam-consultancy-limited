@@ -7,7 +7,7 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-section">
           <h3>ASFAM Consultancy</h3>
-          <p>Transformative financial and trade advisory services for Kenya's businesses.</p>
+          <p>Transformative financial and trade advisory services for local,regional & international businesses.</p>
         </div>
         
         <div className="footer-section">
@@ -17,11 +17,11 @@ function Footer() {
             <li><a href="/about">About Us</a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="/team">Team</a></li>
+            <li><a href="/partners">Partners</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
 
-        {/* CLICKABLE CONTACT INFO */}
         <div className="footer-section">
           <h3>Contact Info</h3>
           <p>
@@ -52,7 +52,6 @@ function Footer() {
           </p>
         </div>
 
-        {/* CLICKABLE ADDRESS TO GOOGLE MAPS */}
         <div className="footer-section">
           <h3>Address</h3>
           <p>
@@ -73,8 +72,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2026 ASFAM Consultancy Company Limited. All rights reserved.</p>
-        <p>Success is best when it's shared.</p>
+        <p>&copy; {new Date().getFullYear()} ASFAM Consultancy. All rights reserved.</p>
       </div>
     </footer>
   );

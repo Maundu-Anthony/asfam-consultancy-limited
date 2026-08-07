@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PartnerCard from '../components/PartnerCard';
 import './Contact.css';
 
 const CONTACT_API_URL = process.env.REACT_APP_CONTACT_API_URL || '/api/contact';
@@ -53,148 +52,51 @@ function Contact() {
       setTimeout(() => setSubmitted(false), 5000);
     } catch (err) {
       console.error('Contact form error:', err);
-      setError('Unable to send message right now. Please try again later.');
+      setError('Unable to send message right now. Please email us directly at info@asfam.co.ke');
     }
   };
-
-  const localPartners = [
-    { name: 'Commercial Banks', category: 'Financial Institutions' },
-    { name: 'Microfinance Institutions', category: 'Financial Institutions' },
-    { name: 'SACCOs & Cooperative Banks', category: 'Financial Institutions' },
-    { name: 'Rural Community Finance Institutions', category: 'Financial Institutions' },
-  ];
-
-  const internationalPartners = [
-    { name: 'ROWAD Capital LLC', category: 'Dubai, UAE' },
-    { name: 'Safwat Al Zad Trading Company', category: 'UAE & Libya' },
-    { name: 'JD Euroway Trust', category: 'Canada' },
-    { name: 'All Trust Foundation', category: 'United Kingdom' },
-    { name: 'ICRA Credit Rating Agency', category: 'Dubai, UAE' },
-    { name: 'Bakhresa Group of Companies', category: 'Tanzania' },
-  ];
 
   return (
     <div className="contact-page">
       <section className="page-header">
         <div className="container">
-          <h1>Get In Touch</h1>
-          <p>Let's discuss how we can help unlock your business potential</p>
+          <h1>CONTACT US.</h1>
+          <p>Get in touch with our team for advisory, training, and strategic partnership inquiries.</p>
         </div>
       </section>
 
-      <section className="contact-info-section">
-        <div className="container">
-          <div className="contact-info-grid">
+      <section className="contact-content">
+        <div className="container contact-grid">
+          <div className="contact-info">
+            <h2>Get in Touch</h2>
+            <p>We are ready to support your organization’s growth and financing journey.</p>
             
-            <div className="contact-card">
-              <h3>📍 Address</h3>
-              <p>
-                ASFAM Consultancy Company Limited<br />
-                Court De Royale<br />
-                Namanga Road Estate<br />
-                Kitengela<br />
-                <br />
-                <strong>P.O BOX 2162 – 90100<br />
-                Machakos, KENYA</strong>
-              </p>
+            <div className="info-item">
+              <h3>Office Location</h3>
+              <p>Court De Royale, Namanga Road Estate, Kitengela</p>
+              <p>P.O BOX 2162 – 90100, Machakos, KENYA</p>
             </div>
 
-            <div className="contact-card">
-              <h3>📞 Phone</h3>
-              <p>
-                <strong>Office:</strong><br />
-
-                <a href="tel:+254100930028">
-                  +254 100 930028
-                </a>
-                <br />
-
-                <a
-                  href="https://wa.me/254100930028"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="whatsapp-link"
-                >
-                  Chat on WhatsApp
-                </a>
-
-                <br /><br />
-
-                <a href="tel:+254745661011">
-                  +254 745 661 011
-                </a>
-                <br />
-
-                <a
-                  href="https://wa.me/254745661011"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="whatsapp-link"
-                >
-                  Chat on WhatsApp
-                </a>
-
-                <br /><br />
-
-                <a href="tel:+254722709200">
-                  +254 722 709 200
-                </a>
-                <br />
-
-                <a
-                  href="https://wa.me/254722709200"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="whatsapp-link"
-                >
-                  Chat on WhatsApp
-                </a>
-              </p>
+            <div className="info-item">
+              <h3>Phone Numbers</h3>
+              <p><a href="tel:+254100930028">+254 100 930028</a></p>
+              <p><a href="tel:+254745661011">+254 745 661 011</a></p>
             </div>
 
-            <div className="contact-card">
-              <h3>✉️ Email</h3>
-              <p>
-                <a href="mailto:info@asfam.co.ke">
-                  info@asfam.co.ke
-                </a>
-              </p>
+            <div className="info-item">
+              <h3>Email Address</h3>
+              <p><a href="mailto:info@asfam.co.ke">info@asfam.co.ke</a></p>
             </div>
-
-            <div className="contact-card">
-              <h3>🌐 Website</h3>
-              <p>
-                <a
-                  href="https://www.asfam.co.ke"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  https://www.asfam.co.ke
-                </a>
-              </p>
-            </div>
-
           </div>
-        </div>
-      </section>
 
-      <section className="contact-form-section">
-        <div className="container">
-          <div className="form-wrapper">
-            <h2>Send us a Message</h2>
-            {submitted && (
-              <div className="success-message">
-                ✓ Thank you! Your message has been sent. We'll get back to you soon.
-              </div>
-            )}
-            {error && (
-              <div className="error-message">
-                {error}
-              </div>
-            )}
+          <div className="contact-form-wrapper">
+            <h2>Send Us a Message</h2>
+            {submitted && <div className="success-message">Thank you! Your message has been sent successfully.</div>}
+            {error && <div className="error-message">{error}</div>}
+            
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="form-group">
-                <label htmlFor="name">Full Name *</label>
+                <label htmlFor="name">Your Name *</label>
                 <input
                   type="text"
                   id="name"
@@ -202,12 +104,11 @@ function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  placeholder="Your full name"
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="email">Email *</label>
+                <label htmlFor="email">Email Address *</label>
                 <input
                   type="email"
                   id="email"
@@ -215,19 +116,17 @@ function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  placeholder="your.email@example.com"
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="phone">Phone</label>
+                <label htmlFor="phone">Phone Number</label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="+254 700 000 000"
                 />
               </div>
 
@@ -240,7 +139,6 @@ function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  placeholder="How can we help?"
                 />
               </div>
 
@@ -249,53 +147,15 @@ function Contact() {
                 <textarea
                   id="message"
                   name="message"
+                  rows="5"
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  placeholder="Tell us more about your inquiry..."
-                  rows="6"
-                />
+                ></textarea>
               </div>
 
-              <button type="submit" className="submit-btn">Send Message</button>
+              <button type="submit" className="cta-button primary">Send Message</button>
             </form>
-          </div>
-        </div>
-      </section>
-
-      <section className="partners-section">
-        <div className="container">
-          <h2>Our Partners</h2>
-          <p className="section-intro">
-            We work with a number of trusted partners drawn from multiple sectors of the economy.
-          </p>
-
-          <div className="partners-subsection">
-            <h3>Local Partners</h3>
-            <div className="partners-grid">
-              {localPartners.map((partner, index) => (
-                <PartnerCard
-                  key={index}
-                  name={partner.name}
-                  category={partner.category}
-                  image={null}
-                />
-              ))}
-            </div>
-          </div>
-
-          <div className="partners-subsection">
-            <h3>International Partners</h3>
-            <div className="partners-grid">
-              {internationalPartners.map((partner, index) => (
-                <PartnerCard
-                  key={index}
-                  name={partner.name}
-                  category={partner.category}
-                  image={null}
-                />
-              ))}
-            </div>
           </div>
         </div>
       </section>

@@ -7,11 +7,11 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
+import Partners from './pages/Partners';
 import './App.css';
 
 function App() {
   useEffect(() => {
-    // Aggressive watermark removal
     const removeWatermarks = () => {
       const elements = document.querySelectorAll('*');
       
@@ -32,20 +32,6 @@ function App() {
             el.style.visibility = 'hidden';
             el.style.opacity = '0';
             el.remove();
-          }
-        }
-        
-        const isWatermarkLike = (
-          className.includes('watermark') ||
-          id.includes('watermark') ||
-          className.includes('wm') ||
-          style.backgroundImage.includes('logo') ||
-          style.backgroundImage.includes('watermark')
-        );
-
-        if (isWatermarkLike && !el.closest('.header') && !el.closest('header') && !el.closest('.page-header')) {
-          if (style.backgroundImage !== 'none') {
-            el.style.backgroundImage = 'none';
           }
         }
       });
@@ -88,6 +74,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/team" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/partners" element={<Partners />} />
           </Routes>
         </main>
         <Footer />

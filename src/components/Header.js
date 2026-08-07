@@ -37,7 +37,6 @@ function Header() {
           height: '100%'
         }}
       >
-        {/* LOGO - Reduced by 5% (100px) */}
         <div 
           className="logo" 
           style={{ 
@@ -51,10 +50,10 @@ function Header() {
           <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
             <img 
               src={logoImage} 
-              alt="ASFAM Logo" 
+              alt="ASFAM Consultancy Logo" 
               className="logo-image" 
               style={{ 
-                height: '100px', /* Reduced 5% from 105px */
+                height: '100px',
                 width: 'auto', 
                 objectFit: 'contain',
                 position: 'absolute',
@@ -65,7 +64,6 @@ function Header() {
           </Link>
         </div>
 
-        {/* MOBILE MENU TOGGLE */}
         <button
           type="button"
           className="menu-toggle"
@@ -78,7 +76,6 @@ function Header() {
           ☰
         </button>
 
-        {/* NAV LINKS */}
         <nav 
           className={`nav ${menuOpen ? 'open' : ''}`} 
           role="navigation" 
@@ -94,6 +91,7 @@ function Header() {
           <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
           <Link to="/services" onClick={() => setMenuOpen(false)}>Our Services</Link>
           <Link to="/team" onClick={() => setMenuOpen(false)}>Our Team</Link>
+          <Link to="/partners" onClick={() => setMenuOpen(false)}>Partners</Link>
           <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
         </nav>
       </div>
