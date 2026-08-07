@@ -47,14 +47,20 @@
   border-radius: 2px;
 }
 
+/* ============================================
+   MEMBERS GRID - 4 CARDS HORIZONTAL LINE
+   ============================================ */
+
 .members-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(4, minmax(260px, 1fr));
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 15px;
 }
 
 /* ============================================
-   TEAM MEMBER IMAGE STYLES - AUTO FILL
+   TEAM MEMBER IMAGE STYLES - UNIFORM HEIGHT
    ============================================ */
 
 .team-member {
@@ -64,6 +70,9 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-top: 5px solid #3282fe;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .team-member:hover {
@@ -80,6 +89,7 @@
   justify-content: center;
   overflow: hidden;
   position: relative;
+  flex-shrink: 0;
 }
 
 .member-image img {
@@ -104,6 +114,9 @@
 
 .member-info {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .member-info h3 {
@@ -124,12 +137,13 @@
   line-height: 1.6;
   margin: 1rem 0;
   font-size: 0.9rem;
+  flex-grow: 1;
 }
 
 .contact-info {
   border-top: 1px solid #e0e0e0;
   padding-top: 1rem;
-  margin-top: 1rem;
+  margin-top: auto;
 }
 
 .contact-info p {
@@ -286,6 +300,12 @@
   margin: 0;
   font-size: 0.95rem;
   color: #cbd5e0;
+}
+
+@media (max-width: 1024px) {
+  .members-grid {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
 }
 
 @media (max-width: 768px) {

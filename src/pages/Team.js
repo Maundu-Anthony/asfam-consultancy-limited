@@ -6,6 +6,7 @@ import './Team.css';
 import mwendaImage from '../images/Mwenda Kabeere E. M\'Marete.png';
 import royImage from '../images/Roy Muli.png';
 import saidImage from '../images/Said Athman.png';
+import euniceImage from '../images/Eunice Mutava.jpeg';
 
 function Team() {
   const teamMembers = [
@@ -33,7 +34,7 @@ function Team() {
       "name": "Ms. Eunice Mutava",
       "title": "Human Resource Consultant & Trainer",
       "bio": "Career HR and Strategic Planning Specialist with 12 years' experience in providing Human Resource and Administrative Support to Executive Management. Possesses wide experience in all aspects including staff training, recruitment, team leadership, mentorship and coaching. Prior to joining ASFAM, worked for Gulf African Bank as Human Resources Manager in Training and Capacity Building. Brings wide knowledge in administration and talent nurturing.",
-      "image": null
+      "image": euniceImage
     }
   ];
 
@@ -57,7 +58,14 @@ function Team() {
       <section className="team-members">
         <div className="container">
           <h2>Senior Management</h2>
-          <div className="members-grid">
+          {/* Inline style applied here to force all 4 cards into a single horizontal line without altering individual card widths */}
+          <div className="members-grid" style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(4, minmax(280px, 1fr))', 
+            gap: '24px', 
+            overflowX: 'auto', 
+            paddingBottom: '15px' 
+          }}>
             {teamMembers.map((member, index) => (
               <TeamMember
                 key={index}

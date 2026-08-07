@@ -1,7 +1,7 @@
 footer.footer {
   background-color: transparent !important;
   background-image: none !important;
-  color: #1a202c;
+  color: #1e3c72; /* Changed main text color to dark blue */
   padding: 4rem 1rem 1.5rem;
   margin-top: 6rem;
   border-top: 1px solid #e2e8f0;
@@ -18,7 +18,7 @@ footer.footer {
 }
 
 .footer-section h3 {
-  color: #1a202c;
+  color: #1e3c72; /* Dark blue heading */
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
   font-weight: 700;
@@ -28,7 +28,7 @@ footer.footer {
   line-height: 1.7;
   margin: 0.7rem 0;
   font-size: 0.95rem;
-  color: #4a5568;
+  color: #1e3c72; /* Dark blue paragraph texts and description */
 }
 
 .footer-section ul {
@@ -42,14 +42,14 @@ footer.footer {
 }
 
 .footer-section a {
-  color: #2d3748;
+  color: #1e3c72; /* Dark blue links/contacts/addresses */
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-  color: #1e3c72;
+  color: #3282fe; /* Accent blue hover state */
 }
 
 .footer-bottom {
@@ -63,7 +63,7 @@ footer.footer {
 
 .footer-bottom p {
   margin: 0.5rem 0;
-  color: #718096;
+  color: #1e3c72; /* Dark blue copyright and quote text */
   font-weight: 500;
 }
 
