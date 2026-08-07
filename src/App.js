@@ -7,7 +7,6 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
-import Registration from './pages/Registration';
 import './App.css';
 
 function App() {
@@ -89,10 +88,6 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/team" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
-            {/* Handled casing variations for registration */}
-            <Route path="/registration" element={<Registration />} />
-            <Route path="/Registration" element={<Registration />} />
-            <Route path="/register" element={<Registration />} />
           </Routes>
         </main>
         <Footer />
