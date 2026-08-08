@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import emailjs from '@emailjs/browser';
 import ServiceCard from '../components/ServiceCard';
 import './Services.css';
 
@@ -131,7 +130,7 @@ function Services() {
   ];
 
   const venueOptions = {
-    Local: ['Naivasha', 'Mombasa', 'Diani', 'Kisumu', 'Nakuru', 'Eldoret'],
+    Local: ['Nairobi', 'Naivasha', 'Mombasa', 'Diani', 'Kisumu', 'Nakuru', 'Eldoret'],
     Regional: ['Rwanda', 'Tanzania', 'Uganda'],
     International: ['Malaysia', 'Singapore', 'Dubai']
   };
@@ -146,7 +145,7 @@ function Services() {
     companyName: '',
     jobTitle: '',
     educationalBackground: '',
-    registrationType: '', // Added here first state-wise
+    registrationType: '',
     selectedModule: '',
     courseTitleCode: '',
     venueCategory: '',
@@ -261,7 +260,7 @@ function Services() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setErrorMsg('');
@@ -270,49 +269,30 @@ function Services() {
       ? `From ${formData.startDate} To ${formData.endDate} (4 Consecutive Days, No Weekends)` 
       : '';
 
-    const SERVICE_ID = 'YOUR_SERVICE_ID';
-    const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-    const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          ...formData,
+          preferredSchedule: scheduleSpan
+        })
+      });
 
-    emailjs
-      .send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
-          to_email: 'info@asfam.co.ke',
-          full_name: formData.fullName,
-          user_email: formData.email,
-          phone: formData.phone,
-          address: formData.address,
-          date_of_birth: formData.dateOfBirth,
-          gender: formData.gender,
-          company_name: formData.companyName,
-          job_title: formData.jobTitle,
-          educational_background: formData.educationalBackground,
-          registration_type: formData.registrationType,
-          selected_module: formData.selectedModule,
-          course_title_code: formData.courseTitleCode,
-          venue_category: formData.venueCategory,
-          training_venue: formData.trainingVenue,
-          preferred_schedule: scheduleSpan,
-          emergency_contact_name: formData.emergencyContactName,
-          emergency_contact_phone: formData.emergencyContactPhone,
-          special_requests: formData.specialRequests
-        },
-        PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log('Email sent successfully:', result.text);
-          setLoading(false);
-          setSubmitted(true);
-        },
-        (error) => {
-          console.error('Email failed to send:', error.text);
-          setLoading(false);
-          setErrorMsg('Failed to send registration. Please try again or contact info@asfam.co.ke directly.');
-        }
-      );
+      if (!response.ok) {
+        const responseText = await response.text();
+        throw new Error(responseText || 'Unable to submit registration.');
+      }
+
+      setLoading(false);
+      setSubmitted(true);
+    } catch (error) {
+      console.error('Registration failed:', error);
+      setLoading(false);
+      setErrorMsg('Failed to send registration. Please try again or contact info@asfam.co.ke directly.');
+    }
   };
 
   const mainServices = [
@@ -385,7 +365,6 @@ function Services() {
         </div>
       </section>
 
-      {/* CORE SERVICES */}
       <section className="main-services">
         <div className="container">
           <h2>Core Services</h2>
@@ -424,7 +403,6 @@ function Services() {
             ))}
           </div>
 
-          {/* TOP REGISTRATION BUTTON */}
           {!showRegistrationModal && (
             <div style={{ textAlign: 'center', margin: '3.5rem 0 1.5rem' }}>
               <button onClick={handleOpenRegistration} className="cta-button" style={{ 
@@ -438,8 +416,7 @@ function Services() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '10px',
-                boxShadow: '0 4px 14px rgba(217, 20, 36, 0.3)',
-                transition: 'background 0.3s ease, transform 0.2s ease'
+                boxShadow: '0 4px 14px rgba(217, 20, 36, 0.3)'
               }}>
                 REGISTER FOR OUR TRAINING PROGRAMS <span className="arrow">➜</span>
               </button>
@@ -447,7 +424,6 @@ function Services() {
           )}
         </div>
 
-        {/* FULL-WIDTH EMBEDDED REGISTRATION FORM CONTAINER */}
         {showRegistrationModal && (
           <div className="services-registration-wrapper" style={{ marginTop: '3rem' }}>
             <div 
@@ -456,8 +432,7 @@ function Services() {
             >
               <section className="registration-header">
                 <div className="container">
-                  <h1>TRAINING REGISTRATION</h1>
-                  <p>Please review and complete your details to register for your upcoming training session.</p>
+                  <h1>REGISTRATION FORM</h1>
                 </div>
               </section>
 
@@ -477,10 +452,7 @@ function Services() {
                         borderRadius: '6px', 
                         border: 'none',
                         cursor: 'pointer',
-                        fontWeight: '600',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '8px'
+                        fontWeight: '600'
                       }}>
                         Close Form
                       </button>
@@ -489,7 +461,6 @@ function Services() {
                 ) : (
                   <form className="registration-form" onSubmit={handleSubmit}>
 
-                    {/* 1. PERSONAL AND CONTACT INFORMATION */}
                     <fieldset className="form-section">
                       <legend>Personal and Contact Information</legend>
                       <div className="form-grid">
@@ -569,7 +540,6 @@ function Services() {
                       </div>
                     </fieldset>
 
-                    {/* 2. PROFESSIONAL OR ACADEMIC BACKGROUND */}
                     <fieldset className="form-section">
                       <legend>Professional or Academic Background</legend>
                       <div className="form-grid">
@@ -608,14 +578,12 @@ function Services() {
                       </div>
                     </fieldset>
 
-                    {/* 3. COURSE AND SESSION DETAILS (Registration Type moved to top) */}
                     <fieldset className="form-section">
                       <legend>Course and Session Details</legend>
                       
                       {errorMsg && <div className="error-message full-width" style={{ marginBottom: '1.5rem', backgroundColor: '#fed7d7', color: '#9b2c2c', padding: '10px', borderRadius: '4px', fontWeight: '600' }}>{errorMsg}</div>}
 
                       <div className="form-grid">
-                        {/* Registration Type moved to the very first position */}
                         <div className="form-group">
                           <label htmlFor="registrationType">Registration Type *</label>
                           <select
@@ -668,7 +636,6 @@ function Services() {
                           </select>
                         </div>
 
-                        {/* Venue Classification Dropdown */}
                         <div className="form-group">
                           <label htmlFor="venueCategory">Venue Classification *</label>
                           <select
@@ -685,7 +652,6 @@ function Services() {
                           </select>
                         </div>
 
-                        {/* Corresponding Venue Dropdown */}
                         <div className="form-group">
                           <label htmlFor="trainingVenue">Training Venue *</label>
                           <select
@@ -705,7 +671,6 @@ function Services() {
                           </select>
                         </div>
 
-                        {/* From Date Selection */}
                         <div className="form-group">
                           <label htmlFor="startDate">Training Start Date (From) *</label>
                           <input
@@ -716,12 +681,8 @@ function Services() {
                             onChange={handleChange}
                             required
                           />
-                          <small style={{ display: 'block', marginTop: '4px', color: '#4a5568', fontSize: '0.8rem' }}>
-                            ℹ️ Weekends (Saturday/Sunday) are excluded from training schedules.
-                          </small>
                         </div>
 
-                        {/* To Date Display / Calculation */}
                         <div className="form-group">
                           <label htmlFor="endDate">Training End Date (To) *</label>
                           <input
@@ -733,14 +694,10 @@ function Services() {
                             required
                             style={{ backgroundColor: '#edf2f7', cursor: 'not-allowed' }}
                           />
-                          <small style={{ display: 'block', marginTop: '4px', color: '#1e3c72', fontSize: '0.8rem', fontWeight: '700' }}>
-                            🔒 Automatically calculated as exactly 4 consecutive working days.
-                          </small>
                         </div>
                       </div>
                     </fieldset>
 
-                    {/* 4. LOGISTICS AND COMPLIANCE */}
                     <fieldset className="form-section">
                       <legend>Logistics and Compliance</legend>
                       <div className="form-grid">
@@ -791,10 +748,7 @@ function Services() {
                         borderRadius: '6px', 
                         border: 'none',
                         cursor: 'pointer',
-                        fontWeight: '600',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '8px'
+                        fontWeight: '600'
                       }}>
                         Close Form
                       </button>
@@ -814,53 +768,11 @@ function Services() {
             ASFAM partners with ICRA LLC, an international credit rating agency based in the UAE with presence across Europe, Africa, and Southeast Asia. Through this partnership, we help clients improve credit readiness, make informed risk decisions, and access rating, portfolio, investor, and ESG services. ASFAM is the sole mandated agent for ICRA LLC in the region.
           </p>
           <div className="rating-services">
-            <div className="rating-service">
-              <h3>Credit Rating Services</h3>
-            </div>
-            <div className="rating-service">
-              <h3>Portfolio Rating Services</h3>
-            </div>
-            <div className="rating-service">
-              <h3>Investor Services</h3>
-            </div>
-            <div className="rating-service">
-              <h3>ESG Rating Services</h3>
-            </div>
-            <div className="rating-service">
-              <h3>ICRA Scorecard Rating System</h3>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="value-proposition">
-        <div className="container">
-          <h2>Our Value Proposition</h2>
-          <div className="proposition-grid">
-            <div className="proposition">
-              <h3>NITA-Accredited Quality Assurance</h3>
-              <p>Our capacity building programs meet national standards for training and professional development.</p>
-            </div>
-            <div className="proposition">
-              <h3>Strong Bankability Focus</h3>
-              <p>Dedicated focus on credit access, investability, and market entry for sustainable business growth.</p>
-            </div>
-            <div className="proposition">
-              <h3>Evidence-Based Decision Making</h3>
-              <p>Our recommendations driven by business research and market intelligence.</p>
-            </div>
-            <div className="proposition">
-              <h3>Practical Solutions</h3>
-              <p>Transaction-oriented, results-driven approach with measurable outcomes.</p>
-            </div>
-            <div className="proposition">
-              <h3>Long-Term ESG Focus</h3>
-              <p>Commitment to sustainable growth, competitiveness, and institutional resilience.</p>
-            </div>
-            <div className="proposition">
-              <h3>Integrated Approach</h3>
-              <p>Combining advisory, research, facilitation, and mentorship for comprehensive solutions.</p>
-            </div>
+            <div className="rating-service"><h3>Credit Rating Services</h3></div>
+            <div className="rating-service"><h3>Portfolio Rating Services</h3></div>
+            <div className="rating-service"><h3>Investor Services</h3></div>
+            <div className="rating-service"><h3>ESG Rating Services</h3></div>
+            <div className="rating-service"><h3>ICRA Scorecard Rating System</h3></div>
           </div>
         </div>
       </section>

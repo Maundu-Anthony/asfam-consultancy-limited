@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PartnerCard from '../components/PartnerCard';
 import './Contact.css';
 
 const CONTACT_API_URL = process.env.REACT_APP_CONTACT_API_URL || '/api/contact';
@@ -53,7 +52,7 @@ function Contact() {
       setTimeout(() => setSubmitted(false), 5000);
     } catch (err) {
       console.error('Contact form error:', err);
-      setError('Unable to send message right now. Please email us directly at info@asfam.co.ke');
+      setError('Unable to send message right now. Please try again later or email info@asfam.co.ke directly.');
     }
   };
 
@@ -61,43 +60,46 @@ function Contact() {
     <div className="contact-page">
       <section className="page-header">
         <div className="container">
-          <h1>CONTACT US.</h1>
-          <p>Get in touch with our team for advisory, training, and strategic partnership inquiries.</p>
+          <h1>CONTACT US</h1>
+          <p>Get in touch with ASFAM Consultancy Limited for professional investment, trade advisory, and training solutions.</p>
         </div>
       </section>
 
-      <section className="contact-content" style={{ paddingBottom: '5rem' }}>
-        <div className="container contact-grid">
+      <section className="contact-content">
+        <div className="container contact-container">
           <div className="contact-info">
-            <h2>Get in Touch</h2>
-            <p>We are ready to support your organization’s growth and financing journey.</p>
+            <h2>Let's Talk About Your Project</h2>
+            <p>We are ready to partner with you to unlock financial opportunities, build institutional capacity, and drive sustainable growth.</p>
             
             <div className="info-item">
               <h3>Office Location</h3>
-              <p>Court De Royale, Namanga Road Estate, Kitengela</p>
-              <p>P.O BOX 2162 – 90100, Machakos, KENYA</p>
+              <p>Nairobi, Kenya</p>
             </div>
 
             <div className="info-item">
-              <h3>Phone Numbers</h3>
-              <p><a href="tel:+254100930028">+254 100 930028</a></p>
-              <p><a href="tel:+254745661011">+254 745 661 011</a></p>
-            </div>
-
-            <div className="info-item">
-              <h3>Email Address</h3>
+              <h3>Email Us</h3>
               <p><a href="mailto:info@asfam.co.ke">info@asfam.co.ke</a></p>
             </div>
           </div>
 
-          <div className="contact-form-wrapper" style={{ paddingBottom: '3rem' }}>
-            <h2>Send Us a Message</h2>
-            {submitted && <div className="success-message">Thank you! Your message has been sent successfully.</div>}
-            {error && <div className="error-message">{error}</div>}
-            
-            <form onSubmit={handleSubmit} className="contact-form">
+          <div className="contact-form-wrapper">
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <h2>Send Us a Message</h2>
+
+              {submitted && (
+                <div className="success-message" style={{ backgroundColor: '#c6f6d5', color: '#22543d', padding: '12px', borderRadius: '6px', marginBottom: '1.5rem', fontWeight: '600' }}>
+                  Thank you! Your message and spreadsheet data have been successfully sent.
+                </div>
+              )}
+
+              {error && (
+                <div className="error-message" style={{ backgroundColor: '#fed7d7', color: '#9b2c2c', padding: '12px', borderRadius: '6px', marginBottom: '1.5rem', fontWeight: '600' }}>
+                  {error}
+                </div>
+              )}
+
               <div className="form-group">
-                <label htmlFor="name">Your Name *</label>
+                <label htmlFor="name">Full Name *</label>
                 <input
                   type="text"
                   id="name"
@@ -143,7 +145,7 @@ function Contact() {
                 />
               </div>
 
-              <div className="form-group full-width">
+              <div className="form-group">
                 <label htmlFor="message">Message *</label>
                 <textarea
                   id="message"
@@ -171,7 +173,7 @@ function Contact() {
                   transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                   width: '100%',
                   marginTop: '1.5rem',
-                  marginBottom: '1.5rem' // Added bottom spacing so it doesn't crowd the container boundary
+                  marginBottom: '1.5rem'
                 }}
               >
                 Send Message

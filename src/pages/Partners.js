@@ -1,6 +1,7 @@
 import React from 'react';
 import PartnerCard from '../components/PartnerCard';
-import './Contact.css';
+import partnersBg from '../images/partners_background.png';
+import './Partners.css';
 
 function Partners() {
   const localPartners = [
@@ -20,7 +21,12 @@ function Partners() {
   ];
 
   return (
-    <div className="partners-page" style={{ padding: '4rem 1rem' }}>
+    <div 
+      className="partners-page"
+      style={{
+        backgroundImage: `linear-gradient(rgba(248, 249, 250, 0.85), rgba(248, 249, 250, 0.85)), url(${partnersBg})`
+      }}
+    >
       <section className="partners-section">
         <div className="container">
           <h2>Our Partners</h2>
@@ -61,4 +67,4 @@ function Partners() {
   );
 }
 
-export default Partners; // <-- Crucial: Must be default export
+export default Partners;

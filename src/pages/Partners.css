@@ -1,0 +1,79 @@
+.partners-page {
+  min-height: 100vh;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  padding: 5rem 1rem;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.partners-section {
+  position: relative;
+  z-index: 1;
+}
+
+.partners-section h2 {
+  text-align: center;
+  color: #1e3c72;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.partners-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3282fe, #d73e33);
+  border-radius: 2px;
+}
+
+.section-intro {
+  color: #4a5568;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.partners-subsection {
+  margin-bottom: 3.5rem;
+}
+
+.partners-subsection h3 {
+  color: #1e3c72;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .partners-section h2 {
+    font-size: 2rem;
+  }
+
+  .partners-subsection h3 {
+    font-size: 1.4rem;
+  }
+}

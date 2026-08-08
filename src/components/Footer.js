@@ -1,13 +1,19 @@
 import React from 'react';
+import footerBg from '../images/footer_background.png';
 import './Footer.css';
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer 
+      className="footer"
+      style={{
+        backgroundImage: `linear-gradient(rgba(248, 249, 250, 0.75), rgba(248, 249, 250, 0.75)), url(${footerBg})`
+      }}
+    >
       <div className="footer-content">
         <div className="footer-section">
           <h3>ASFAM Consultancy</h3>
-          <p>Transformative financial and trade advisory services for local,regional & international businesses.</p>
+          <p>Transformative financial and trade advisory services for local, regional & international businesses.</p>
         </div>
         
         <div className="footer-section">
@@ -72,7 +78,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} ASFAM Consultancy. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} ASFAM Consultancy. All rights reserved.</p>
       </div>
     </footer>
   );
