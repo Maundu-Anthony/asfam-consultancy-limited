@@ -16,6 +16,9 @@
 .partners-section {
   position: relative;
   z-index: 1;
+  /* Reduced width and centered layout */
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .partners-section h2 {
@@ -41,12 +44,13 @@
 }
 
 .section-intro {
-  color: #4a5568;
+  color: #2d3748;
   line-height: 1.8;
   font-size: 1.1rem;
   text-align: center;
   max-width: 800px;
   margin: 0 auto 3.5rem auto;
+  font-weight: 500;
 }
 
 .partners-subsection {
@@ -69,6 +73,9 @@
 }
 
 @media (max-width: 768px) {
+  .partners-section {
+    max-width: 100%;
+  }
   .partners-section h2 {
     font-size: 2rem;
   }

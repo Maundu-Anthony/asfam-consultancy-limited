@@ -24,7 +24,7 @@ function Partners() {
     <div 
       className="partners-page"
       style={{
-        backgroundImage: `linear-gradient(rgba(248, 249, 250, 0.85), rgba(248, 249, 250, 0.85)), url(${partnersBg})`
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.30), rgba(255, 255, 255, 0.30)), url(${partnersBg})`
       }}
     >
       <section className="partners-section">
