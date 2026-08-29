@@ -201,7 +201,10 @@ function Home() {
         <div className="container">
           <h2>Discover Your Business Potential with Us</h2>
           <p>Let's partner to unlock your opportunities and drive sustainable growth.</p>
-          <Link to="/contact" className="cta-button">Get In Touch</Link>
+          <Link to="/contact" className="cta-button">
+            Get In Touch
+            <span className="arrow">➜</span>
+          </Link>
         </div>
       </section>
     </div>

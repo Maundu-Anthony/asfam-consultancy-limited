@@ -404,19 +404,26 @@
 }
 
 .cta-section .cta-button {
-  background-color: #ffffff !important;
-  color: #1e3c72 !important;
-  font-weight: 700 !important;
-  border: 2px solid #ffffff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 2.8rem;
+  background: linear-gradient(180deg, #c31313 0%, #a20d0d 100%);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 20px rgba(162, 13, 13, 0.35);
+  border: 1px solid #8f0a0a;
 }
 
 .cta-section .cta-button:hover {
-  background-color: #e2e8f0 !important;
-  color: #1e3c72 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(180deg, #a20d0d 0%, #810b0b 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(129, 11, 11, 0.45);
+  color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -469,6 +476,11 @@
   }
 
   .services-cta .cta-button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+  }
+
+  .cta-section .cta-button {
     padding: 0.9rem 1.8rem;
     font-size: 1rem;
   }
