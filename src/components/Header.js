@@ -94,8 +94,7 @@ function Header() {
             style={{
               marginLeft: 'auto',
               display: 'flex',
-              alignItems: 'center',
-              transform: 'translateY(60%)'
+              alignItems: 'center'
             }}
           >
             <Link to="/" onClick={closeMenu}>Home</Link>
