@@ -88,9 +88,11 @@ function Home() {
               &nbsp;–&nbsp;
             </span>
 
-            Financial &amp; Trade Advisory Excellence
+            Financial &amp; Trade Advisory Excellence,
 
             <span className="company-line"></span>
+            <br />
+            Capacity Building &amp; Training Services | NITA Certified
           </p>
 
           <Link to="/services" className="cta-button">
