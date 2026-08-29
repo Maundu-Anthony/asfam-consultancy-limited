@@ -92,7 +92,7 @@ function Home() {
 
             <span className="company-line"></span>
             <br />
-            Capacity Building &amp; Training Services | NITA Certified
+            Capacity Building &amp; Training Services | NITA Accredited
           </p>
 
           <Link to="/services" className="cta-button">
