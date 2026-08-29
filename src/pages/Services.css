@@ -225,15 +225,10 @@
   overflow: hidden;
 }
 
-.training-category summary {
-  list-style: none;
-}
-
-.training-category summary::-webkit-details-marker {
-  display: none;
-}
-
 .training-category-summary {
+  border: 0;
+  font-family: inherit;
+  text-align: left;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -257,7 +252,7 @@
   line-height: 1;
 }
 
-.training-category[open] .training-category-summary::after {
+.training-category.is-open .training-category-summary::after {
   content: '−';
 }
 

@@ -16,6 +16,8 @@ import registerBg from '../images/register.jpeg';
 function Services() {
   const { hash } = useLocation();
   const [showRegistrationModal, setShowRegistrationModal] = useState(false);
+  const [hoveredCategory, setHoveredCategory] = useState(null);
+  const [pinnedCategory, setPinnedCategory] = useState(null);
 
   const trainingCategories = [
     {
@@ -189,6 +191,13 @@ function Services() {
     setShowRegistrationModal(false);
     setSubmitted(false);
     setErrorMsg('');
+  };
+
+  const activeCategory = hoveredCategory ?? pinnedCategory;
+
+  const handleCategoryClick = (index) => {
+    setPinnedCategory((currentCategory) => currentCategory === index ? null : index);
+    setHoveredCategory(null);
   };
 
   const handleChange = (e) => {
@@ -390,16 +399,31 @@ function Services() {
           </p>
           <div className="training-categories">
             {trainingCategories.map((category, index) => (
-              <details key={index} className="training-category">
-                <summary className="training-category-summary">
+              <div
+                key={index}
+                className={`training-category ${activeCategory === index ? 'is-open' : ''}`}
+                onMouseEnter={() => setHoveredCategory(index)}
+                onMouseLeave={() => setHoveredCategory(null)}
+              >
+                <button
+                  type="button"
+                  className="training-category-summary"
+                  aria-expanded={activeCategory === index}
+                  aria-controls={`training-category-${index}`}
+                  onClick={() => handleCategoryClick(index)}
+                  onFocus={() => setHoveredCategory(index)}
+                  onBlur={() => setHoveredCategory(null)}
+                >
                   {category.title}
-                </summary>
-                <ul className="training-category-items">
-                  {category.items.map((item, itemIndex) => (
-                    <li key={`${index}-${itemIndex}`}>{item}</li>
-                  ))}
-                </ul>
-              </details>
+                </button>
+                {activeCategory === index && (
+                  <ul id={`training-category-${index}`} className="training-category-items">
+                    {category.items.map((item, itemIndex) => (
+                      <li key={`${index}-${itemIndex}`}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             ))}
           </div>
 

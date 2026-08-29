@@ -89,6 +89,12 @@
   z-index: 100006;
 }
 
+.menu-control {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
 nav {
   gap: 2rem;
   position: relative;
@@ -120,12 +126,17 @@ nav a:hover {
     background: none !important;
   }
 
+  .menu-control {
+    position: relative;
+  }
+
   nav {
     display: none !important;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: auto;
     right: 0;
+    width: min(280px, calc(100vw - 2rem));
     flex-direction: column;
     gap: 0;
     background: #ffffff !important;

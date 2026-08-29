@@ -4,10 +4,18 @@ import logoImage from '../images/asfam.png';
 import './Header.css';
 
 function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuHovered, setMenuHovered] = useState(false);
+  const [menuPinned, setMenuPinned] = useState(false);
+  const menuOpen = menuHovered || menuPinned;
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuPinned((isPinned) => !isPinned);
+    setMenuHovered(false);
+  };
+
+  const closeMenu = () => {
+    setMenuHovered(false);
+    setMenuPinned(false);
   };
 
   return (
@@ -64,36 +72,40 @@ function Header() {
           </Link>
         </div>
 
-        <button
-          type="button"
-          className="menu-toggle"
-          onClick={toggleMenu}
-          onTouchStart={toggleMenu}
-          onMouseDown={(e) => e.preventDefault()}
-          aria-expanded={menuOpen}
-          aria-label="Toggle navigation"
+        <div
+          className="menu-control"
+          onMouseEnter={() => setMenuHovered(true)}
+          onMouseLeave={() => setMenuHovered(false)}
         >
-          ☰
-        </button>
+          <button
+            type="button"
+            className="menu-toggle"
+            onClick={toggleMenu}
+            aria-expanded={menuOpen}
+            aria-label="Toggle navigation"
+          >
+            ☰
+          </button>
 
-        <nav 
-          className={`nav ${menuOpen ? 'open' : ''}`} 
-          role="navigation" 
-          data-open={menuOpen}
-          style={{ 
-            marginLeft: 'auto', 
-            display: 'flex', 
-            alignItems: 'center',
-            transform: 'translateY(60%)'
-          }}
-        >
-          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
-          <Link to="/services" onClick={() => setMenuOpen(false)}>Our Services</Link>
-          <Link to="/team" onClick={() => setMenuOpen(false)}>Our Team</Link>
-          <Link to="/partners" onClick={() => setMenuOpen(false)}>Our Partners</Link>
-          <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
-        </nav>
+          <nav
+            className={`nav ${menuOpen ? 'open' : ''}`}
+            role="navigation"
+            data-open={menuOpen}
+            style={{
+              marginLeft: 'auto',
+              display: 'flex',
+              alignItems: 'center',
+              transform: 'translateY(60%)'
+            }}
+          >
+            <Link to="/" onClick={closeMenu}>Home</Link>
+            <Link to="/about" onClick={closeMenu}>About Us</Link>
+            <Link to="/services" onClick={closeMenu}>Our Services</Link>
+            <Link to="/team" onClick={closeMenu}>Our Team</Link>
+            <Link to="/partners" onClick={closeMenu}>Our Partners</Link>
+            <Link to="/contact" onClick={closeMenu}>Contact Us</Link>
+          </nav>
+        </div>
       </div>
     </header>
   );

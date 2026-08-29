@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
 import Partners from './pages/Partners';
+import Seo from './components/Seo';
 import './App.css';
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <Seo />
         <Header />
         <main className="main-content">
           <Routes>
