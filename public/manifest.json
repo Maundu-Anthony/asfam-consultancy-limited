@@ -1,15 +1,25 @@
 {
   "short_name": "ASFAM",
-  "name": "ASFAM Consultancy Limited",
+  "name": "ASFAM Consultancy Limited - Financial & Trade Advisory",
+  "description": "ASFAM Consultancy Limited provides financial advisory, investment facilitation, trade advisory, credit facilitation, business research, and professional training in Kenya.",
   "icons": [
     {
       "src": "asfam-logo.png",
       "type": "image/png",
-      "sizes": "624x316"
+      "sizes": "624x284",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "32x32"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "theme_color": "#0b5fc3",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "categories": ["business", "finance"]
 }
